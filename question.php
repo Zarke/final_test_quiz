@@ -16,7 +16,7 @@
         public function get_question(){
            echo "<h1>".$this->documents->{0}->pitanje."</h1> <br>";
            foreach ($this->documents->{0}->moguci_odgovori as $key => $odgovor) {
-               echo "<input type=\"checkbox\" name=".$key.">".$odgovor."<br>";
+               echo "<input type=\"checkbox\" name= \"correct[]\" value=" .$key.">".$odgovor."<br>";
                
            }
         }

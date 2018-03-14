@@ -4,9 +4,10 @@
       "moguci_odgovori": {
           "0": "123",
           "1": "324",
-          "2": "567"
+          "2": "567",
+          "3": "890"
       },
-      "tacni_odgovori": [0, 2]
+      "tacni_odgovori": [0, 2, 3]
   },
   "1": {
     "pitanje": "koja je godina?",
@@ -15,6 +16,6 @@
         "1": "324",
         "2": "567"
     },
-    "tacni_odgovori": [0, 2]
+    "tacni_odgovori": [0, 2, 3]
 }
 }

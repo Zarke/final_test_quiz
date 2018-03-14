@@ -1,9 +1,9 @@
-<?php include("question.php");?>
+<?php include("init.php");?>
 <html>
     <body>
-        <form action="action.php">
+        <form method="post">
             <?php $question->get_question()?>
-            <input type="submit" value="Submit">
+            <input type="submit" name="submit" value="submit"/>
         </form>
     </body>
 </html>
