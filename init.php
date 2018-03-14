@@ -1,4 +1,4 @@
 <?php
-    include("question.php");
-    include("action.php");
+    include("includes/question.php");
+    include("includes/action.php");
 ?>
