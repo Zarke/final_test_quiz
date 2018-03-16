@@ -10,12 +10,21 @@
       "tacni_odgovori": [0, 2, 3]
   },
   "1": {
-    "pitanje": "koja je godina?",
+    "pitanje": "Koji je vek",
     "moguci_odgovori": {
         "0": "123",
         "1": "324",
         "2": "567"
     },
-    "tacni_odgovori": [0, 2, 3]
+    "tacni_odgovori": [0]
+},
+"2": {
+    "pitanje": "Koji je dan",
+    "moguci_odgovori": {
+        "0": "djokica",
+        "1": "324",
+        "2": "567"
+    },
+    "tacni_odgovori": [1,2]
 }
 }
