@@ -51,7 +51,7 @@
                foreach ($unchecked_correct as $correct) {
                    echo "<li class=\"should\">You shoud have also checked ".$this->documents->{$this->id}->moguci_odgovori->{$correct}."</li><br>" ;
                } 
-               $this->get_question();
+            //    $this->get_question();
         }
 
         //deletes an item from the dopy of the correct answer array
