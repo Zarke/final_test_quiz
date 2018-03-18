@@ -1,0 +1,85 @@
+#kviz {
+width: 500px ;
+  background-color: #33312e ;
+  color: white ;
+  margin-left: 10% ;
+  float: left ;
+}
+h1 {
+text-align: center ;
+  padding-top: 25px;
+color: #cc6633 ;
+}
+.kec {
+  margin-left: 20px;
+  margin-bottom: 50px;
+  margin-top: 25px;
+}
+.dva {
+margin-left: 10% ;
+  width: 150px;
+  margin-bottom: 30px;
+  font-size: 15px;
+  border: 5px solid #ccc;
+   position: relative;
+  padding-bottom: 10px;
+  box-shadow:
+	0 0 0 3px white,
+	0 0 0 4px white,
+0 0 0 5px #ccc ;
+border-radius: 25% ;
+  margin-top: 50px;
+}
+span {
+margin-left: 50px;
+  font-size: 25px;
+  line-height: 1.5 ;
+  margin: auto ;
+  text-align: center ;
+}
+span p {
+margin-left: 10% ;
+  margin-right: 10% ;
+  margin-top: -70px;
+}
+#rezultati {
+width: 200px;
+background-color: #ccc ;
+  margin-right: 10%;
+  height: 500px;
+  float: left ;
+  margin-left: 50px;
+}
+#rezultati ul {
+list-style-type: none ;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+ul li {
+background-color: green ;
+  border: 1px solid black ;
+  color: black ;
+  display: block ;
+  padding-bottom: 20px;
+  margin-left: -10% ;
+    margin-right: 10% ;
+    margin-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold ;
+  padding-top: 15px;
+}
+#rezultati .false {
+background-color: red ;
+}
+#rezultati .true {
+background-color: green ;
+}
+#rezultati p {
+font-size: 20px;
+  text-align: center ;
+}
+.should:last-child {
+background-color: rgba(250,255,0, 0.4) ;
+
+}
