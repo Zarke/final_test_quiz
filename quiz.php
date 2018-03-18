@@ -9,8 +9,17 @@
             if(isset($_POST['next'])){
             $question->get_question();
        }   ?>
-            <input type="submit" name="submit" value="submit"/>
-            <input id="next" type="submit" name="next" value="next question"/>
+            <input type="submit" class="kec" name="submit" value="submit"/>
+            <input type="submit" class="kec" name="next" value="next question"/>
         </form>
+        <div>
+            <ul>
+                <?php  
+                    if(isset($_POST['submit'])){
+                        $question->check();
+                    }
+                ?>
+            </ul>
+        </div>
     </body>
 </html>

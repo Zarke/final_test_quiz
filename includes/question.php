@@ -22,7 +22,7 @@
            $question_id = $this->get_cookie();
            echo "<h1>".$this->documents->{$question_id}->pitanje."</h1> <br>";
            foreach ($this->documents->{$question_id}->moguci_odgovori as $key => $odgovor) {
-               echo "<input type='checkbox' name= 'checkbox[]' value=" .$key.">".$odgovor."<br>";
+               echo "<input class=\"kec\" type='checkbox' name= 'checkbox[]' value=" .$key.">".$odgovor."<br>";
                
            }
         }
@@ -40,16 +40,16 @@
                
                foreach ($_POST['checkbox'] as $answer) {
                     if(in_array($answer ,$answers)){
-                        echo "The answer ". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." is correct <br>";
+                        echo "<li class=\"true\">The answer ". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." is correct </li><br>";
                         question::deleteElement($answer, $unchecked_correct);
                     } else {
-                        echo "The answer ".$this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." is not correct <br>";
+                        echo "<li class=\"false\">The answer ".$this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." is not correct </li><br>";
                     }
                 }//end of foreach lop
                 
                 //loops all the unchecked correct answers
                foreach ($unchecked_correct as $correct) {
-                   echo "You shoud have also checked ".$this->documents->{$this->id}->moguci_odgovori->{$correct}."<br>" ;
+                   echo "<li class=\"should\">You shoud have also checked ".$this->documents->{$this->id}->moguci_odgovori->{$correct}."</li><br>" ;
                } 
                $this->get_question();
         }
