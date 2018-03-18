@@ -1,21 +1,21 @@
-#kviz {
+#quiz {
 width: 500px ;
   background-color: #33312e ;
   color: white ;
   margin-left: 10% ;
   float: left ;
 }
-h1 {
+.question {
 text-align: center ;
   padding-top: 25px;
 color: #cc6633 ;
 }
-.kec {
+.one {
   margin-left: 20px;
   margin-bottom: 50px;
   margin-top: 25px;
 }
-.dva {
+.two {
 margin-left: 10% ;
   width: 150px;
   margin-bottom: 30px;
@@ -35,14 +35,16 @@ margin-left: 50px;
   font-size: 25px;
   line-height: 1.5 ;
   margin: auto ;
-  text-align: center ;
-}
-span p {
-margin-left: 10% ;
+  margin-left: 10% ;
   margin-right: 10% ;
   margin-top: -70px;
 }
-#rezultati {
+span p {
+margin-left: 18%;
+  margin-right: 10% ;
+  margin-top: -75px;
+}
+#result {
 width: 200px;
 background-color: #ccc ;
   margin-right: 10%;
@@ -50,16 +52,15 @@ background-color: #ccc ;
   float: left ;
   margin-left: 50px;
 }
-#rezultati ul {
+#result ul {
 list-style-type: none ;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size:15px;
 }
 ul li {
 background-color: green ;
   border: 1px solid black ;
-  color: black ;
+  color: white ;
   display: block ;
   padding-bottom: 20px;
   margin-left: -10% ;
@@ -70,17 +71,16 @@ background-color: green ;
   font-weight: bold ;
   padding-top: 15px;
 }
-#rezultati .false {
+#result .false {
 background-color: red ;
 }
-#rezultati .true {
+#result .true {
 background-color: green ;
 }
-#rezultati p {
+#result p {
 font-size: 20px;
   text-align: center ;
 }
-.should:last-child {
-background-color: rgba(250,255,0, 0.4) ;
-
+.should {
+background-color: #327BAB ;
 }
