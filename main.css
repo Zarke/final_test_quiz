@@ -54,6 +54,7 @@ background-color: #ccc ;
 list-style-type: none ;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-size:15px;
 }
 ul li {
 background-color: green ;
