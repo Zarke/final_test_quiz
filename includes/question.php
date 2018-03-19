@@ -1,14 +1,13 @@
 <?php    
     class question {
-        public $cookie_name = "question_id";
-        public $url = null;
-        public $data = null;
-        public $documents = null;
-        public $id = 0;
-        public $answers = array();//all correct answers
-        public $unchecked_correct = array();//all checked correct answers
-        public $id_answer = 0;
-        public $value = null;
+        private $cookie_name = "question_id";
+        private $url = null;
+        private $data = null;
+        private $documents = null;
+        private $id = 0;
+        private $answers = array();//all correct answers
+        private $unchecked_correct = array();//all checked correct answers
+        private $id_answer = 0;
         
         //extraction and formating of the json file
         public function get_json(){
@@ -55,7 +54,7 @@
         }
 
         //deletes an item from the dopy of the correct answer array
-        private function deleteElement($element, &$array){
+        private static function deleteElement($element, &$array){
             $index = array_search($element, $array);
             if($index !== false){
                 unset($array[$index]);
@@ -63,7 +62,7 @@
         }
 
         //method for setting and updating the cookie value
-        public function get_cookie(){
+        private function get_cookie(){
             if(!isset($_POST['submit'])){
                 if(!isset($_COOKIE[$this->cookie_name])){
                     setcookie($this->cookie_name,0, time()+(2400), "/");
