@@ -27,7 +27,7 @@ margin-left: 10% ;
 	0 0 0 3px white,
 	0 0 0 4px white,
 0 0 0 5px #ccc ;
-border-radius: 25% ;
+border-radius: 2.5% ;
   margin-top: 50px;
 }
 span {
@@ -73,6 +73,7 @@ background-color: green ;
 }
 #result .false {
 background-color: red ;
+    z-index: 2 ;
 }
 #result .true {
 background-color: green ;
@@ -84,3 +85,17 @@ font-size: 20px;
 .should {
 background-color: #327BAB ;
 }
+.false + .true   {
+margin-top: -80px;
+  position: relative ;
+}
+.true ~ .false {
+position: relative ;
+top: 80px;
+
+}
+.should {
+position: relative ;
+  top: 80px ;
+}
+
