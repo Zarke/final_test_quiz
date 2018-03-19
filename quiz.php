@@ -8,7 +8,7 @@
     </head>
    
     <body>
-        <div id="kviz">
+        <div id="quiz">
             <form id="target" method="post">
                 <?php
                     if(isset($_POST['next'])){
@@ -17,11 +17,11 @@
                         $question->get_question();
                         }        
                 ?>
-            <input type="submit" class="dva" name="submit" value="submit"/>
-            <input type="submit" class="dva" name="next" value="next question"/>
+            <input type="submit" class="two" name="submit" value="submit"/>
+            <input type="submit" class="two" name="next" value="next question"/>
             </form>
         </div>
-        <div  id="rezultati">
+        <div  id="result">
             <ul>
                 <?php  
                     if(isset($_POST['submit'])){
