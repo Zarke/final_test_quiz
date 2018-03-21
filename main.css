@@ -12,9 +12,9 @@ color: #dcd0c0 ;
   margin: 1% 10% 5% 10% ;
 }
 .one {
-  margin-left: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
   margin-top: 25px;
+  margin-left: 10% ;
 }
 .two {
 margin-left: 10% ;
@@ -32,19 +32,12 @@ border-radius: 2.5% ;
   margin-top: 10%;
   padding-top: 2.5% ;
 }
-span {
-margin-left: 50px;
-  font-size: 25px;
-  line-height: 1.5 ;
-  margin: auto ;
-  margin-left: 10% ;
-  margin-right: 10% ;
-  margin-top: -70px;
-}
 span p {
-margin-left: 18%;
-  margin-right: 10% ;
-  margin-top: -75px;
+  margin-left: 15% ;
+  margin-right: 15% ;
+  margin-top: -14.5% ;
+  text-align: left ;
+  font-size: 25px ;
 }
 #result {
 width: 200px;
