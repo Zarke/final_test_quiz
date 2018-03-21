@@ -50,8 +50,8 @@ margin-left: 18%;
 width: 200px;
 background-color: #ccc ;
   margin-right: 10%;
-  height: 100%;
-  max-height: 1000px;
+  height: 200%;
+  max-height: 1500px;
   float: left ;
   margin-left: 50px;
 }
@@ -60,6 +60,7 @@ list-style-type: none ;
   margin-top: 20px;
   margin-bottom: 20px;
   max-height: 90% ;
+  margin-bottom: 10% ;
 }
 ul li {
 background-color: green ;
@@ -79,10 +80,7 @@ background-color: #a83c30 ;
 #result .true {
 background-color: #2c681a;
 }
-#result p {
-font-size: 20px;
-  text-align: center ;
-}
+
 .should {
 background-color: #07889b ;
 }
@@ -92,11 +90,11 @@ background-color: #07889b ;
 }
 .true ~ .false {
 position: relative ;
-top: 55%;
+top: 45%;
 
 }
 .should {
 position: relative ;
-top: 85% ;
+top: 75% ;
 }
 
