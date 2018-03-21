@@ -11,7 +11,7 @@
         
         //extraction and formating of the json file
         public function get_json(){
-            $this->url = 'document.json';
+            $this->url = 'questions.json';
             $this->data = file_get_contents($this->url); 
             $this->documents = json_decode($this->data);
         }
@@ -21,7 +21,7 @@
            $question_id = $this->get_cookie();
            echo "<h1 class=\"question\">".$this->documents->{$question_id}->pitanje."</h1> <br>";
            foreach ($this->documents->{$question_id}->moguci_odgovori as $key => $odgovor) {
-               echo "<input class=\"one\" type='checkbox' name= 'checkbox[]' value=" .$key.">".$odgovor."<br>";
+               echo "<input class=\"one\" type='checkbox' name= 'checkbox[]' value=" .$key.">"."<span>".$odgovor."</span>"."<br>";
                
            }
         }
