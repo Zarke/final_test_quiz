@@ -22,13 +22,13 @@
             </form>
         </div>
         <div  id="result">
-            <ul>
+          
                 <?php  
                     if(isset($_POST['submit'])){
                         $question->check();
                     }
                 ?>
-            </ul>
+         
         </div>
     </body>
 </html>

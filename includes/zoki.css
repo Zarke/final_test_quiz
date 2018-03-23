@@ -1,7 +1,6 @@
 #quiz {
 width: 500px ;
-
-background: url(../images/background-1.jpg) ;
+background: url(../images/background-1.jpg);
   color: white ;
   margin-left: 10% ;
   float: left ;
@@ -31,16 +30,12 @@ border-radius: 2.5% ;
   color: white ;
   text-shadow: 3px 3px 1px #111 ;
 }
-span {
-  font-size: 25px;
-  line-height: 1.5 ;
-  margin: -70px 10% 2px 10%;
-}
+
 span p {
-margin-left: 18%;
-  margin-right: 10% ;
-  margin-top: -75px;
+margin: -13% 0px 0px 10% ;
+  text-align: left;
 }
+
 #result {
 width: 200px;
 background-color: #ccc ;
