@@ -3,7 +3,13 @@
 <html>
     <head>
     <script src="javascript/jquery-3.3.1.min.js"></script>
-    <script src="javascript/main.js"></script>
+    <script >
+        $(document).ready(function(){
+            if($("#result").children().length == 0){
+                $("#result").css("visibility","hidden");
+            }
+        });
+    </script>
     <link rel="stylesheet" type="text/css" href="includes/zoki.css">
     </head>
    
@@ -21,7 +27,7 @@
             <input type="submit" class="two" name="next" value="next question"/>
             </form>
         </div>
-        <div  id="result">
+        <div id="result">
           
                 <?php  
                     if(isset($_POST['submit'])){

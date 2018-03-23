@@ -42,35 +42,21 @@ background-color: #ccc ;
   margin-right: 10%;
   float: left ;
   margin-left: 50px;
+  padding: 2% 1% 2% 1% ;
 }
-#result ul {
-list-style-type: none ;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-ul li {
-background-color: green ;
-  border: 1px solid black ;
-  color: white ;
-  display: block ;
-  padding-bottom: 7%;
-  margin-left: -10% ;
-    margin-right: 10% ;
-    margin-bottom: 20px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold ;
-  padding-top: 8%;
-}
+
 #result .false {
-background-color: red ;
+background-color: rgb(230, 40, 40) ;
 }
 #result .true {
 background-color: green ;
 }
 #result p {
-font-size: 20px;
+font-size: 25px ;
   text-align: center ;
+  font-family: Georgia ;
+color: white ;
+  padding: 5% 0 5% 0 ;
 }
 .should {
 background-color: #327BAB ;
