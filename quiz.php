@@ -4,7 +4,7 @@
     <head>
     <script src="javascript/jquery-3.3.1.min.js"></script>
     <script src="javascript/main.js"></script>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="includes/zoki.css">
     </head>
    
     <body>

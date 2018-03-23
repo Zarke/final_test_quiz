@@ -36,8 +36,10 @@
                
                $id_answer = 0;
                $unchecked_correct = $answers;
-               
-               foreach ($_POST['checkbox'] as $answer) {
+               if (empty($_POST['checkbox'])){
+                    echo("<script>alert(\"Molim odaberite bar jedan od ponudjenih odgovora\")</script>");
+               } else {
+                foreach ($_POST['checkbox'] as $answer) {
                     if(in_array($answer ,$answers)){
                         echo "<li class=\"true\">The answer ". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." is correct </li><br>";
                         question::deleteElement($answer, $unchecked_correct);
@@ -50,7 +52,8 @@
                foreach ($unchecked_correct as $correct) {
                    echo "<li class=\"should\">You shoud have also checked ".$this->documents->{$this->id}->moguci_odgovori->{$correct}."</li><br>" ;
                } 
-            //    $this->get_question();
+               }
+              
         }
 
         //deletes an item from the dopy of the correct answer array
