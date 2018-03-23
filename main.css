@@ -1,6 +1,6 @@
 #quiz {
 width: 500px ;
-background: url(images/bg.jpg) ;
+background: url(images/zoki.jpg) center bottom  ;
   color: white ;
   margin-left: 10% ;
   float: left ;
@@ -20,25 +20,24 @@ color: #DA916C ;
 margin-left: 10% ;
   width: 35% ;
   margin-bottom: 5%;
-  font-size: 15px;
+  font-size: 25px;
   border: 5px solid #ccc;
    position: relative;
   padding-bottom: 2%;
   box-shadow:
-	0 0 0 2px white,
-	0 0 0 4px black,
+	0 0 0 2px #fff,
+	0 0 0 4px #000,
 0 0 0 5px #ccc ;
 border-radius: 2.5% ;
   margin-top: 20%;
+  background-color: transparent ;
+  color: white ;
+  text-shadow: 3px 3px 1px #111 ;
 }
 span {
-margin-left: 50px;
   font-size: 25px;
   line-height: 1.5 ;
-  margin: auto ;
-  margin-left: 10% ;
-  margin-right: 10% ;
-  margin-top: -70px;
+  margin: -70px 10% 2px 10%;
 }
 span p {
 margin-left: 18%;
