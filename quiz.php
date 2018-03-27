@@ -19,9 +19,12 @@
                 <?php
                     if(isset($_POST['next'])){
                     $question->get_question();
-                    } else{
+                     }
+                    else if(isset($_POST['submit'])){
+                        $question->get_current_question();
+                    } else {
                         $question->get_question();
-                        }        
+                    }        
                 ?>
             <input type="submit" class="two" name="submit" value="submit"/>
             <input type="submit" class="two" name="next" value="next question"/>

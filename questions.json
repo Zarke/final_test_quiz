@@ -1,6 +1,6 @@
 {
   "0": {
-      "pitanje": "Дата је наредба декларације, а затим и наредба форматираног излаза: floatx = 5.56; printf(' x = %f/tx = %g/n', x, x); Након извршења ових наредби на екрану ће се приказати вредности променљивих у задатом формату:",
+      "pitanje": "Дата је наредба декларације, а затим и наредба форматираног излаза: <br><span style=\"color:red;text-align=left\">floatx = 5.56; <br>printf(' x = %f/tx = %g/n', x, x); </span>Након извршења ових наредби на екрану ће се приказати вредности променљивих у задатом формату:",
       "moguci_odgovori": {
           "0": "1. x = 5.560000e+000 x= 0",
           "1": "2. x = 5.560000 x = 5.560000e+000",
@@ -83,10 +83,10 @@
   "8": {
     "pitanje": "Дате су четири варијанте Ц кода којим се одређује вредност максимума између два целобројна податка. Одредити који је тачно написан код:",
     "moguci_odgovori": {
-        "0": "max=b; if(max<a) max=a; printf('/nMaksimum = %d',&max);",
-        "1": "b=max; if(max<a) max=a; printf('/nMaksimum = %d',&max);",
-        "2": "max=b; if(max<a) max=a; printf('/nMaksimum = %d',max);",
-        "3": "max=a; if(b<max) max=b; printf('/nMaksimum = %d',max);"
+        "0": "max=b; if(max\f<\fa) max=a; printf('/nMaksimum = %d',&max);",
+        "1": "b=max; if(max\f<\fa) max=a; printf('/nMaksimum = %d',&max);",
+        "2": "max=b; if(max\f<\fa) max=a; printf('/nMaksimum = %d',max);",
+        "3": "max=a; if(b\f<\fmax) max=b; printf('/nMaksimum = %d',max);"
     },
     "tacni_odgovori": [2]
 },
