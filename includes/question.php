@@ -12,7 +12,7 @@
         
         //extraction and formating of the json file
         public function get_json(){
-            $this->url = 'questions.json';
+            $this->url = 'includes/questions.json';
             $this->data = file_get_contents($this->url); 
             $this->documents = json_decode($this->data);
         }
@@ -61,7 +61,8 @@
                         return $question_id;
                     }
                 } else {
-                    echo "<script>alert(\"Dosli ste do kraja ovog dela testa :D\")</script>";
+                    echo "<script>alert(\"Dosli ste do kraja ovog dela testa\")</script>";
+                    question::redirect("choice.php");
                 }
             }
         }
@@ -124,6 +125,11 @@
         }
         protected function set_cookie($cookie_name, $question_array){
             setcookie($cookie_name, serialize($question_array), time()+(2400), "/");
+        }
+
+        //method for redirecting to a certain page
+        public static function redirect($location){
+            header("Location: {$location}");
         }
       
     }//end of question class

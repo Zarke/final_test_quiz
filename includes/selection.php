@@ -10,7 +10,7 @@ include("question.php");
         
         //method for extractinh the JSON file taht contains the questions
         public function get_json(){
-            $this->url = 'questions.json';
+            $this->url = 'includes/questions.json';
             $this->data = file_get_contents($this->url); 
             $this->documents = json_decode($this->data);
         }
@@ -50,14 +50,11 @@ include("question.php");
                         if(isset($answer)){
                         $this->question_set_array[] = $answer;    
                         $this->set_cookie($this->cookie_name,$this->question_set_array);
-                        $this->redirect("quiz.php");
+                        self::redirect("quiz.php");
                         }
                     }
                 }
             }
-        }
-        function redirect($location){
-            header("Location: {$location}");
         }
 
     }//end of selection class
