@@ -4,8 +4,9 @@ include("question.php");
         private $url = null;
         private $data = null;
         private $documents = null;
-        private $question_list_cookie_name = "question_list";
+        private $cookie_name= "question_scope";
         private $question_amount = null;
+        public $question_set_array = array();
         
         //method for extractinh the JSON file taht contains the questions
         public function get_json(){
@@ -33,8 +34,8 @@ include("question.php");
                 $start_question = 1;
                 $end_question = 5;
                 echo "<h1 class=\"question\">Izaberite zeljenu grupu pitanja:</h1> <br>";
-                for ($i=0; $i < $selection_amount; $i++) { 
-                    echo "<input class='one' type='checkbox' name= 'checkbox[]' value='".$i."'>"."<span><p>Grupa pitanja ".$i.": ".$start_question."-". $end_question."</p></span>"."<br>";
+                for ($i=1; $i <= $selection_amount; $i++) { 
+                    echo "<input class='one' type='checkbox' name= 'checkbox[]' value='".$end_question."'>"."<span><p>Grupa pitanja ".$i.": ".$start_question."-". $end_question."</p></span>"."<br>";
                     $end_question +=5;
                     $start_question +=5;
                 }  
@@ -47,11 +48,16 @@ include("question.php");
                 } else {
                     foreach ($_POST['checkbox'] as $answer) {
                         if(isset($answer)){
-                           echo "Cekiran sam !!!";
+                        $this->question_set_array[] = $answer;    
+                        $this->set_cookie($this->cookie_name,$this->question_set_array);
+                        $this->redirect("quiz.php");
                         }
                     }
                 }
             }
+        }
+        function redirect($location){
+            header("Location: {$location}");
         }
 
     }//end of selection class

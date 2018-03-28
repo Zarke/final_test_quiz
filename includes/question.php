@@ -1,6 +1,7 @@
 <?php    
     class question {
-        private $cookie_name = "question_id";
+        private $used_questions = "question_id";
+        private $question_scope = "question_scope";
         private $url = null;
         private $data = null;
         private $documents = null;
@@ -27,8 +28,7 @@
         }
 
         public function get_current_question(){
-            $question_id_array = $this->get_cookie();
-            echo implode(" ",$question_id_array);
+            $question_id_array = $this->get_cookie($this->used_questions);
             $current_question_id = end($question_id_array);
             $question_id = $current_question_id;
             echo "<h1 class=\"question\">".$this->documents->{$question_id}->pitanje."</h1> <br>";
@@ -39,13 +39,16 @@
         }
         //method for randomization of questions
         public function randomisation(){
-            if(!isset($_COOKIE[$this->cookie_name])){
-                $this->set_cookie(array(0));
-                return 0;
+            $start_end_question = $this->get_cookie($this->question_scope);
+            $end_rand = end($start_end_question);
+            $start_rand = $end_rand - 4;
+            if(!isset($_COOKIE[$this->used_questions])){
+                $this->set_cookie($this->used_questions,array($start_rand));
+                return $start_rand;
             } else {
-                $question_id_array = $this->get_cookie();
-                if(count($question_id_array) <10 && count($question_id_array)> 0){
-                    $question_id = rand(1,9);
+                $question_id_array = $this->get_cookie($this->used_questions);
+                if(count($question_id_array) <5 && count($question_id_array)> 0){
+                    $question_id = rand($start_rand,$end_rand);
                     if (in_array($question_id, $question_id_array))
                     {
                         // $this->randomisation();
@@ -54,7 +57,7 @@
                   else
                     {
                         array_push($question_id_array,$question_id);
-                        $this->set_cookie($question_id_array);
+                        $this->set_cookie($this->used_questions, $question_id_array);
                         return $question_id;
                     }
                 } else {
@@ -77,7 +80,7 @@
         }
         //Checks what answers are correct and tells the user what the mistake was and what is the correct answer
         public function check(){
-                $last_question_id = $this->get_cookie();
+                $last_question_id = $this->get_cookie($this->used_questions);
                 $last_question_id_placeholder = end($last_question_id);
                 $question_id_val = $last_question_id_placeholder;
 
@@ -116,11 +119,11 @@
             }
         }
 
-        protected function get_cookie(){
-                return  unserialize($_COOKIE[$this->cookie_name]);
+        protected function get_cookie($question_name){
+                return  unserialize($_COOKIE[$question_name]);
         }
-        protected function set_cookie($question_array){
-            setcookie($this->cookie_name, serialize($question_array), time()+(2400), "/");
+        protected function set_cookie($cookie_name, $question_array){
+            setcookie($cookie_name, serialize($question_array), time()+(2400), "/");
         }
       
     }//end of question class
