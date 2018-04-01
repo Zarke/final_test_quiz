@@ -1,34 +1,77 @@
-#begin {
-width: 1280px;
-  margin: auto ;
-  background: url(background.jpg) no-repeat ;
-  height: 851px ;
-}
-.caption {
-font-size: 60px;
-  text-align: center ;
-  color: #eee ;
-padding-top: 7% ;
-}
-.beginform {
-font-size: 40px;
+#quiz {
+width: 500px ;
+background: url(../images/background.jpg);
   color: white ;
+  margin-left: 10% ;
+  float: left ;
+
 }
-.begininput {
-display: inline-block ;
+.question {
+text-align: center ;
+  padding-top: 25px;
+color: #DA916C ;
+}
+.one {
+  margin-left: 20px;
+  margin-bottom: 50px;
+  margin-top: 25px;
+}
+.two {
+margin-left: 10% ;
+  width: 35% ;
+  margin-bottom: 5%;
+  font-size: 25px;
+  border: 1px solid #ccc;
    position: relative;
+  padding-bottom: 2%;
+border-radius: 2.5% ;
+  margin-top: 20%;
+  background-color: transparent ;
   color: white ;
   text-shadow: 3px 3px 1px #111 ;
-  margin-left: 5% ;
 }
+
 span p {
-margin-top: -3.5% ;
-  margin-left: 10% ;
+margin: -13% 0px 0px 10% ;
+  text-align: left;
 }
-.beginsubmit {
-margin: 18% 40% 50px 40% ;
-  width: 20% ;
-  font-size: 50px ;
+
+#result {
+width: 200px;
+background-color: #ccc ;
+  margin-right: 10%;
+  float: left ;
+  margin-left: 50px;
+  padding: 2% 1% 2% 1% ;
+}
+
+#result .false {
+background-color: rgb(230, 40, 40) ;
+}
+#result .true {
+background-color: green ;
+}
+#result p {
+font-size: 25px ;
   text-align: center ;
-  text-transform: uppercase ;
+  font-family: Georgia ;
+color: white ;
+  padding: 5% 0 5% 0 ;
 }
+.should {
+background-color: #327BAB ;
+}
+.false + .true   {
+  position: relative ;
+  top: -90% ;
+}
+.true ~ .false {
+position: relative ;
+top: 55%;
+
+}
+.should {
+position: relative ;
+top: 85% ;
+}
+

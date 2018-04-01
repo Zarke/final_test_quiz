@@ -2,16 +2,16 @@
     ?>
 <html>
     <head>
-    <link rel="stylesheet" type="text/css" href="includes/zoki.css">
+    <link rel="stylesheet" type="text/css" href="includes/beggining.css">
     </head>
     <body>
-        <div id="quiz">
-            <form method="post">
+        <div id="begin">
+            <form class="beginform" method="post">
                 <?php
                     $selection->show_selections();
                     $selection->set_selection_and_redirect();
                 ?>
-                <input type="submit" class="two" name="submit" value="submit"/>
+                <input type="submit" class="beginsubmit" name="submit" value="submit"/>
             </form>
         </div>
     </body>
