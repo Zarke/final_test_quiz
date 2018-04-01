@@ -41,17 +41,16 @@
         public function randomisation(){
             $start_end_question = $this->get_cookie($this->question_scope);
             $end_rand = end($start_end_question);
-            $start_rand = $end_rand - 4;
+            $start_rand = $end_rand - 24;
             if(!isset($_COOKIE[$this->used_questions])){
                 $this->set_cookie($this->used_questions,array($start_rand));
                 return $start_rand;
             } else {
                 $question_id_array = $this->get_cookie($this->used_questions);
-                if(count($question_id_array) <5 && count($question_id_array)> 0){
+                if(count($question_id_array) <25 && count($question_id_array)> 0){
                     $question_id = rand($start_rand,$end_rand);
                     if (in_array($question_id, $question_id_array))
                     {
-                        // $this->randomisation();
                         return $this->randomisation();
                     }
                   else

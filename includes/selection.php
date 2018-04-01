@@ -24,7 +24,7 @@ include("question.php");
 
         //method that tells us how many question groups there are based on the division
         private function question_selection_partitioning($question_number){
-            return $question_number/5;
+            return $question_number/25;
         }
 
         //method that activates on page load that lists all question groups
@@ -32,12 +32,12 @@ include("question.php");
             $this->question_amount();
             $selection_amount = $this->question_selection_partitioning($this->question_amount);
                 $start_question = 1;
-                $end_question = 5;
+                $end_question = 25;
                 echo "<h1 class=\"question\">Izaberite zeljenu grupu pitanja:</h1> <br>";
                 for ($i=1; $i <= $selection_amount; $i++) { 
                     echo "<input class='one' type='checkbox' name= 'checkbox[]' value='".$end_question."'>"."<span><p>Grupa pitanja ".$i.": ".$start_question."-". $end_question."</p></span>"."<br>";
-                    $end_question +=5;
-                    $start_question +=5;
+                    $end_question +=25;
+                    $start_question +=25;
                 }  
         }
 
@@ -48,7 +48,7 @@ include("question.php");
                 } else {
                     foreach ($_POST['checkbox'] as $answer) {
                         if(isset($answer)){
-                        $this->question_set_array[] = $answer;    
+                        $this->question_set_array[] = $answer;
                         $this->set_cookie($this->cookie_name,$this->question_set_array);
                         self::redirect("quiz.php");
                         }
