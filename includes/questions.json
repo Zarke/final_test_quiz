@@ -212,7 +212,7 @@
 },
 
 "19": {
-    "pitanje": "На левој страни је дата дефиниција функције void zameni(int *a, int *b), а на десној страни део кода, написан на програмском језику Ц, који позива дефинисану функцију. <br> void zameni(int *a, int *b) <br> { <br> int temp; <br> temp = *a; <br> *a = *b; <br> *b = temp; <br> } <br> <br> int a = 3, b = 4; <br> zameni(&a, &b); <br> printf('a=%d i b=%d',a,b); <br> Одредити које вредности ће променљиве a и b добити после извршавања кода. ",
+    "pitanje": "На левој страни је дата дефиниција функције void zameni(int *a, int *b), а на десној страни део кода, написан на програмском језику Ц, који позива дефинисану функцију. <br> void zameni(int *a, int *b) <br> { int temp; <br> temp = *a; <br> *a = *b; <br> *b = temp; } <br> <br> int a = 3, b = 4; <br> zameni(&a, &b); <br> printf('a=%d i b=%d',a,b); <br> Одредити које вредности ће променљиве a и b добити после извршавања кода. ",
     "moguci_odgovori": {
         "0": "a=3 i b=3 ",
         "1": "a=4 i b=4 ",
