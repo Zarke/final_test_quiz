@@ -1,0 +1,42 @@
+#mainlast {
+width: 1280px;
+  margin: auto ;
+  background: url(background.jpg) no-repeat ;
+  height: 851px ;
+}
+.captionlast {
+font-size: 30px;
+  text-align: center ;
+  color: #fff ;
+padding-top: 9% ;
+  margin: 2% auto 8% auto  ;
+  font-family: Arial ;
+}
+.formlast {
+font-size: 30px;
+  color: white ;
+}
+.buttonlast {
+display: inline-block;
+  color: white ;
+  position: relative;
+  margin: 28% 5% 0 17% ;
+}
+.buttonlasttext {
+display: inline-block ;
+  text-align: center ;
+  margin-top: -5% ;
+}
+
+.buttonlast2 {
+display: inline-block ;
+  position: relative ;
+  color: white ;
+  margin: 3% 5% 1% 17% ;
+}
+.buttonlasttext2 {
+display: inline-block ;
+  text-align: center ;
+  margin-top: -5% ;
+
+}
