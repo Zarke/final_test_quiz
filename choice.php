@@ -2,14 +2,14 @@
     ?>
 <html>
     <head>
-    <link rel="stylesheet" type="text/css" href="includes/zoki.css">
+    <link rel="stylesheet" type="text/css" href="includes/last.css">
     </head>
     <body>
-        <div id="quiz">
-            <form method="post">
-                <h1>Prosli ste ovaj deo kviza. Molimo vas da izaberete kako zelite da nastavite</h1>
-                <input type="submit" class="two" name="rerun" value="Ponoviti prolaz kroz trenutnu selekciju"/>
-                <input type="submit" class="two" name="new_selection" value="Odabir nove selekcije"/>
+        <div id="mainlast">
+            <form method="post" class="formlast">
+                <h1 class="captionlast">Prosli ste ovaj deo kviza. Molimo vas da izaberete kako zelite da nastavite</h1>
+                <input type="submit" class="buttonlast" name="rerun" value="Ponoviti prolaz kroz trenutnu selekciju"/>
+                <input type="submit" class="buttonlast2" name="new_selection" value="Odabir nove selekcije"/>
             </form>
         </div>
     </body>

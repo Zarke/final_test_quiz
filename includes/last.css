@@ -1,8 +1,7 @@
 #mainlast {
 width: 1280px;
   margin: auto ;
-  background: url(background.jpg) no-repeat ;
-  height: 851px ;
+  background: url(../images/background.jpg) no-repeat ;
 }
 .captionlast {
 font-size: 30px;
@@ -16,30 +15,19 @@ padding-top: 9% ;
 font-size: 30px;
   color: white ;
 }
-.buttonlast {
+.buttonlast, .buttonlast2 {
 display: inline-block;
   position: relative;
-  margin: 28% 5% 0 13% ;
-  padding: 10px 15px 11px !important;
-font-size: 28px !important;
-background-color: rgba(87, 214, 199, 0.60) ;
-font-weight: bold;
-text-shadow: 1px 1px #57D6C7;
-color: #ffffff;
-border-radius: 5px;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-border: 1px solid #57D6C7;
-cursor: pointer;
-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
--moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
--webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-}
+  margin: 28% 5% 0 13% ; }
+
 .buttonlast2 {
 display: block;
   position: relative;
   margin-top: -4.5% ;
   margin-left: 65% ;
+}
+
+.buttonlast, .buttonlast2 {
   padding: 10px 15px 11px !important;
 font-size: 28px !important;
 background-color: rgba(87, 214, 199, 0.60) ;
@@ -55,24 +43,96 @@ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
+
 .buttonlast2:hover, .buttonlast:hover  {
 background-color: rgba(87, 214, 199, 0.30) ;
   font-size: 24px ;
 }
-border : solid 3px #666666;
-	border-radius : 20px;
-	moz-border-radius : 20px;
-	-webkit-box-shadow : inset 5px 4px 11px rgba(0,0,0,0.5);
-	-moz-box-shadow : inset 5px 4px 11px rgba(0,0,0,0.5);
-	box-shadow : inset 5px 4px 11px rgba(0,0,0,0.5);
-	font-size : 20px;
-	color : #d1ff6e;
-	padding : 6px 20px;
-	background : #053494;
-	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#053494), color-stop(100%,#22557d));
-	background : -moz-linear-gradient(top, #053494 0%, #22557d 100%);
-	background : -webkit-linear-gradient(top, #053494 0%, #22557d 100%);
-	background : -o-linear-gradient(top, #053494 0%, #22557d 100%);
-	background : -ms-linear-gradient(top, #053494 0%, #22557d 100%);
-	background : linear-gradient(top, #053494 0%, #22557d 100%);
-	filter : progid:DXImageTransform.Microsoft.gradient( startColorstr='#053494', endColorstr='#22557d',GradientType=0 );
+
+
+@media only screen and (max-width: 1199px) and (min-width:992px) {
+
+#mainlast {
+width: 95%;
+  margin: auto ;
+  background: url(../images/background.jpg) no-repeat ;
+}
+.captionlast {
+font-size: 25px;
+  text-align: center ;
+  color: #fff ;
+padding-top: 9% ;
+  margin: 2% auto 8% auto  ;
+  font-family: Arial ;
+}
+
+.buttonlast, .buttonlast2 {
+display: inline-block;
+  position: relative;
+  margin: 42% 5% 0 5% ;
+    padding: 2% ;
+  font-size: 20px !important;
+
+}
+
+.buttonlast2 {
+display: block;
+  position: relative;
+  margin-top: -5.1%;
+  margin-left: 55% ;
+  padding-top: 4% ;
+}
+}
+
+/* Zna se */
+@media only screen and (max-width: 1199px) and (min-width:1100px) {
+  .buttonlast2 {
+  margin-top: -4.5%;
+}
+}
+
+
+@media only screen and (max-width: 991px) and (min-width:769px) {
+  #mainlast {
+  width: 90%;
+  margin: auto ;
+  background: url(../images/background.jpg) no-repeat ;
+  }
+
+  .captionlast {
+font-size: 25px;
+  text-align: center ;
+  color: #fff ;
+padding-top: 9% ;
+  margin: 2% auto 8% auto  ;
+  font-family: Arial ;
+}
+.buttonlast, .buttonlast2 {
+display: inline-block;
+  position: relative;
+  margin: 50% 5% 0 5% ;
+    padding: 1% ;
+  font-size: 18px !important;
+}
+.buttonlast2 {
+display: block;
+  position: relative;
+  margin-top: -5.1%;
+  margin-left: 55% ;
+}
+}
+
+/* Zna se */
+@media only screen and (max-width: 925px) and (min-width:769px) {
+  .buttonlast2, .buttonlast {
+ margin: 50% 2% 0 2% ;
+  }
+  .buttonlast2 {
+display: block;
+  position: relative;
+  margin-top: -5.7%;
+  margin-left: 65% ;
+}
+}
+
+@media only screen and (max-width: 768px)

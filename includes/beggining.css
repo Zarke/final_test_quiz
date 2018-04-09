@@ -2,7 +2,6 @@
 width: 1280px;
   margin: auto ;
   background: url(../images/background.jpg) no-repeat ;
-  height: 851px ;
 }
 .caption {
 font-size: 60px;
@@ -31,4 +30,205 @@ margin: 18% 40% 50px 40% ;
   font-size: 50px ;
   text-align: center ;
   text-transform: uppercase ;
+   padding: 10px 15px 11px 10px !important;
+background-color: rgba(87, 214, 199, 0.60) ;
+font-weight: bold;
+text-shadow: 1px 1px #57D6C7;
+color: #ffffff;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border: 1px solid #57D6C7;
+cursor: pointer;
+  border: 2px solid #eee ;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+.beginsubmit:hover  {
+background-color: rgba(87, 214, 199, 0.30) ;
+}
+
+
+@media only screen and (max-width: 1199px) and (min-width:992px) {
+
+  #begin {
+width: 95%;
+  margin: auto ;
+  background: url(../images/background.jpg) no-repeat ;
+}
+
+  .caption {
+font-size: 50px;
+  text-align: center ;
+  color: #eee ;
+padding-top: 7% ;
+}
+  .beginform {
+font-size: 35px;
+  color: white ;
+}
+  .beginsubmit {
+margin: 18% 40% 50px 40% ;
+  width: 20% ;
+  font-size: 40px ;
+  text-align: center ;
+  text-transform: uppercase ;
+    font-family: Arial ;
+}
+
+span p {
+margin-top: -3.5% ;
+  margin-left: 10% ;
+}
+  .begininput {
+display: inline-block ;
+   position: relative;
+  color: white ;
+  text-shadow: 3px 3px 1px #111 ;
+  margin-left: 6% ;
+
+}
+}
+/*Pazi ovo je opcionalno, uradih jer su bezali dugmici u responsivu*/
+
+@media only screen and (max-width: 1100px) and (min-width:992px) {
+
+  span p {
+margin-top: -4% ;
+  margin-left: 10% ;
+}
+}
+
+@media only screen and (max-width: 991px) and (min-width:769px) {
+#begin {
+width: 90%;
+  margin: auto ;
+  background: url(../images/background.jpg) no-repeat ;
+}
+  .caption {
+font-size: 50px;
+  text-align: center ;
+  color: #eee ;
+padding-top: 7% ;
+}
+  .beginform {
+font-size: 30px;
+  color: white ;
+}
+  .beginsubmit {
+margin: 18% 40% 5% 40% ;
+  width: 20% ;
+  font-size: 30px ;
+  text-align: center ;
+  text-transform: uppercase ;
+    font-family: Arial ;
+  padding: 2% ;
+}
+span p {
+margin-top: -5% ;
+  margin-left: 10% ;
+}
+  .begininput {
+display: inline-block ;
+   position: relative;
+  color: white ;
+  text-shadow: 3px 3px 1px #111 ;
+  margin-left: 6% ;
+
+}
+}
+/*Ista prica*/
+@media only screen and (max-width: 991px) and (min-width: 820px) {
+span p {
+margin-top: -4% ;
+  margin-left: 10% ;
+}
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+  #begin {
+width: 95%;
+  margin: auto ;
+  background: url(../images/background.jpg) no-repeat ;
+}
+
+  .caption {
+font-size: 35px;
+  text-align: center ;
+  color: #eee ;
+padding-top: 7% ;
+    margin-bottom: 15% ;
+}
+
+  .beginform {
+font-size: 35px;
+  color: white ;
+    margin-bottom: 5% ;
+}
+
+  .beginsubmit {
+margin: 18% 40% 5% 40% ;
+  width: 25% ;
+  font-size: 25px ;
+  text-align: center ;
+  text-transform: uppercase ;
+    font-family: Arial ;
+  padding: 5% ;
+}
+
+span p {
+margin-top: -5.5% ;
+  margin-left: 10% ;
+}
+
+  .begininput {
+display: inline-block ;
+   position: relative;
+  color: white ;
+  text-shadow: 3px 3px 1px #111 ;
+  margin-left: 6% ;
+
+  }
+}
+
+
+/* Isto komentar*/
+  @media only screen and (max-width: 620px) and (min-width: 480px) {
+
+span p {
+margin-top: -7% ;
+  margin-left: 15% ;
+}
+    .beginsubmit {
+margin: 18% 40% 5% 40% ;
+  width: 25% ;
+  font-size: 20px ;
+  text-align: center ;
+  text-transform: uppercase ;
+    font-family: Arial ;
+  padding: 5% ;
+}
+}
+
+@media only screen and (max-width: 479px) {
+span p {
+margin-top: -8.75% ;
+  margin-left: 15% ;
+}
+  .beginsubmit {
+margin: 18% 25% ;
+  width: 50% ;
+  font-size: 20px ;
+  text-align: center ;
+  text-transform: uppercase ;
+    font-family: Arial ;
+  padding: 2% ;
+
+}
+}
 }
