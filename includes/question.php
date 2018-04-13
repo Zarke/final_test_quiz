@@ -85,19 +85,20 @@
                 $question_id_val = $last_question_id_placeholder;
 
                 foreach ($this->documents->{$question_id_val}->tacni_odgovori as $answer) {
-                    $answers[$this->id_answer] = $answer;
+                    $this->answers[$this->id_answer] = $answer;
                     $this->id_answer ++;
                 }
                
                $id_answer = 0;
-               $unchecked_correct = $answers;
+               $unchecked_correct = $this->answers;
+               
                if (empty($_POST['checkbox'])){
                     echo("<script>alert(\"Molim odaberite bar jedan od ponudjenih odgovora\")</script>");
                } else {
                 foreach ($_POST['checkbox'] as $answer) {
-                    if(isset($answer ,$answers)){
+                    if(in_array($answer , $this->answers)){
                         echo "<p class=\"true\">The answer: ". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." is correct </p><br>";
-                        question::deleteElement($answer, $unchecked_correct);
+                        $unchecked_correct = question::deleteElement($answer, $unchecked_correct);
                     } else {
                         echo "<p class=\"false\">The answer: ".$this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." is not correct </p><br>";
                     }
@@ -112,11 +113,12 @@
         }
 
         //deletes an item from the copy of the correct answer array
-        private static function deleteElement($element, &$array){
+        private static function deleteElement($element, $array){
             $index = array_search($element, $array);
             if($index !== false){
                 unset($array[$index]);
             }
+            return $array;
         }
 
         protected function get_cookie($question_name){
