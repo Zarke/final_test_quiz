@@ -102,7 +102,7 @@
                     } else {
                         echo "<p class=\"false\">The answer: ".$this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." is not correct </p><br>";
                     }
-                }//end of foreach lop
+                }//end of foreach lop hehe
                 
                 //loops all the unchecked correct answers
                foreach ($unchecked_correct as $correct) {
