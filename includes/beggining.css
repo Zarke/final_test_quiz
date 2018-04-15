@@ -19,6 +19,8 @@ display: inline-block ;
   color: white ;
   text-shadow: 3px 3px 1px #111 ;
   margin-left: 5% ;
+  visibility: hidden;
+
 }
 span p {
 margin-top: -3.5% ;
@@ -187,12 +189,12 @@ margin-top: -5.5% ;
 }
 
   .begininput {
-display: inline-block ;
-   position: relative;
-  color: white ;
-  text-shadow: 3px 3px 1px #111 ;
-  margin-left: 6% ;
-
+    display: inline-block ;
+    position: relative;
+    color: white ;
+    text-shadow: 3px 3px 1px #111 ;
+    margin-left: 6% ;
+    visibility: hidden;
   }
 }
 

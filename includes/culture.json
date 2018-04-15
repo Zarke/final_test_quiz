@@ -3,7 +3,7 @@
         "0":{
             "section questions":{
                 "0":{
-                    "pitanje": "Koliko je stara tvrdjava Smederevo",
+                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 0 qst 0",
                     "moguci_odgovori": {
                         "0": "150 godina",
                         "1": "250 godina",
@@ -13,7 +13,7 @@
                     "tacni_odgovori": [0]
                 },
                 "1":{
-                    "pitanje": "Koliko je stara Niska tvrdjava ",
+                    "pitanje": "Koliko je stara Niska tvrdjava img section 0 qst 1",
                     "moguci_odgovori": {
                         "0": "150 godina",
                         "1": "250 godina",
@@ -25,33 +25,9 @@
             }
         },
         "1":{
-            "section question":{
-                "0":{
-                    "pitanje": "Koliko je stara tvrdjava Petrovaradin",
-                    "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
-                    },
-                    "tacni_odgovori": [2]
-                },
-                "1":{
-                    "pitanje": "Koliko je stara Backa tvrdjava ",
-                    "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
-                    },
-                    "tacni_odgovori": [3]
-                }
-            }
-        },
-        "2":{
             "section questions":{
                 "0":{
-                    "pitanje": "Koliko je stara tvrdjava Smederevo",
+                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 1 qst 0",
                     "moguci_odgovori": {
                         "0": "150 godina",
                         "1": "250 godina",
@@ -61,7 +37,31 @@
                     "tacni_odgovori": [0]
                 },
                 "1":{
-                    "pitanje": "Koliko je stara Niska tvrdjava ",
+                    "pitanje": "Koliko je stara Niska tvrdjava img section 1 qst 1",
+                    "moguci_odgovori": {
+                        "0": "150 godina",
+                        "1": "250 godina",
+                        "2": "175 godina",
+                        "3": "350 godina"
+                    },
+                    "tacni_odgovori": [1]
+                }
+            }
+        },
+        "2":{
+            "section questions":{
+                "0":{
+                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 2 qst 0",
+                    "moguci_odgovori": {
+                        "0": "150 godina",
+                        "1": "250 godina",
+                        "2": "175 godina",
+                        "3": "350 godina"
+                    },
+                    "tacni_odgovori": [0]
+                },
+                "1":{
+                    "pitanje": "Koliko je stara Niska tvrdjava img section 2 qst 1",
                     "moguci_odgovori": {
                         "0": "150 godina",
                         "1": "250 godina",
@@ -75,7 +75,7 @@
         "3":{
             "section questions":{
                 "0":{
-                    "pitanje": "Koliko je stara tvrdjava Smederevo",
+                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 3 qst 0",
                     "moguci_odgovori": {
                         "0": "150 godina",
                         "1": "250 godina",
@@ -85,7 +85,7 @@
                     "tacni_odgovori": [2]
                 },
                 "1":{
-                    "pitanje": "Koliko je stara Niska tvrdjava ",
+                    "pitanje": "Koliko je stara Niska tvrdjava img section 3 qst 1",
                     "moguci_odgovori": {
                         "0": "150 godina",
                         "1": "250 godina",

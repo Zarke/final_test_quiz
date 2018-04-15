@@ -10,6 +10,7 @@
                 <?php
                     $selection->show_selections();
                     $selection->set_selection_and_redirect();
+                    
                 ?>
                 <input type="submit" class="beginsubmit" name="submit" value="submit"/>
             </form>

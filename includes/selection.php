@@ -3,14 +3,14 @@ include("question.php");
     class question_selection extends question {
         private $url = null;
         private $data = null;
-        private $documents = null;
-        private $cookie_name= "question_scope";
-        private $question_amount = null;
+        private $documents = null;//where the decoded json is stored
+        private $cookie_selection= "question_difficulty";
+        private $selection_num = null;//number of question selections
         public $question_set_array = array();
         
         //method for extractinh the JSON file taht contains the questions
         public function get_json(){
-            $this->url = 'includes/questions.json';
+            $this->url = 'includes/culture.json';
             $this->data = file_get_contents($this->url); 
             $this->documents = json_decode($this->data);
         }
@@ -18,38 +18,42 @@ include("question.php");
         //method for counting the question amount
         private function question_amount(){
             foreach($this->documents as $id => $question){
-                $this->question_amount ++;
+                $this->selection_num ++;
             }
         }
 
-        //method that tells us how many question groups there are based on the division
-        private function question_selection_partitioning($question_number){
-            return $question_number/25;
-        }
+        // //method that tells us how many question groups there are based on the division
+        // private function question_selection_partitioning($question_number){
+        //     return $question_number/25;
+        // }
 
         //method that activates on page load that lists all question groups
         public function show_selections(){
             $this->question_amount();
-            $selection_amount = $this->question_selection_partitioning($this->question_amount);
-                $start_question = 1;
-                $end_question = 25;
-                echo "<h1 class=\"caption\">Izaberite zeljenu grupu pitanja:</h1> <br>";
-                for ($i=1; $i <= $selection_amount; $i++) { 
-                    echo "<input class='begininput' type='checkbox' name= 'checkbox[]' value='".$end_question."'>"."<span><p>Grupa pitanja ".$i.": ".$start_question."-". $end_question."</p></span>"."<br>";
-                    $end_question +=25;
-                    $start_question +=25;
+                echo "<h1 class=\"caption\">Izaberite željenu težinu pitanja:</h1> <br>";
+                for ($i=0; $i <= $this->selection_num; $i++) { 
+                    switch ($i) {
+                        case 0:
+                            echo "<input class='begininput' id='".$i."' type='checkbox' name= 'checkbox[]' value='".$i."'>"."<label for='".$i."'>Težina pitanja: Laka</label>"."<br>";
+                            break;
+                        case 1:
+                            echo "<input class='begininput' id='".$i."' type='checkbox' name= 'checkbox[]' value='".$i."'>"."<label for='".$i."'>Težina pitanja: Teška</label>"."<br>";
+                            break;
+                    }
                 }  
         }
 
         public function set_selection_and_redirect(){
             if(isset($_POST['submit'])){
                 if (empty($_POST['checkbox'])){
-                    echo("<script>alert('Molim odaberite bar jednu od ponudjenih opcija')</script>");
+                    echo("<script>alert('Molim odaberite bar jednu od ponuđenih opcija')</script>");
                 } else {
                     foreach ($_POST['checkbox'] as $answer) {
                         if(isset($answer)){
                         $this->question_set_array[] = $answer;
-                        $this->set_cookie($this->cookie_name,$this->question_set_array);
+                        $this->set_cookie($this->cookie_selection,$this->question_set_array);
+                        $section_id = rand(0,3);
+                        $this->set_cookie("img_section",array($section_id));
                         self::redirect("quiz.php");
                         }
                     }
