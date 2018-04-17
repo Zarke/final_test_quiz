@@ -3,11 +3,46 @@
 <html>
     <head>
     <script src="javascript/jquery-3.3.1.min.js"></script>
+    <script src="javascript/jquery.cookie.js"></script>
     <script src="javascript/main.js"></script>
     <link rel="stylesheet" type="text/css" href="includes/zoki.css">
+    <script>
+        $(document).ready(function(){
+            var correct_sections = $.cookie("correct_sections");
+            var data = $.parseJSON(correct_sections);
+            $.each(data, function(i,item){
+                console.log(item);
+                $("td").each(function(){
+                    if($(this).hasClass(item)){
+                        $(this).removeClass("img__section");
+                    };
+                });
+            });
+        });
+    </script>
     </head>
    
     <body>
+    <?php
+        
+    ?>
+    <table class="img__cover">
+        <tr>
+            <td class="img__section 0"></td>
+            <td class="img__section 1"></td>
+            <td class="img__section 2"></td>
+        </tr>
+        <tr>
+            <td class="img__section 3"></td>
+            <td class="img__section 4"></td>
+            <td class="img__section 5"></td>
+        </tr>
+        <tr>
+            <td class="img__section 6"></td>
+            <td class="img__section 7"></td>
+            <td class="img__section 8"></td>
+        </tr>
+    </table>
         <div id="quiz">
             <form id="target" method="post">
                 <?php

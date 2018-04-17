@@ -30,14 +30,14 @@ include("question.php");
         //method that activates on page load that lists all question groups
         public function show_selections(){
             $this->question_amount();
-                echo "<h1 class=\"caption\">Izaberite željenu težinu pitanja:</h1> <br>";
+                echo "<h1 class=\"caption\">Izaberite željenu sliku:</h1> <br>";
                 for ($i=0; $i <= $this->selection_num; $i++) { 
                     switch ($i) {
                         case 0:
-                            echo "<input class='begininput' id='".$i."' type='checkbox' name= 'checkbox[]' value='".$i."'>"."<label for='".$i."'>Težina pitanja: Laka</label>"."<br>";
+                            echo "<input class='begininput' id='".$i."' type='checkbox' name= 'checkbox[]' value='".$i."'>"."<label for='".$i."'>Istorija banata</label>"."<br>";
                             break;
                         case 1:
-                            echo "<input class='begininput' id='".$i."' type='checkbox' name= 'checkbox[]' value='".$i."'>"."<label for='".$i."'>Težina pitanja: Teška</label>"."<br>";
+                            echo "<input class='begininput' id='".$i."' type='checkbox' name= 'checkbox[]' value='".$i."'>"."<label for='".$i."'>istorija beogradskog pasaluka</label>"."<br>";
                             break;
                     }
                 }  

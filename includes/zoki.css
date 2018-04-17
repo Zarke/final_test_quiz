@@ -82,3 +82,18 @@ position: relative ;
 top: 85% ;
 }
 
+.img__cover{
+  width: 640px;
+  height: 426px;
+  border-spacing: 0;
+  background-image: url(../images/fortress-1.jpg);
+}
+.img__section{
+  width: 213.333333px;
+  height: 142px;
+  background-color:black; 
+}
+.section__visible{
+  background-color: none!important;
+}
+
