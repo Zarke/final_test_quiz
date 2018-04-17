@@ -4,7 +4,7 @@ include("question.php");
         private $url = null;
         private $data = null;
         private $documents = null;//where the decoded json is stored
-        private $cookie_selection= "question_difficulty";
+        private $cookie_selection= "question_set";
         private $selection_num = null;//number of question selections
         public $question_set_array = array();
         
@@ -53,6 +53,8 @@ include("question.php");
                         $this->question_set_array[] = $answer;
                         $this->set_cookie($this->cookie_selection,$this->question_set_array);
                         $section_id = rand(0,3);
+                        $answer = json_encode($answer);
+                        setcookie("img_id", $answer, time()+(2400), "/");
                         $this->set_cookie("img_section",array($section_id));
                         self::redirect("quiz.php");
                         }

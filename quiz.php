@@ -7,11 +7,15 @@
     <script src="javascript/main.js"></script>
     <link rel="stylesheet" type="text/css" href="includes/zoki.css">
     <script>
+        //table backgroud image is dinamicaly set base on the selected question set
         $(document).ready(function(){
+            var img_id_cookie = $.cookie("img_id");
+            var img_id = $.parseJSON(img_id_cookie);
+            var img_url = "url(images/fortress-"+ img_id + ".jpg)";
+            $("table").css("background-image",img_url);
             var correct_sections = $.cookie("correct_sections");
             var data = $.parseJSON(correct_sections);
             $.each(data, function(i,item){
-                console.log(item);
                 $("td").each(function(){
                     if($(this).hasClass(item)){
                         $(this).removeClass("img__section");

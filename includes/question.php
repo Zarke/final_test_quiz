@@ -2,7 +2,7 @@
     class question {
         private $img_sections = "img_section";//image sections that have been used
         private $question_ids = "question_ids";
-        private $question_difficulty = "question_difficulty";
+        private $question_set = "question_set";
         public  $sections_correct = "correct_sections";
         private $url = null;
         private $data = null;
@@ -30,7 +30,7 @@
                 array_push($arr_of_question_ids,$question_id); 
                 $this->set_cookie($this->question_ids,$arr_of_question_ids);
             }
-            $quiz_section = $this->get_cookie($this->question_difficulty);
+            $quiz_section = $this->get_cookie($this->question_set);
             $quiz_section_id = $quiz_section[0];//id of the current section
             if(!isset($_COOKIE[$this->img_sections])){
                 echo "<h1 class=\"question\">".$this->documents->{$quiz_section_id}->{0}->{"section questions"}->{$question_id}->{"pitanje"}."</h1> <br>";
@@ -51,7 +51,7 @@
             $question_id_array = $this->get_cookie($this->question_ids);
             //depending on the size of the array we choose which element to take
             $current_question_id = $this->last_arr_elem($question_id_array,1);//extraction of the question id
-            $quiz_section = $this->get_cookie($this->question_difficulty);
+            $quiz_section = $this->get_cookie($this->question_set);
             $quiz_section_id = $quiz_section[0];
 
             $curr_img_section_array = $this->get_cookie($this->img_sections);
@@ -102,7 +102,7 @@
             //depending on the size of the array we choose which element to take
             $current_question_id = $this->last_arr_elem($question_id_array,1);
 
-            $quiz_section = $this->get_cookie($this->question_difficulty);
+            $quiz_section = $this->get_cookie($this->question_set);
             $quiz_section_id = $quiz_section[0];//id of the current section
 
             $curr_img_section_array = $this->get_cookie($this->img_sections);//aquisition of the current image section
