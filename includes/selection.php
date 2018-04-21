@@ -1,10 +1,10 @@
 <?php
 include("question.php");
     class question_selection extends question {
-        private $url = null;
-        private $data = null;
-        private $documents = null;//where the decoded json is stored
-        private $cookie_selection= "question_set";
+        protected $url = null;
+        protected $data = null;
+        protected $documents = null;//where the decoded json is stored
+        public $cookie_selection= "question_set";
         private $selection_num = null;//number of question selections
         public $question_set_array = array();
         

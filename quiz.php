@@ -56,7 +56,6 @@
                     else if(isset($_POST['submit'])){
                         $question->get_current_question();
                     } else {
-                        
                         $question->get_question();
                     }        
                 ?>
