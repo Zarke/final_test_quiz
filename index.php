@@ -2,7 +2,7 @@
     ?>
 <html>
     <head>
-    <link rel="stylesheet" type="text/css" href="includes/beggining.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
     <body>
         <div id="begin">

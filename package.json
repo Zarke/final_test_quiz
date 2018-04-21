@@ -1,0 +1,25 @@
+{
+  "name": "cultural_heritage",
+  "version": "1.0.0",
+  "description": "quiz through which you learn about european cultural heritage",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass/main": "node-sass sass/materialize.scss css/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zarke/final_test_quiz.git"
+  },
+  "author": "Milan Zaric",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zarke/final_test_quiz/issues"
+  },
+  "homepage": "https://github.com/Zarke/final_test_quiz#readme",
+  "devDependencies": {
+    "node-sass": "^4.8.3"
+  },
+  "dependencies": {
+    "materialize-css": "^1.0.0-beta"
+  }
+}

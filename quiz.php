@@ -5,7 +5,7 @@
     <script src="javascript/jquery-3.3.1.min.js"></script>
     <script src="javascript/jquery.cookie.js"></script>
     <script src="javascript/main.js"></script>
-    <link rel="stylesheet" type="text/css" href="includes/zoki.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <script>
         //table backgroud image is dinamicaly set base on the selected question set
         $(document).ready(function(){
@@ -26,11 +26,8 @@
     </script>
     </head>
    
-    <body>
-    <?php
-        
-    ?>
-    <table class="img__cover">
+    <body class="container">
+    <table class="responsive-table table__img">
         <tr>
             <td class="img__section 0"></td>
             <td class="img__section 1"></td>
@@ -47,7 +44,7 @@
             <td class="img__section 8"></td>
         </tr>
     </table>
-        <div id="quiz">
+        <div class="">
             <form id="target" method="post">
                 <?php
                     if(isset($_POST['next'])){
