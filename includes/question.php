@@ -50,7 +50,7 @@
         }
 
         private function get_section_and_question_ids(){
-            $this->unchecked_correct = $this->get_cookie($this->unchecked_correct_sections);
+            if($this->unchecked_correct = $this->get_cookie($this->unchecked_correct_sections)){
             print_r($this->unchecked_correct);echo " Sva prodjena netacna pitanja <br>";
             $question_id = null;//value to be extracted from the assoc. array
             $img_sections_array = $this->get_cookie($this->img_sections);//array of all image sections that have been allready used
@@ -84,10 +84,13 @@
                             $this->set_cookie($this->img_sections, $img_sections_array);
                             return $question;
                         } 
-                    } else {
+                    } else{
                         question::redirect('choice.php');
                     }
                 }
+            }
+            } else {
+                question::redirect('choice.php');
             }
         }
 

@@ -8,11 +8,15 @@
         public function choose_action(){
             if(isset($_POST['rerun'])){
                 $section = rand(0,3);
-                $this->set_cookie($this->img_sections, serialize(array($section))) or die("Cookie nije tu!");
+                setcookie($this->img_sections, serialize(array($section)), time()+(2400), "/") or die("Cookie unsetting failed!");
+                $this->unset_cookie($this->unchecked_correct_sections);
+                $this->unset_cookie($this->sections_correct);
                 choosing::redirect('quiz.php');
             } else if(isset($_POST['new_selection'])){
-                setcookie($this->img_sections, '', time()-(2400), "/");
-                setcookie($this->question_selection, '', time()-(2400), "/");
+                $this->unset_cookie($this->img_sections);
+                $this->unset_cookie($this->question_selection);
+                $this->unset_cookie($this->unchecked_correct_sections);
+                $this->unset_cookie($this->sections_correct);
                 choosing::redirect('index.php');
             }else if(isset($_POST['check'])){
                 $this->curr_question_set = $this->get_cookie($this->question_set);
@@ -26,6 +30,10 @@
             }
         }
 
+        //method for unsetting a cookie
+        private function unset_cookie($cookie_name){
+            setcookie($cookie_name, '', time()-(2400), "/") or die("Cookie unsetting failed!");
+        }
         //method taht lists all 
         public function checkbox_listing(){
             $this->get_json();
@@ -46,5 +54,5 @@
         }
     }//end of class redirect
     $choice = new choosing();
-    $choice->choose_action();
+    
 ?>

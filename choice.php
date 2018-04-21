@@ -46,7 +46,7 @@
         <div id="mainlast">
             <form method="post" class="formlast">
                 <h1 class="captionlast">Čestitamo, odgovorili ste tačno na sva pitanja! Sada proverite svoje znanje tako što ćete pokušati da pogodite o kojoj tvrđavi je reč.</h1>
-                <?php $choice->checkbox_listing();?>
+                <?php $choice->checkbox_listing(); $choice->choose_action();?>
                 <input type="submit" class="buttonlast" name="rerun" value="Ponoviti prolaz kroz trenutnu selekciju"/>
                 <input type="submit" class="buttonlast3" name="check" value="Potvrdi odabir"/>
                 <input type="submit" class="buttonlast2" name="new_selection" value="Odabir nove selekcije"/>
