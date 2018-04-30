@@ -34,7 +34,7 @@
                         "2": "175 godina",
                         "3": "350 godina"
                     },
-                    "tacni_odgovori": [0]
+                    "tacni_odgovori": [2]
                 },
                 "1":{
                     "pitanje": "Koliko je stara Niska tvrdjava img section 1 qst 1",
@@ -44,7 +44,7 @@
                         "2": "175 godina",
                         "3": "350 godina"
                     },
-                    "tacni_odgovori": [1]
+                    "tacni_odgovori": [3]
                 }
             }
         },
@@ -93,6 +93,126 @@
                         "3": "350 godina"
                     },
                     "tacni_odgovori": [3]
+                }
+            }
+        },
+        "4":{
+            "section questions":{
+                "0":{
+                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 4 qst 0",
+                    "moguci_odgovori": {
+                        "0": "150 godina",
+                        "1": "250 godina",
+                        "2": "175 godina",
+                        "3": "350 godina"
+                    },
+                    "tacni_odgovori": [0]
+                },
+                "1":{
+                    "pitanje": "Koliko je stara Niska tvrdjava img section 4 qst 1",
+                    "moguci_odgovori": {
+                        "0": "150 godina",
+                        "1": "250 godina",
+                        "2": "175 godina",
+                        "3": "350 godina"
+                    },
+                    "tacni_odgovori": [1]
+                }
+            }
+        },
+        "5":{
+            "section questions":{
+                "0":{
+                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 5 qst 0",
+                    "moguci_odgovori": {
+                        "0": "150 godina",
+                        "1": "250 godina",
+                        "2": "175 godina",
+                        "3": "350 godina"
+                    },
+                    "tacni_odgovori": [2]
+                },
+                "1":{
+                    "pitanje": "Koliko je stara Niska tvrdjava img section 5 qst 1",
+                    "moguci_odgovori": {
+                        "0": "150 godina",
+                        "1": "250 godina",
+                        "2": "175 godina",
+                        "3": "350 godina"
+                    },
+                    "tacni_odgovori": [3]
+                }
+            }
+        },
+        "6":{
+            "section questions":{
+                "0":{
+                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 6 qst 0",
+                    "moguci_odgovori": {
+                        "0": "150 godina",
+                        "1": "250 godina",
+                        "2": "175 godina",
+                        "3": "350 godina"
+                    },
+                    "tacni_odgovori": [0]
+                },
+                "1":{
+                    "pitanje": "Koliko je stara Niska tvrdjava img section 6 qst 1",
+                    "moguci_odgovori": {
+                        "0": "150 godina",
+                        "1": "250 godina",
+                        "2": "175 godina",
+                        "3": "350 godina"
+                    },
+                    "tacni_odgovori": [1]
+                }
+            }
+        },
+        "7":{
+            "section questions":{
+                "0":{
+                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 7 qst 0",
+                    "moguci_odgovori": {
+                        "0": "150 godina",
+                        "1": "250 godina",
+                        "2": "175 godina",
+                        "3": "350 godina"
+                    },
+                    "tacni_odgovori": [2]
+                },
+                "1":{
+                    "pitanje": "Koliko je stara Niska tvrdjava img section 7 qst 1",
+                    "moguci_odgovori": {
+                        "0": "150 godina",
+                        "1": "250 godina",
+                        "2": "175 godina",
+                        "3": "350 godina"
+                    },
+                    "tacni_odgovori": [3]
+                }
+            }
+        },
+        "8":{
+            "section questions":{
+                "0":{
+                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 8 qst 0",
+                    "moguci_odgovori": {
+                        "0": "150 godina",
+                        "1": "250 godina",
+                        "2": "175 godina",
+                        "3": "350 godina"
+                    },
+                    "tacni_odgovori": [0]
+                },
+                "1":{
+                    "pitanje": "Koliko je stara Niska tvrdjava img section 8 qst 1",
+                    "moguci_odgovori": {
+                        "0": "150 godina",
+                        "1": "250 godina",
+                        "2": "175 godina",
+                        "3": "350 godina"
+                    },
+                    "tacni_odgovori": [1]
                 }
             }
         }

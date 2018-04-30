@@ -1,0 +1,97 @@
+#quiz {
+  width: 50% ;
+  background: url(../images/background.jpg);
+    color: white ;
+    float: left ;
+    margin-left: 2% ;
+  
+  }
+  .question {
+  text-align: center ;
+  color: #ce581c ;
+      margin: 6% auto 2% auto  ;
+    background-color: rgba(255,255,255,0.5) ;
+    width: 90% ;
+  }
+  .one {
+    margin-left: 12% ;
+    margin-bottom: 11%;
+    margin-top: 25px;
+  }
+  .two {
+  margin-left: 10% ;
+    width: 35% ;
+    margin-bottom: 5%;
+    font-size: 25px;
+    border: 1px solid #ccc;
+     position: relative;
+    padding-bottom: 2%;
+  border-radius: 2.5% ;
+    margin-top: 20%;
+    background-color: transparent ;
+    color: white ;
+    text-shadow: 3px 3px 1px #111 ;
+  }
+  
+  span p {
+  margin: -13.5% 15% 0px 15% ;
+    text-align:center;
+    font-size: 20px;
+    background-color: rgba(34, 34, 34, 0.7) ;
+    width: 53% ;
+    padding: 1.5% ;
+    position: relative ;
+  }
+  
+  #result {
+  width: 200px;
+  background-color: #ccc ;
+    margin-right: 10%;
+    float: left ;
+    margin-left: 50px;
+    padding: 2% 1% 2% 1% ;
+  }
+  
+  #result .false {
+  background-color: rgb(230, 40, 40) ;
+  }
+  #result .true {
+  background-color: green ;
+  }
+  #result p {
+  font-size: 25px ;
+    text-align: center ;
+    font-family: Georgia ;
+  color: white ;
+    padding: 5% 0 5% 0 ;
+  }
+  .should {
+  background-color: #327BAB ;
+  }
+  .false + .true   {
+    position: relative ;
+    top: -90% ;
+  }
+  .true ~ .false {
+  position: relative ;
+  top: 55%;
+  
+  }
+  .should {
+  position: relative ;
+  top: 85% ;
+  }
+  
+  .img__cover{
+    width: 640px;
+    height: 426px;
+    border-spacing: 0;
+  }
+  .img__section{
+    width: 213.333333px;
+    height: 142px;
+    background-color:black; 
+  }
+  .section__visible{
+    background-color: none!important;
+  }

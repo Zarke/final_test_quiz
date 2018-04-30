@@ -8,66 +8,66 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script>
         //table backgroud image is dinamicaly set base on the selected question set
-        $(document).ready(function(){
-            var img_id_cookie = $.cookie("img_id");
-            var img_id = $.parseJSON(img_id_cookie);
-            var img_url = "url(images/fortress-"+ img_id + ".jpg)";
-            $("table").css("background-image",img_url);
-            var correct_sections = $.cookie("correct_sections");
-            var data = $.parseJSON(correct_sections);
-            $.each(data, function(i,item){
-                $("td").each(function(){
-                    if($(this).hasClass(item)){
-                        $(this).removeClass("img__section");
-                    };
-                });
-            });
-        });
+        // $(document).ready(function(){
+        //     var img_id_cookie = $.cookie("img_id");
+        //     var img_id = $.parseJSON(img_id_cookie);
+        //     var img_url = "url(images/fortress-"+ img_id + ".jpg)";
+        //     $("table").css("background-image",img_url);
+        //     var correct_sections = $.cookie("correct_sections");
+        //     var data = $.parseJSON(correct_sections);
+        //     $.each(data, function(i,item){
+        //         $(".img__section").each(function(){
+        //             if($(this).hasClass("id-"+item)){
+        //                 $(this).removeClass("img__section");
+        //             };
+        //         });
+        //     });
+        // });
     </script>
     </head>
    
     <body class="container">
     <table class="responsive-table table__img">
         <tr>
-            <td class="img__section 0"></td>
-            <td class="img__section 1"></td>
-            <td class="img__section 2"></td>
+            <td class="img__section table__img--section id-0"></td>
+            <td class="img__section table__img--section id-1"></td>
+            <td class="img__section table__img--section id-2"></td>
         </tr>
         <tr>
-            <td class="img__section 3"></td>
-            <td class="img__section 4"></td>
-            <td class="img__section 5"></td>
+            <td class="img__section table__img--section id-3"></td>
+            <td class="img__section table__img--section id-4"></td>
+            <td class="img__section table__img--section id-5"></td>
         </tr>
         <tr>
-            <td class="img__section 6"></td>
-            <td class="img__section 7"></td>
-            <td class="img__section 8"></td>
+            <td class="img__section table__img--section id-6"></td>
+            <td class="img__section table__img--section id-7"></td>
+            <td class="img__section table__img--section id-8"></td>
         </tr>
     </table>
-        <div class="">
-            <form id="target" method="post">
+        <section class="row question">
+            <div class="col m12 question__answers ">
+                <?php  
+                    if(isset($_POST['submit'])){
+                        $question->check();
+                    }
+                ?>
+            </div>
+
+            <form class="question__form" method="post">
                 <?php
                     if(isset($_POST['next'])){
                         $question->get_question();
-                     }
+                    }
                     else if(isset($_POST['submit'])){
                         $question->get_current_question();
                     } else {
                         $question->get_question();
                     }        
                 ?>
-            <input type="submit" class="two" name="submit" value="submit"/>
-            <input type="submit" class="two" name="next" value="next question"/>
+                <input type="hidden" id="selected_answers" name="selected_answers" />
+                <input type="submit" class="question__form-btn btn-submit" name="submit" value="provera"/>
+                <input type="submit" class="question__form-btn btn-next" name="next" value="Sledeće pitanje"/>
             </form>
-        </div>
-        <div id="result">
-          
-                <?php  
-                    if(isset($_POST['submit'])){
-                        $question->check();
-                    }
-                ?>
-         
-        </div>
+        </section>    
     </body>
 </html>

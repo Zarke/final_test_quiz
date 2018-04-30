@@ -24,7 +24,6 @@
         //method for printing the question
         public function get_question(){
             $question_id = $this->randomisation();//the random number of the question
-            print_r($question_id);
             // here we set the question_ids cookie used in get_current_question method to make sure that the same question gets printed
             if(!isset($_COOKIE[$this->question_ids])){
                 $this->set_cookie($this->question_ids,array($question_id));
@@ -36,25 +35,35 @@
             $quiz_section = $this->get_cookie($this->question_set);
             $quiz_section_id = $quiz_section[0];//id of the current section
             if(!isset($_COOKIE[$this->img_sections])){
-                echo "<h1 class=\"question\">".$this->documents->{$quiz_section_id}->{0}->{"section questions"}->{$question_id}->{"pitanje"}."</h1> <br>";
+                echo "<h3 class='col m6 offset-m3 question__form-heading center-align'>".$this->documents->{$quiz_section_id}->{0}->{"section questions"}->{$question_id}->{"pitanje"}."</h3> <br>";
                 foreach ($this->documents->{$quiz_section_id}->{0}->{"section questions"}->{$question_id}->{"moguci_odgovori"} as $key => $odgovor) {
-                    echo "<input class=\"one\" type='checkbox' name= 'checkbox[]' value=" .$key.">"."<span><p>".$odgovor."</p></span>"."<br>";
+                    // echo "<input  id='".$key."' class='question__form-radio-input' type='radio' name= 'checkbox[]' value=" .$key.">"."<label class='col m3 question__form-radio-label center-align' for='".$key."'>".$odgovor."</label>"."<br>";
+                    echo $this->possible_answer_template($key,$odgovor);
                 }   
             }else{
                 $curr_img_section = $this->last_cookie_arr_elem($this->img_sections);//we extract the last element of the sections array
-                echo "<h1 class=\"question\">".$this->documents->{$quiz_section_id}->{$curr_img_section}->{"section questions"}->{$question_id}->{"pitanje"}."</h1> <br>";
+                echo "<h3 class='col m6 offset-m3 question__form-heading center-align'>".$this->documents->{$quiz_section_id}->{$curr_img_section}->{"section questions"}->{$question_id}->{"pitanje"}."</h3> <br>";
                 foreach ($this->documents->{$quiz_section_id}->{$curr_img_section}->{"section questions"}->{$question_id}->{"moguci_odgovori"} as $key => $odgovor) {
-                    echo "<input class='one' id='".$key."' type='checkbox' name= 'checkbox[]' value=" .$key.">"."<label for='".$key."'>"."<span><p>".$odgovor."</p></span>"."</label>"."<br>";
+                    // echo "<input  id='".$key."' class='question__form-radio-input' type='radio' name= 'checkbox[]' value=" .$key.">"."<label class='col m3 question__form-radio-label center-align' for='".$key."'>".$odgovor."</label>"."<br>";
+                    echo $this->possible_answer_template($key,$odgovor);
                 }
             } 
         }
 
+        private function possible_answer_template( $key,$odgovor){
+            if (in_array($key,array(0,1))){
+                return "<span class='question__form-possible_answer col m3 offset-m2' id='id_$key' data-value='$key' >$odgovor</span>";
+            } else if($key == 2){
+                return "<span class='question__form-possible_answer col m3 offset-m1' id='id_$key' data-value='$key' >$odgovor</span>";
+            } else{
+                return "<span class='question__form-possible_answer col m3 offset-m4' id='id_$key' data-value='$key' >$odgovor</span>";
+            }
+        }
+
         private function get_section_and_question_ids(){
             if($this->unchecked_correct = $this->get_cookie($this->unchecked_correct_sections)){
-            print_r($this->unchecked_correct);echo " Sva prodjena netacna pitanja <br>";
             $question_id = null;//value to be extracted from the assoc. array
             $img_sections_array = $this->get_cookie($this->img_sections);//array of all image sections that have been allready used
-            print_r($img_sections_array);echo " Sva prodjena pitanja <br>";
             if(!isset($_COOKIE[$this->sections_correct])){
                 foreach($this->unchecked_correct as $section => $question){
                     $last_img_section = $this->last_arr_elem($img_sections_array,1);
@@ -67,20 +76,17 @@
             } else {
                 $checked_corr = $_COOKIE[$this->sections_correct];
                 $checked_corr = json_decode($checked_corr);
-                print_r($checked_corr);echo "svi tacni sectioni <br>";
                 foreach($this->unchecked_correct as $section => $question){
                     $last_img_section = $this->last_arr_elem($img_sections_array,1);
-                    if(count($checked_corr) < 3){
+                    if(count($checked_corr) < 8){
                         if(!in_array($section,$checked_corr ) && $section != $last_img_section ){
                             array_push($img_sections_array,$section);
-                            print_r($img_sections_array);echo " Sva prodjena pitanja nakod sto si prosao ovo<br>";
                             $this->set_cookie($this->img_sections, $img_sections_array);
                             return $this->unchecked_correct[$last_img_section];
                         } 
-                    } else if(count($checked_corr) !=4){
+                    } else if(count($checked_corr) !=9){
                         if(!in_array($section,$checked_corr )){
                             array_push($img_sections_array,$section);
-                            print_r($img_sections_array);echo " Sva prodjena pitanja nakod sto si prosao ovo<br>";
                             $this->set_cookie($this->img_sections, $img_sections_array);
                             return $question;
                         } 
@@ -97,18 +103,17 @@
         //method for printing the current qestion for which we are checking the answer
         public function get_current_question(){
             $question_id_array = $this->get_cookie($this->question_ids);
-            print_r($question_id_array);echo"ID svih prodjenih pitanja";
             $current_question_id = $this->last_arr_elem($question_id_array,1);//extraction of the question id
             $quiz_section = $this->get_cookie($this->question_set);
             $quiz_section_id = $quiz_section[0];
 
-            $curr_img_section_array = $this->get_cookie($this->img_sections);
-            print_r($curr_img_section_array);echo "Ovo je array prodjenih pitanja iz kog ces da vuces sledeci section";
+            $curr_img_section_array = $this->get_cookie($this->img_sections);;
             $curr_img_section = $this->last_arr_elem($curr_img_section_array,2);
 
-            echo "<h1 class=\"question\">".$this->documents->{$quiz_section_id}->{$curr_img_section}->{"section questions"}->{$current_question_id}->{"pitanje"}."</h1> <br>";
+            echo "<h3 class='col m6 offset-m3 question__form-heading center-align'>".$this->documents->{$quiz_section_id}->{$curr_img_section}->{"section questions"}->{$current_question_id}->{"pitanje"}."</h3> <br>";
             foreach ($this->documents->{$quiz_section_id}->{$curr_img_section}->{"section questions"}->{$current_question_id}->{"moguci_odgovori"} as $key => $odgovor) {
-                echo "<input class='one' id='".$key."' type='checkbox' name= 'checkbox[]' value=" .$key.">"."<label for='".$key."'>"."<span><p>".$odgovor."</p></span>"."</label>"."<br>";
+                // echo "<input id='".$key."' class='question__form-radio-input' type='radio' name= 'checkbox[]' value=" .$key.">"."<label class='col m3 question__form-radio-label center-align' for='".$key."'>".$odgovor."</label>"."<br>";
+                echo $this->possible_answer_template($key,$odgovor);
             }
         }
         //method for randomization of questions
@@ -118,8 +123,8 @@
                 return $question_id;  
             } else {
                 $img_sections_array = $this->get_cookie($this->img_sections);//array of all image sections that have been allready used
-                $section_id = rand(0,3); //image section id is randomly generated
-                if(count($img_sections_array) < 4){
+                $section_id = rand(0,8); //image section id is randomly generated
+                if(count($img_sections_array) < 9){
                     if (in_array($section_id, $img_sections_array)){
                         return $this->randomisation();                      
                     } else{
@@ -128,9 +133,9 @@
                         $key = rand(0,1);
                         return $key;
                     }
-                } else if(count($img_sections_array)== 4){
+                } else if(count($img_sections_array)== 9){
                     if(isset($_COOKIE[$this->unchecked_correct_sections])){
-                        $incorrect_answers = $this->get_cookie($this->unchecked_correct_sections);//we make sure that the first sectionid to be used when we start looping incorrect questions is from the $unchecked_correct_sections cookie
+                        $incorrect_answers = $this->get_cookie($this->unchecked_correct_sections);//we make sure that the first section_id to be used when we start looping incorrect questions is from the $unchecked_correct_sections cookie
                         reset($incorrect_answers);
                         $section_id = key($incorrect_answers);
                     }
@@ -141,7 +146,7 @@
                   }
                   else if(isset($_COOKIE[$this->sections_correct])){
                     $correct_sections = $_COOKIE[$this->sections_correct];  
-                    if(count($correct_sections) != 4){
+                    if(count($correct_sections) != 9){
                       //returns question id and sets section id for one of the section from the unchecked_correct_sections cookie
                         $key = $this->get_section_and_question_ids();
                         return $key;
@@ -177,14 +182,13 @@
                $id_answer = 0;
                $unchecked_correct = $this->answers;
                
-               if (empty($_POST['checkbox'])){
+               if (!isset($_POST['selected_answers'])){
                     echo("<script>alert(\"Molim odaberite bar jedan od ponudjenih odgovora\")</script>");
-               } else {
-                foreach ($_POST['checkbox'] as $answer) {
+               } else  {
+                    $answer = $_POST['selected_answers'];
                     if(in_array($answer , $this->answers)){
-                        echo "<p class=\"true\">The answer: ". $this->documents->{$quiz_section_id}->{$curr_img_section}->{"section questions"}->{$current_question_id}->{"moguci_odgovori"}->{$answer} ." is correct </p><br>";
+                        echo "<div class='question__answers--correct '>Odgovor: ". $this->documents->{$quiz_section_id}->{$curr_img_section}->{"section questions"}->{$current_question_id}->{"moguci_odgovori"}->{$answer} ." je tačan </div>";
                         $unchecked_correct = question::deleteElement($answer, $unchecked_correct);
-                        print_r ($unchecked_correct);
                         //a json cookie is set containing all the correctly answered sections
                         if (!isset($_COOKIE[$this->sections_correct])) {
                             $curr_section = array($curr_img_section);
@@ -198,16 +202,17 @@
                             setcookie($this->sections_correct, $sections_correct_ids, time()+(2400), "/");
                         }
                     } else {
-                        echo "<p class=\"false\">Odgovor: ".$this->documents->{$quiz_section_id}->{$curr_img_section}->{"section questions"}->{$current_question_id}->{"moguci_odgovori"}->{$answer}." nije tačan. </p><br>";
+                        echo "<div class='question__answers--incorrect '>Odgovor: ".$this->documents->{$quiz_section_id}->{$curr_img_section}->{"section questions"}->{$current_question_id}->{"moguci_odgovori"}->{$answer}." nije tačan. </div>";
                     }
-                }//end of foreach lop hehe
+               
                 
                 //loops all the unchecked correct answers 
                     foreach ($unchecked_correct as $correct) {
-                        echo "<p class=\"should\">Trebali ste da čekirate: ".$this->documents->{$quiz_section_id}->{$curr_img_section}->{"section questions"}->{$current_question_id}->{"moguci_odgovori"}->{$correct}."</p><br>" ;
-                    }
-                    //sets a cookie of unchecked answers and their respective sections
-                    if(empty($unchecked_correct)){
+                        echo "<div class='question__answers--unchecked ' >Trebali ste da odaberete: ".$this->documents->{$quiz_section_id}->{$curr_img_section}->{"section questions"}->{$current_question_id}->{"moguci_odgovori"}->{$correct}."</div>" ;
+                        
+                    }//end of unchecked correct foreach loop
+                     //sets a cookie of unchecked answers and their respective sections
+                     if(empty($unchecked_correct)){
                     } else {
                         if(!isset($_COOKIE[$this->unchecked_correct_sections])){
                             $unchecked_correct = array($curr_img_section =>$current_question_id);
@@ -219,7 +224,7 @@
                             $this->set_cookie($this->unchecked_correct_sections,$unchecked_correct_cookie);
                         }
                         
-                    }
+                    }    
                }
               
         }
