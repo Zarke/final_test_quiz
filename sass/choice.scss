@@ -55,42 +55,19 @@
     }
 }
 
-.img__section{
+.img_section{
     background-color: color("deep-orange",'accent-3');
 }
-.question{
-    background: url(../images/question-background.jpg);
+.img_check{
+    background: url(../images/choice_bckg.jpg);
     background-size: cover;
     height: 60vh;
     position: relative;
-    &__answers{
-        background-color: rgba($color: color("grey","darken-4"), $alpha: 0.6);
-        box-shadow: 0 -.666rem 1.3rem -2px color("grey","darken-4") inset;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: color("shades","white");
 
-        &--correct{
-            @include answer;
-            background-color: color("green","darken-1");
-            width: 100%;
-        }
-
-        &--incorrect{
-            @include answer;
-            background-color: color("materialize-red","darken-1");
-            width:50%;
-        }
-        &--unchecked{
-            @include answer;
-            background-color: color("blue","darken-1");
-            width:50%;
-        }
-    }
     &__form{ 
         &-heading{
             background-color:rgba($color: color("grey","darken-4"), $alpha: 0.75);
+            padding: 1rem!important;
             box-shadow: 0 1rem 2.667rem color("grey","darken-4");
             color:color("grey","lighten-5");
             border-radius: 7px;
@@ -102,6 +79,7 @@
             background-color:rgba($color: map-get($grey,'lighten-1'), $alpha: 0.75);
             box-shadow: .4rem .4rem .5rem map-get($grey,'darken-4');
             height: 6rem;
+            color: color('shades','white');
             vertical-align: middle;
             line-height: 6rem;
             margin-bottom: 3rem;
@@ -119,7 +97,7 @@
             border: 1px solid color("shades","white");
             text-transform: uppercase;
             height: 5rem;
-            width: 13rem;
+            width: 14rem;
             cursor: pointer;
             transition: all .2s;
             &:hover{
@@ -137,9 +115,13 @@
     }
 }
 
-.btn-next{
-    right: 10rem;
+.btn-rerun{
+    left: 5rem;
+    width: 15rem!important;
 }
-.btn-submit{ 
-    left: 10rem;
+.btn-check{ 
+    left: 43%;
+}
+.btn-new_selection{ 
+    right: 5rem;
 }

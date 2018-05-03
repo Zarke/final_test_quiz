@@ -39,7 +39,7 @@
             $this->get_json();
             $this->fortress_arr = $this->documents->{'lista tvrdajva'};
             foreach( $this->fortress_arr as $key => $value){
-                echo "<input class='checkbox' id='".$key."' type='radio' name= 'radio_btn[]' value=" .$key.">"."<label for='".$key."'>".$value."</label>"."<br>";
+                echo "<input class='checkbox' id='".$key."' type='radio' name= 'radio_btn[]' value=" .$key.">"."<label class='img_check__form-possible_answer col m3 offset-m2' for='".$key."'>".$value."</label>"."<br>";
             }
         }
         //method that cheks if the corect answer was chosen in the checkbox list

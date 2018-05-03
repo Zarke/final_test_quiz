@@ -6520,59 +6520,23 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
     border: 0.333rem solid #000000;
     width: 33.333333%; }
 
-.img__section {
+.img_section {
   background-color: #ff3d00; }
 
-.question {
-  background: url(../images/question-background.jpg);
+.img_check {
+  background: url(../images/choice_bckg.jpg);
   background-size: cover;
   height: 60vh;
   position: relative; }
-  .question__answers {
-    background-color: rgba(33, 33, 33, 0.6);
-    box-shadow: 0 -0.666rem 1.3rem -2px #212121 inset;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF; }
-    .question__answers--correct {
-      border-radius: 5px;
-      font-size: 20px;
-      text-align: center;
-      display: inline-block;
-      padding: 10px 10px;
-      margin: 10px 10px;
-      vertical-align: middle;
-      background-color: #43A047;
-      width: 100%; }
-    .question__answers--incorrect {
-      border-radius: 5px;
-      font-size: 20px;
-      text-align: center;
-      display: inline-block;
-      padding: 10px 10px;
-      margin: 10px 10px;
-      vertical-align: middle;
-      background-color: #d0181e;
-      width: 50%; }
-    .question__answers--unchecked {
-      border-radius: 5px;
-      font-size: 20px;
-      text-align: center;
-      display: inline-block;
-      padding: 10px 10px;
-      margin: 10px 10px;
-      vertical-align: middle;
-      background-color: #1E88E5;
-      width: 50%; }
-  .question__form-heading {
+  .img_check__form-heading {
     background-color: rgba(33, 33, 33, 0.75);
+    padding: 1rem !important;
     box-shadow: 0 1rem 2.667rem #212121;
     color: #fafafa;
     border-radius: 7px;
     margin-bottom: 6rem;
     border: 1px solid #bdbdbd; }
-  .question__form-possible_answer {
+  .img_check__form-possible_answer {
     border-radius: 5px;
     font-size: 20px;
     text-align: center;
@@ -6583,13 +6547,14 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
     background-color: rgba(189, 189, 189, 0.75);
     box-shadow: 0.4rem 0.4rem 0.5rem #212121;
     height: 6rem;
+    color: #FFFFFF;
     vertical-align: middle;
     line-height: 6rem;
     margin-bottom: 3rem;
     cursor: pointer; }
-    .question__form-possible_answer.active {
+    .img_check__form-possible_answer.active {
       background-color: rgba(41, 182, 246, 0.75); }
-  .question__form-btn {
+  .img_check__form-btn {
     border-radius: 5px;
     font-size: 20px;
     text-align: center;
@@ -6604,19 +6569,23 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
     border: 1px solid #FFFFFF;
     text-transform: uppercase;
     height: 5rem;
-    width: 13rem;
+    width: 14rem;
     cursor: pointer;
     transition: all .2s; }
-    .question__form-btn:hover {
+    .img_check__form-btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-    .question__form-btn:active, .question__form-btn:focus {
+    .img_check__form-btn:active, .img_check__form-btn:focus {
       outline: none;
       transform: translateY(-1px);
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
-.btn-next {
-  right: 10rem; }
+.btn-rerun {
+  left: 5rem;
+  width: 15rem !important; }
 
-.btn-submit {
-  left: 10rem; }
+.btn-check {
+  left: 43%; }
+
+.btn-new_selection {
+  right: 5rem; }
