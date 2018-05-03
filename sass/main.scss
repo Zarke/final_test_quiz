@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+// Color
+@import "components/color-variables";
+@import "components/color-classes";
+
+// Variables;
+@import "components/variables";
+
+// Reset
+@import "components/normalize";
+
+// Mixins
+@import "components//mixins";
+
+// components
+@import "components/global";
+@import "components/badges";
+@import "components/icons-material-design";
+@import "components/grid";
+@import "components/navbar";
+@import "components/typography";
+@import "components/transitions";
+@import "components/cards";
+@import "components/toast";
+@import "components/tabs";
+@import "components/tooltip";
+@import "components/buttons";
+@import "components/dropdown";
+@import "components/waves";
+@import "components/modal";
+@import "components/collapsible";
+@import "components/chips";
+@import "components/materialbox";
+@import "components/forms/forms";
+@import "components/table_of_contents";
+@import "components/sidenav";
+@import "components/preloader";
+@import "components/slider";
+@import "components/carousel";
+@import "components/tapTarget";
+@import "components/pulse";
+@import "components/datepicker";
+@import "components/timepicker";
+
+
+.table__img{
+    background: url(../img/hero.jpg);
+    background-size: cover;
+    height: 35vh;
+    border: 1rem solid color('shades','black');
+    &--section{
+        border: .333rem solid color("shades","black");
+        width: 33.333333%; 
+    }
+}
+
+.img__section{
+    background-color: color("deep-orange",'accent-3');
+}
+.question{
+    background: url(../images/question-background.jpg);
+    background-size: cover;
+    height: 60vh;
+    position: relative;
+    &__answers{
+        background-color: rgba($color: color("grey","darken-4"), $alpha: 0.6);
+        box-shadow: 0 -.666rem 1.3rem -2px color("grey","darken-4") inset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: color("shades","white");
+
+        &--correct{
+            @include answer;
+            background-color: color("green","darken-1");
+            width: 100%;
+        }
+
+        &--incorrect{
+            @include answer;
+            background-color: color("materialize-red","darken-1");
+            width:50%;
+        }
+        &--unchecked{
+            @include answer;
+            background-color: color("blue","darken-1");
+            width:50%;
+        }
+    }
+    &__form{ 
+        &-heading{
+            background-color:rgba($color: color("grey","darken-4"), $alpha: 0.75);
+            box-shadow: 0 1rem 2.667rem color("grey","darken-4");
+            color:color("grey","lighten-5");
+            border-radius: 7px;
+            margin-bottom: 6rem;
+            border: 1px solid color("grey","lighten-1");
+        }
+        &-possible_answer{
+            @include answer;
+            background-color:rgba($color: map-get($grey,'lighten-1'), $alpha: 0.75);
+            box-shadow: .4rem .4rem .5rem map-get($grey,'darken-4');
+            cursor:pointer;
+            height: 6rem;
+            vertical-align: middle;
+            line-height: 6rem;
+            margin-bottom: 3rem;
+
+            &.active{
+                background-color:rgba($color: color("light-blue","lighten-1"), $alpha: 0.75);
+            }
+        }
+        &-btn{
+            @include answer;
+            background-color:rgba($color: color("grey","darken-4"), $alpha: 0.75);
+            position: absolute;
+            bottom: 5rem;
+            color: color("shades","white");
+            border: 1px solid color("shades","white");
+            text-transform: uppercase;
+            height: 5rem;
+            width: 13rem;
+            cursor: pointer;
+            transition: all .2s;
+            &:hover{
+                transform: translateY(-3px);
+                box-shadow: 0 1rem 2rem rgba(color("shades","black"),.2);
+            }
+            &:active,
+            &:focus{
+                outline: none;
+                transform: translateY(-1px);
+                box-shadow: 0 .5rem 1rem rgba(color("shades","black"),.2);
+            }
+        }
+       
+    }
+}
+
+.btn-next{
+    right: 10rem;
+}
+.btn-submit{ 
+    left: 10rem;
+}

@@ -4,7 +4,7 @@
   "description": "quiz through which you learn about european cultural heritage",
   "main": "index.js",
   "scripts": {
-    "compile:sass/main": "node-sass sass/materialize.scss css/main.css -w"
+    "compile:sass": "multi-sass --directory sass/ --output css/ --source-map --f sass/main.scss --o css/main.css --n --f sass/index.scss --o css/index.css --n --f sass/choice.scss --o css/choice.css -w"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,7 @@
   },
   "homepage": "https://github.com/Zarke/final_test_quiz#readme",
   "devDependencies": {
+    "multi-sass": "^1.0.0",
     "node-sass": "^4.8.3"
-  },
-  "dependencies": {
-    "materialize-css": "^1.0.0-beta"
   }
 }

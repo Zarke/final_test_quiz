@@ -65,8 +65,8 @@
                     }        
                 ?>
                 <input type="hidden" id="selected_answers" name="selected_answers" />
-                <input type="submit" class="question__form-btn btn-submit" name="submit" value="provera"/>
-                <input type="submit" class="question__form-btn btn-next" name="next" value="Sledeće pitanje"/>
+                <input type="submit" class=" waves-effect waves-light question__form-btn btn-submit" name="submit" value="provera"/>
+                <input type="submit" class=" waves-effect waves-light question__form-btn btn-next" name="next" value="Sledeće pitanje"/>
             </form>
         </section>    
     </body>

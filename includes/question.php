@@ -182,7 +182,7 @@
                $id_answer = 0;
                $unchecked_correct = $this->answers;
                
-               if (!isset($_POST['selected_answers'])){
+               if (!isset($_POST['selected_answers']) ){
                     echo("<script>alert(\"Molim odaberite bar jedan od ponudjenih odgovora\")</script>");
                } else  {
                     $answer = $_POST['selected_answers'];
