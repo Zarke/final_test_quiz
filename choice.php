@@ -2,7 +2,7 @@
     ?>
 <html>
     <head>
-    <link rel="stylesheet" type="text/css" href="includes/last.css">
+    <link rel="stylesheet" type="text/css" href="css/choice.css">
     </head>
     <body>
         <div id="mainlast">

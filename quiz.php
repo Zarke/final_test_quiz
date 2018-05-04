@@ -3,14 +3,8 @@
 <html>
     <head>
     <script src="javascript/jquery-3.3.1.min.js"></script>
-    <script >
-        $(document).ready(function(){
-            if($("#result").children().length == 0){
-                $("#result").css("visibility","hidden");
-            }
-        });
-    </script>
-    <link rel="stylesheet" type="text/css" href="includes/zoki.css">
+    <script src="javascript/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/quiz.css">
     </head>
    
     <body>
