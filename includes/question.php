@@ -112,7 +112,6 @@
 
             echo "<h3 class='col m6 offset-m3 question__form-heading center-align'>".$this->documents->{$quiz_section_id}->{$curr_img_section}->{"section questions"}->{$current_question_id}->{"pitanje"}."</h3> <br>";
             foreach ($this->documents->{$quiz_section_id}->{$curr_img_section}->{"section questions"}->{$current_question_id}->{"moguci_odgovori"} as $key => $odgovor) {
-                // echo "<input id='".$key."' class='question__form-radio-input' type='radio' name= 'checkbox[]' value=" .$key.">"."<label class='col m3 question__form-radio-label center-align' for='".$key."'>".$odgovor."</label>"."<br>";
                 echo $this->possible_answer_template($key,$odgovor);
             }
         }

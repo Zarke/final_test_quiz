@@ -45,13 +45,13 @@ include("question.php");
                 } else {
                     foreach ($_POST['checkbox'] as $answer) {
                         if(isset($answer)){
-                        $this->question_set_array[] = $answer;
-                        $this->set_cookie($this->cookie_selection,$this->question_set_array);
-                        $section_id = rand(0,3);
-                        $answer = json_encode($answer);
-                        setcookie("img_id", $answer, time()+(2400), "/");
-                        $this->set_cookie("img_section",array($section_id));
-                        self::redirect("quiz.php");
+                            $this->question_set_array[] = $answer;
+                            $this->set_cookie($this->cookie_selection,$this->question_set_array);
+                            $section_id = rand(0,3);
+                            $answer = json_encode($answer);
+                            setcookie("img_id", $answer, time()+(2400), "/");
+                            $this->set_cookie("img_section",array($section_id));
+                            self::redirect("quiz.php");
                         }
                     }
                 }

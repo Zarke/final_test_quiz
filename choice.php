@@ -34,6 +34,13 @@
             </tr>
         </table>
         <section class="row img_check">
+            <div class="col m12 img_check__answers">
+                <?php  
+                    if(isset($_POST['check'])){
+                        $choice->checkbox_guess();
+                    }
+                ?>
+            </div>
             <form method="post" class="img_check__form">
                 <h3 class="img_check__form-heading col m8 offset-m2 center-align">Čestitamo, odgovorili ste tačno na sva pitanja! Sada proverite svoje znanje tako što ćete pokušati da pogodite o kojoj tvrđavi je reč.</h3>
                 <?php $choice->checkbox_listing(); $choice->choose_action();?>
