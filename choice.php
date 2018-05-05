@@ -4,13 +4,13 @@
     <head>
     <link rel="stylesheet" type="text/css" href="css/choice.css">
     </head>
-    <body>
-        <div id="mainlast">
-            <form method="post" class="formlast">
-                <h1 class="captionlast">Prosli ste ovaj deo kviza. Molimo vas da izaberete kako zelite da nastavite</h1>
-                <input type="submit" class="buttonlast" name="rerun" value="Ponoviti prolaz kroz trenutnu selekciju"/>
-                <input type="submit" class="buttonlast2" name="new_selection" value="Odabir nove selekcije"/>
+    <body class="container">
+        <section class="row section_choose_action">
+            <form method="post" class="section_choose_action__form">
+                <h1 class="section_choose_action__form-heading center-align ">Prošli ste ovaj deo kviza. Molimo vas da izaberete kako želite da nastavite</h1>
+                <input type="submit" class="section_choose_action__form-btn btn-rerun" name="rerun" value="Ponoviti trenutnu selekciju"/>
+                <input type="submit" class="section_choose_action__form-btn btn-new_selection" name="new_selection" value="Nova selekcija"/>
             </form>
-        </div>
+        </section>
     </body>
 </html>

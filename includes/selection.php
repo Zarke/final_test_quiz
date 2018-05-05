@@ -33,9 +33,10 @@ include("question.php");
             $selection_amount = $this->question_selection_partitioning($this->question_amount);
                 $start_question = 1;
                 $end_question = 25;
-                echo "<h1 class=\"caption\">Izaberite zeljenu grupu pitanja:</h1> <br>";
+                echo "<h1 class='section_choice__form-heading center-align'>Izaberite zeljenu grupu pitanja</h1>";
                 for ($i=1; $i <= $selection_amount; $i++) { 
-                    echo "<input class='begininput' type='checkbox' name= 'checkbox[]' value='".$end_question."'>"."<span><p>Grupa pitanja ".$i.": ".$start_question."-". $end_question."</p></span>"."<br>";
+                    // echo "<input class='begininput' type='checkbox' name= 'checkbox[]' value='".$end_question."'>"."<span><p>Grupa pitanja ".$i.": ".$start_question."-". $end_question."</p></span>"."<br>";
+                    echo "<input id='".$end_question."' type='checkbox' name='checkbox[]' value='".$end_question."'>"."<label class='section_choice__form-option' for='".$end_question."'>Grupa pitanja: ".$start_question." - ".$end_question."</label>";
                     $end_question +=25;
                     $start_question +=25;
                 }  

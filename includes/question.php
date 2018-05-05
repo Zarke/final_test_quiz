@@ -20,9 +20,9 @@
         //method for printing the question
         public function get_question(){
            $question_id = $this->randomisation();
-           echo "<h1 class=\"question\">".$this->documents->{$question_id}->pitanje."</h1> <br>";
+           echo "<h3 class='question__form-heading center-align'>".$this->documents->{$question_id}->pitanje."</h3>";
            foreach ($this->documents->{$question_id}->moguci_odgovori as $key => $odgovor) {
-               echo "<input class=\"one\" type='checkbox' name= 'checkbox[]' value=" .$key.">"."<span><p>".$odgovor."</p></span>"."<br>";
+               echo "<input id='".$key."' type='checkbox' name= 'checkbox[]' value=" .$key.">"."<label  class='question__form-possible_answer' for='".$key."' >".$odgovor."</label>";
                
            }
         }
@@ -31,9 +31,9 @@
             $question_id_array = $this->get_cookie($this->used_questions);
             $current_question_id = end($question_id_array);
             $question_id = $current_question_id;
-            echo "<h1 class=\"question\">".$this->documents->{$question_id}->pitanje."</h1> <br>";
+            echo "<h3 class='question__form-heading center-align'>".$this->documents->{$question_id}->pitanje."</h3>";
            foreach ($this->documents->{$question_id}->moguci_odgovori as $key => $odgovor) {
-               echo "<input class=\"one\" type='checkbox' name= 'checkbox[]' value=" .$key.">"."<span><p>".$odgovor."</p></span>"."<br>";
+            echo "<input id='".$key."' type='checkbox' name= 'checkbox[]' value=" .$key.">"."<label  class='question__form-possible_answer' for='".$key."' >".$odgovor."</label>";
                
            }
         }
@@ -97,16 +97,19 @@
                } else {
                 foreach ($_POST['checkbox'] as $answer) {
                     if(in_array($answer , $this->answers)){
-                        echo "<p class=\"true\">The answer: ". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." is correct </p><br>";
+                        // echo "<p class=\"true\">Odgovor: ". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." je tačan </p>";
+                        echo "<div class='question__answers-correct '>Odgovor:<b> ". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." </b>je tačan </div>";
                         $unchecked_correct = question::deleteElement($answer, $unchecked_correct);
                     } else {
-                        echo "<p class=\"false\">The answer: ".$this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." is not correct </p><br>";
+                        // echo "<p class=\"false\">The answer: ".$this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." je netačan </p>";
+                        echo "<div class='question__answers-incorrect '>Odgovor: <b>". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ."</b> je netačan </div>";
                     }
                 }//end of foreach lop
                 
                 //loops all the unchecked correct answers
                foreach ($unchecked_correct as $correct) {
-                   echo "<p class=\"should\">You shoud have also checked: ".$this->documents->{$question_id_val}->moguci_odgovori->{$correct}."</p><br>" ;
+                //    echo "<p class=\"should\">Trebalo je čekirati: ".$this->documents->{$question_id_val}->moguci_odgovori->{$correct}."</p>" ;
+                   echo "<div class='question__answers-unchecked '>Trebalo je odabrati: <b>". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ."</b></div>";
                } 
                }
               

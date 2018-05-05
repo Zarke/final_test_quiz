@@ -3,13 +3,27 @@
 <html>
     <head>
     <script src="javascript/jquery-3.3.1.min.js"></script>
-    <script src="javascript/main.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/quiz.css">
+    <script>
+        $(document).ready(function(){
+            $(".question__form-possible_answer").on('click',function(){
+                $(this).toggleClass("active");
+            });
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
    
-    <body>
-        <div id="quiz">
-            <form id="target" method="post">
+    <body class="container">
+        <section class=" row question">
+        <div class="question__answers col m12">
+          <?php  
+              if(isset($_POST['submit'])){
+                  $question->check();
+              }
+          ?>
+        </div>
+        <div class="row">
+            <form class="question_form col m12" method="post">
                 <?php
                     if(isset($_POST['next'])){
                     $question->get_question();
@@ -20,18 +34,12 @@
                         $question->get_question();
                     }        
                 ?>
-            <input type="submit" class="two" name="submit" value="submit"/>
-            <input type="submit" class="two" name="next" value="next question"/>
+            <div style="float:left; width:100%; height:7rem;"></div>    
+            <input type="submit" class="question__form-btn btn-submit" name="submit" value="submit"/>
+            <input type="submit" class="question__form-btn btn-next" name="next" value="next question"/>
             </form>
         </div>
-        <div id="result">
-          
-                <?php  
-                    if(isset($_POST['submit'])){
-                        $question->check();
-                    }
-                ?>
-         
-        </div>
+        
+        </section>
     </body>
 </html>
