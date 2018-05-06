@@ -6,6 +6,7 @@
     </head>
     <body class="container">
         <section class="row section_choose_action">
+        <div class="spacer"></div>
             <form method="post" class="section_choose_action__form">
                 <h1 class="section_choose_action__form-heading center-align ">Prošli ste ovaj deo kviza. Molimo vas da izaberete kako želite da nastavite</h1>
                 <input type="submit" class="section_choose_action__form-btn btn-rerun" name="rerun" value="Ponoviti trenutnu selekciju"/>

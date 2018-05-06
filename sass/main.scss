@@ -46,7 +46,7 @@
 .question{
     background: url(../images/question_background.jpg);
     background-size: cover;
-    // height: 80vh;
+    min-height: 60vh;
     margin-top: 5vh;
     position: relative;
     &__answers{
@@ -89,10 +89,10 @@
             background-color:rgba($color: map-get($grey,'lighten-1'), $alpha: 0.75);
             box-shadow: .4rem .4rem .5rem map-get($grey,'darken-4');
             cursor:pointer;
-            height: 6rem;
+            // height: 6rem;
             color: color('shades','black');
             vertical-align: middle!important;
-            line-height: 6rem;
+            // line-height: 6rem;
             margin-bottom: 3rem;
             font-size: 1.3rem!important;
 
@@ -132,4 +132,8 @@
 }
 .btn-submit{ 
     left: 2rem;
+}
+.spacer{
+    @include spacer;
+    float: left;
 }

@@ -47,9 +47,11 @@
     background: url(../images/choice_bckg.jpg);
     background-size: cover;
     height: 60vh;
+    margin-top: 5rem;
     position: relative;
     
     &__form{ 
+        //TODO find a way to give the heading a top margin
         &-heading{
             background-color:rgba($color: color("grey","darken-4"), $alpha: 0.75);
             padding: 1rem!important;
@@ -107,4 +109,7 @@
 }
 .btn-new_selection{ 
     right: 3rem;
+}
+.spacer{
+    @include spacer;
 }

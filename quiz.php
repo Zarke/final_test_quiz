@@ -34,7 +34,7 @@
                         $question->get_question();
                     }        
                 ?>
-            <div style="float:left; width:100%; height:7rem;"></div>    
+            <div class="spacer"></div>    
             <input type="submit" class="question__form-btn btn-submit" name="submit" value="submit"/>
             <input type="submit" class="question__form-btn btn-next" name="next" value="next question"/>
             </form>
