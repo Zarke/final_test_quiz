@@ -51,6 +51,7 @@ include("question.php");
                         if(isset($answer)){
                         $this->question_set_array[] = $answer;
                         $this->set_cookie($this->cookie_name,$this->question_set_array);
+                        $this->set_cookie($this->count,array(0));
                         self::redirect("quiz.php");
                         }
                     }
