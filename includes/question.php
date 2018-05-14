@@ -76,13 +76,13 @@
         public function randomisation(){
             $start_end_question = $this->get_cookie($this->question_scope);
             $end_rand = end($start_end_question);
-            $start_rand = $end_rand - 24;
+            $start_rand = $end_rand - 49;
             if(!isset($_COOKIE[$this->used_questions])){
                 $this->set_cookie($this->used_questions,array($start_rand));
                 return $start_rand;
             } else {
                 $question_id_array = $this->get_cookie($this->used_questions);
-                if(count($question_id_array) <25 && count($question_id_array)> 0){
+                if(count($question_id_array) <50 && count($question_id_array)> 0){
                     $question_id = rand($start_rand,$end_rand);
                     if (in_array($question_id, $question_id_array))
                     {
@@ -119,9 +119,9 @@
                } else {
                 foreach ($_POST['checkbox'] as $answer) {
                     if(in_array($answer , $this->answers)){
-                        // echo "<p class=\"true\">Odgovor: ". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." je tačan </p>";
                         echo "<div class='question__answers-correct '>Odgovor:<b> ". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." </b>je tačan </div>";
                         $unchecked_correct = question::deleteElement($answer, $unchecked_correct);
+                        print_r($unchecked_correct);echo "Kad pogodis jedan tacan";
                     } else {
                         echo "<div class='question__answers-incorrect '>Odgovor: <b>". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ."</b> je netačan </div>";
                     }
@@ -129,7 +129,7 @@
                 
                 //loops all the unchecked correct answers
                foreach ($unchecked_correct as $correct) {
-                   echo "<div class='question__answers-unchecked '>Trebalo je odabrati: <b>". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ."</b></div>";
+                   echo "<div class='question__answers-unchecked '>Trebalo je odabrati: <b>". $this->documents->{$question_id_val}->moguci_odgovori->{$correct} ."</b></div>";
                } 
                }
                $this->set_cookie($this->question_submit,array(1));  
