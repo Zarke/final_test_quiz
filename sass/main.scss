@@ -137,3 +137,136 @@
     @include spacer;
     float: left;
 }
+//index.php styling
+
+.section_choice{
+    background: url(../images/index_bckg.jpg);
+    background-size: cover;
+    height: 60vh;
+    position: relative;
+    margin-top:20vh; 
+    &__form{
+        padding: 2rem;
+        &-heading{
+            background-color:rgba($color: color("grey","darken-4"), $alpha: 0.75);
+            box-shadow: 0 1rem 2.667rem color("grey","darken-4");
+            color:color("grey","lighten-5");
+            border-radius: 7px;
+            margin-bottom: 6rem;
+            border: 1px solid color("grey","lighten-1");
+            
+        }
+        &-option{
+            @include answer;
+            background-color:rgba($color: color('grey','lighten-1'), $alpha: 0.75);
+            box-shadow: .4rem .4rem .5rem color('grey','darken-4');
+            vertical-align: middle;
+            line-height: 6rem;
+            margin-bottom: 3rem;
+            cursor:pointer;
+            color: color('shades','white');
+            display: inline-block;
+
+            &.active{
+                background-color:rgba($color: color("light-blue","lighten-1"), $alpha: 0.75);
+            }
+        }
+        &-submit{
+            @include answer;
+            background-color:rgba($color: color("grey","darken-4"), $alpha: 0.75);
+            position: absolute;
+            bottom: 5rem;
+            left:40%;
+            color: color("shades","white");
+            border: 1px solid color("shades","white");
+            text-transform: uppercase;
+            height: 5rem;
+            cursor: pointer;
+            transition: all .2s;
+            &:hover{
+                transform: translateY(-3px);
+                box-shadow: 0 1rem 2rem rgba(color("shades","black"),.2);
+            }
+            &:active,
+            &:focus{
+                outline: none;
+                transform: translateY(-1px);
+                box-shadow: 0 .5rem 1rem rgba(color("shades","black"),.2);
+            }
+        }
+    }
+}
+.spacer{
+    @include spacer;
+}
+//choice.php styling
+.section_choose_action{
+    background: url(../images/choice_bckg.jpg);
+    background-size: cover;
+    height: 60vh;
+    margin-top: 5rem;
+    position: relative;
+    
+    &__form{ 
+        //TODO find a way to give the heading a top margin
+        &-heading{
+            background-color:rgba($color: color("grey","darken-4"), $alpha: 0.75);
+            padding: 1rem!important;
+            box-shadow: 0 1rem 2.667rem color("grey","darken-4");
+            color:color("grey","lighten-5");
+            border-radius: 7px;
+            margin: 2rem 2rem 6rem 2rem!important;
+            border: 1px solid color("grey","lighten-1");
+        }
+        &-possible_answer{
+            @include answer;
+            background-color:rgba($color: map-get($grey,'lighten-1'), $alpha: 0.75);
+            box-shadow: .4rem .4rem .5rem map-get($grey,'darken-4');
+            height: 6rem;
+            color: color('shades','white');
+            vertical-align: middle;
+            line-height: 6rem;
+            margin-bottom: 3rem;
+            cursor:pointer;
+
+            &.active{
+                background-color:rgba($color: color("light-blue","lighten-1"), $alpha: 0.75);
+            }
+        }
+        &-btn{
+            @include answer;
+            background-color:rgba($color: color("grey","darken-4"), $alpha: 0.75);
+            position: absolute;
+            bottom: 3rem;
+            color: color("shades","white");
+            border: 1px solid color("shades","white");
+            text-transform: uppercase;
+            height: 5rem;
+            width: 14rem;
+            cursor: pointer;
+            transition: all .2s;
+            &:hover{
+                transform: translateY(-3px);
+                box-shadow: 0 1rem 2rem rgba(color("shades","black"),.2);
+            }
+            &:active,
+            &:focus{
+                outline: none;
+                transform: translateY(-1px);
+                box-shadow: 0 .5rem 1rem rgba(color("shades","black"),.2);
+            }
+        }
+       
+    }
+}
+
+.btn-rerun{ 
+    left: 3rem;
+    width: 22rem;
+}
+.btn-new_selection{ 
+    right: 3rem;
+}
+.spacer{
+    @include spacer;
+}

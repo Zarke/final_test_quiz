@@ -4,7 +4,11 @@
   "description": "quiz through which you learn about european cultural heritage",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "multi-sass --directory sass/ --output css/ --source-map --f sass/main.scss --o css/main.css --n --f sass/index.scss --o css/index.css --n --f sass/choice.scss --o css/choice.css -w"
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css":"node-sass css/style.prefix.css css/style.min.css --output-style compressed",
+    "build:css":"npm-run-all compile:sass prefix:css compress:css"
   },
   "repository": {
     "type": "git",
@@ -17,7 +21,9 @@
   },
   "homepage": "https://github.com/Zarke/final_test_quiz#readme",
   "devDependencies": {
-    "multi-sass": "^1.0.0",
-    "node-sass": "^4.8.3"
+    "autoprefixer": "^8.5.0",
+    "node-sass": "^4.8.3",
+    "npm-run-all": "^4.1.3",
+    "postcss-cli": "^5.0.0"
   }
 }
