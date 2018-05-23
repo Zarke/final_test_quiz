@@ -2450,7 +2450,7 @@
     "pitanje": "Дат је код програма у програмском језику C# који декларише два објекта типа Pravougaonik и један објекат типа Krug. Класе Pravougaonik и Krug наслеђују апстрактну класу Figura и обе класе имају методуToString. Код програма треба допунити са наредбом која ће исписивати низ Figura[] декларисан у коду програма. <br> <br> 1. publicabstractclassFigura { <br> 2. protectedstaticint brojFigura=0; <br> 3. publicstaticint BrojFigura {get{return brojFigura;}} <br> 4. public Figura() {brojFigura++; } <br> 5. publicabstractdouble povrsinaFigure(); <br> 6. publicoverridestring ToString(){return\"Figura \";} } <br> … <br> 1. Pravougaonik pr1 = newPravougaonik(); <br> 2. Pravougaonik pr2 = newPravougaonik(3, 2); <br> 3. Krug kr1 = newKrug(2); <br> 4. Console.WriteLine(\"Broj figura=\"+Figura.BrojFigura+\"\\n\"); <br> 5. Figura[] niz = newFigura[Figura.BrojFigura]; <br> 6. niz[0] = pr1; niz[1] = pr2; niz[2] = kr1; <br> 7. Console.WriteLine(\"Prikaz figura:\"); <br> 8. ______________________________________________________________ <br> Заокружити бројеве испред одговора који представљају могуће начине приказа низа фигура: ",
     "moguci_odgovori": {
         "0": "foreach(Figura el in niz) Console.WriteLine(el);",
-        "1": "for(int i=0; i<niz.Length; i++) Console.WriteLine(niz[i]);",
+        "1": "for(int i=0; i&ltniz.Length; i++) Console.WriteLine(niz[i]);",
         "2": "foreach (el in niz) Console.WriteLine(el);",
         "3": "foreach (int i in niz) Console.WriteLine(niz[i]);"
     },
@@ -2847,16 +2847,16 @@
 "257": {
     "pitanje": "Уколико је стил једног DIV елемента дефинисан са три класе blue, black и top, заокружити правилну линију кода којом је елемент дефинисан у оквиру HTML стране:",
     "moguci_odgovori": {
-        "0": "<div id=”blueblacktop”>Maturski ispit -EIT</div>",
-        "1": "<div id=”blue” class=”black” class=”top”>Maturski ispit -EIT</div> ",
-        "2": "<div class=”blue” class=”black” class=”top”>Maturski ispit - EIT</div>",
-        "3": "<div class=”blue black top”>Maturski ispit -EIT</div>"
+        "0": "&ltdiv id=”blueblacktop”&gtMaturski ispit -EIT &lt/div&gt",
+        "1": "&ltdiv id=”blue” class=”black” class=”top”>Maturski ispit -EIT &lt/div&gt ",
+        "2": "&ltdiv class=”blue” class=”black” class=”top”>Maturski ispit - EIT &lt/div&gt",
+        "3": "&ltdiv class=”blue black top”&gtMaturski ispit -EIT&lt/div&gt"
     },
     "tacni_odgovori": [3]
 },
 
 "258": {
-    "pitanje": "Дефинисан је ХТМЛ елемент: <br> <br> <div id=”container”> Maturski ispit -EIT</div> <br> <br> Којим начином стила се дефинишу стилови за дати елемент:",
+    "pitanje": "Дефинисан је ХТМЛ елемент: <br> <div id=”container”> Maturski ispit -EIT</div> <br> Којим начином стила се дефинишу стилови за дати елемент:",
     "moguci_odgovori": {
         "0": "container { <br> font-size: 1.5em; }",
         "1": "#container { <br> font-size: 1.5em; }",
@@ -2981,14 +2981,14 @@
 "269": {
     "pitanje": "Написати линију кода којом се укључује екстерна CSS датотека - style.css у оквиру заглавља веб странице - index.html (датотеке style.css и indeks.html се налазе у истом директоријуму):",
     "moguci_odgovori": {
-        "0": "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" >",
-        "1": "<link rel=\"stylesheet\" type=\"text.css\" href=\"style.css\" >"
+        "0": "&ltlink rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" &gt",
+        "1": "&ltlink rel=\"stylesheet\" type=\"text.css\" href=\"style.css\" &gt"
     },
     "tacni_odgovori": [0]
 },
 
 "270": {
-    "pitanje": "HTML документ може да прими податке од корисника помо <br> Повежите дате тагове и атрибуте са својимдефиницијама: <br> <br> 1. FORM _______________ ____ Дефинише одредиште, фајл и који, или е-маил адресу на коју ће подаци са форме бити прослеђени <br> <br> 2. INPUT _______________ ____ Одређује начин на који се подаци са форме шаљу на дефинисано одредиште (може бити „post” или „get“) <br> <br> 3. ACTIONО _______________ ____ Oсновни таг формулара са којим се креира формулар за унос података од стране корисника  <br> <br> 4. METHOD HTML _______________ ____ Дефинише поље за унос податка унутар форме." ,
+    "pitanje": "HTML документ може да прими податке од корисника помо <br> Повежите дате тагове и атрибуте са својимдефиницијама: <br> 1. FORM _______________ ____ Дефинише одредиште, фајл и који, или е-маил адресу на коју ће подаци са форме бити прослеђени <br> 2. INPUT _______________ ____ Одређује начин на који се подаци са форме шаљу на дефинисано одредиште (може бити „post” или „get“) <br> 3. ACTIONО _______________ ____ Oсновни таг формулара са којим се креира формулар за унос података од стране корисника  <br> <br> 4. METHOD HTML _______________ ____ Дефинише поље за унос податка унутар форме." ,
     "moguci_odgovori": {
         "0": "3 <br> 4 <br> 2 <br> 1",
         "1": "3 <br> 4 <br> 1 <br> 2"
@@ -3015,7 +3015,7 @@
 },
 
 "273": {
-    "pitanje": "Са леве стране су дати HTML тагови, а са десне стране су наведенииндикатори. <br> <br> На линију испред уписати број, повезати наведене HTML тагове са индикаторима које ће се видети на HTML страници: <br> <br> 1. <font color=\"#ff0003\"> _______________  ____ приказ наслова трећег нивоа <br> <br> 2. <b> _______________  ____ приказ текста дате величине <br> <br> 3. <h3> _______________  ____ приказ текста у боји <br> <br> 4. <font size=\"3\"> _______________  ____ приказ подебљаног текста",
+    "pitanje": "Са леве стране су дати HTML тагови, а са десне стране су наведени индикатори. <br>  На линију испред уписати број, повезати наведене HTML тагове са индикаторима које ће се видети на HTML страници: <br> 1. <font> _______________  ____ приказ наслова трећег нивоа <br> <br> 2. <b> _______________  ____ приказ текста дате величине <br>  3. <h3> _______________  ____ приказ текста у боји <br> 4. <font size=\"3\"> _______________  ____ приказ подебљаног текста",
     "moguci_odgovori": {
         "0": "3 <br> 4 <br> 1 <br> 2",
         "1": "3 <br> 4 <br> 2 <br> 1"
@@ -3024,7 +3024,7 @@
 },
 
 "274": {
-    "pitanje": "Са леве стране су дати HTML тагови, а са десне стране су наведенииндикатори. На линију испред уписати број, повезати наведене HTML тагове са индикаторима које ће се видети на HTML страници: <br> <br> 1. <ol> _______________  ____ дефинисање елемента листе <br> <br> 2. <li> _______________  ____ постављање позадинске боје <br> <br> 3. <body bgcolor=\"#ffff00\"> _______________  ____ постављање позадинске слике <br> <br> 4. <body background=\"0001.jpg\"> _______________  ____ дефинисање нумерисане листе",
+    "pitanje": "Са леве стране су дати HTML тагови, а са десне стране су наведенииндикатори. На линију испред уписати број, повезати наведене HTML тагове са индикаторима које ће се видети на HTML страници: <br> 1. <ol> _______________  ____ дефинисање елемента листе <br>  2. <li> _______________  ____ постављање позадинске боје <br> 3. <body > _______________  ____ постављање позадинске слике <br>  4. <body background=\"0001.jpg\"> _______________  ____ дефинисање нумерисане листе",
     "moguci_odgovori": {
         "0": "3 <br> 1 <br> 4 <br> 2",
         "1": "1 <br> 3 <br> 4 <br> 2"
@@ -3033,7 +3033,7 @@
 },
 
 "275": {
-    "pitanje": "Са леве стране су дати HTML тагови, а са десне стране су наведени индикатори. <br> <br> На линију испред уписати број, повезати наведене HTML тагове са индикаторима које ће се видети на HTML страници: <br> <br> 1. <tr> _______________  ____ Дефинисање хиперлинка <br> <br> 2. <td> _______________  ____ Нови ред у ћелији <br> <br> 3. <img src=\"slika.jpg\" > _______________  ____ Нова ћелија у табели <br> <br> 4. <a href=\"index.html\"> _______________  ____ Уметање слике",
+    "pitanje": "Са леве стране су дати HTML тагови, а са десне стране су наведени индикатори. <br> <br> На линију испред уписати број, повезати наведене HTML тагове са индикаторима које ће се видети на HTML страници: <br> <br> 1. <tr> _______________  ____ Дефинисање хиперлинка <br> <br> 2. <td> _______________  ____ Нови ред у ћелији <br> <br> 3. <img src=\"slika.jpg\" > _______________  ____ Нова ћелија у табели <br> <br> 4. <a style=\"color:white;\"href=\"index.html\"> _______________  ____ Уметање слике",
     "moguci_odgovori": {
         "0": "4 <br> 1 <br> 2 <br> 3",
         "1": "4 <br> 1 <br> 3 <br> 2"
@@ -3042,16 +3042,16 @@
 },
 
 "276": {
-    "pitanje": "Направите редослед потребних корака за приказ једне статичке веб странице. <br> <br> Унесите редни број на линије испред описа корака, почев од броја 1 до броја 5. <br> <br> _______ Веб сервер шаље пронађену страну клијенту - веб претраживачу. <br> <br> _______ Корисник захтева да види веб страну (кликом на линк, укуцавањем адресе у адресну линију Веб претраживача, и слично) <br> <br> _______ Аутор је креирао страну која се састоји од HTML кода и ставио је на веб сервер. <br> <br> _______ Веб претраживач обрађује добијени HTML код и приказује кориснику уредно форматирану страницу са свим елементима(сликама, линковима, табелама,…) <br> <br> _______ Веб сервер проналази HTML страну коју је корисник захтевао",
+    "pitanje": "Направите редослед потребних корака за приказ једне статичке веб странице. <br> <br> Унесите редни број на линије испред описа корака, почев од броја 1 до броја 5. <br>  _______ Веб сервер шаље пронађену страну клијенту - веб претраживачу. <br>  _______ Корисник захтева да види веб страну (кликом на линк, укуцавањем адресе у адресну линију Веб претраживача, и слично) <br> _______ Аутор је креирао страну која се састоји од HTML кода и ставио је на веб сервер. <br> _______ Веб претраживач обрађује добијени HTML код и приказује кориснику уредно форматирану страницу са свим елементима(сликама, линковима, табелама,…) <br> _______ Веб сервер проналази HTML страну коју је корисник захтевао",
     "moguci_odgovori": {
-        "0": "2 <br> 4 <br> 1 <br> 5 <br> 3",
-        "1": "4 <br> 2 <br> 1 <br> 5 <br> 3"
+        "0": "<pre>2  4  1  5  3</pre>",
+        "1": "<pre>4  2  1  5  3</pre>"
     },
     "tacni_odgovori": [1]
 },
 
 "277": {
-    "pitanje": "Направите редослед потребних корака за приказ једне динамичке веб странице. Унесите редни број на линије испред описа корака. <br> <br> Уписати редни број почев од 1 на линију испред резервисане реченице, тако да одговара редоследу неопходних корака за приказ једне динамичке веб странице. <br> <br> _______ Веб претраживач обрађује добијени HTML код и приказује страницу кориснику са свим елементима. <br> <br> _______ Веб сервер извршава програмски код, који је саставни део стране и креира HTM Lкод. <br> <br> _______ Корисник креира захтев да види динамичку веб страну. Захтев се прослеђује од клијента (веб претраживача) до веб сервера, на којем се налази захтевана страна. <br> <br> _______ Аутор је креирао страну, која се састоји од серверских контрола и инструкција у неком програмском језику, и ставио је на веб сервер. <br> <br> _______ Веб сервер обрађује захтев корисника и проналази динамичку страну коју је корисник захтевао <br> <br> _______ Веб сервер шаље преко Интернета генерисани HTML код веб претраживачу",
+    "pitanje": "Направите редослед потребних корака за приказ једне динамичке веб странице. Унесите редни број на линије испред описа корака. <br> Уписати редни број почев од 1 на линију испред резервисане реченице, тако да одговара редоследу неопходних корака за приказ једне динамичке веб странице. <br>  _______ Веб претраживач обрађује добијени HTML код и приказује страницу кориснику са свим елементима. <br> _______ Веб сервер извршава програмски код, који је саставни део стране и креира HTM Lкод. <br> _______ Корисник креира захтев да види динамичку веб страну. Захтев се прослеђује од клијента (веб претраживача) до веб сервера, на којем се налази захтевана страна. <br> _______ Аутор је креирао страну, која се састоји од серверских контрола и инструкција у неком програмском језику, и ставио је на веб сервер. <br> _______ Веб сервер обрађује захтев корисника и проналази динамичку страну коју је корисник захтевао <br>_______ Веб сервер шаље преко Интернета генерисани HTML код веб претраживачу",
     "moguci_odgovori": {
         "0": "6 <br> 4 <br> 2 <br> 1 <br> 3 <br> 5",
         "1": "6 <br> 4 <br> 2 <br> 1 <br> 5 <br> 3"
@@ -3119,7 +3119,7 @@
     "moguci_odgovori": {
         "0": "//",
         "1": "/* … */",
-        "2": "<!--...-->",
+        "2": "&lt!-- ... --&gt",
         "3": "@* … *@"
     },
     "tacni_odgovori": [3]
@@ -3128,10 +3128,10 @@
 "284": {
     "pitanje": "Од понуђене синтаксе, која је исправна формулација која дефинише верзију XML документа:",
     "moguci_odgovori": {
-        "0": "<?xml version=\"1.0\" />",
-        "1": "<xml version=\"1.0\" />",
-        "2": "<?xml version=\"1.0\"?>",
-        "3": "<xml version=\"1.0\"?>"
+        "0": "&lt?xml version=\"1.0\" /&gt",
+        "1": "&ltxml version=\"1.0\" /&gt",
+        "2": "&lt?xml version=\"1.0\"?&gt",
+        "3": "&ltxml version=\"1.0\"?&gt"
     },
     "tacni_odgovori": [2]
 },
@@ -3247,10 +3247,10 @@
 },
 
 "295": {
-    "pitanje": "Веб обрасци могу да садрже неколико различитих типова компо <br> <br> Категоришите наведене компоненте веб образаца, и повежите категорија, уносећи тачан број на линију: <br> <br> 1. HTML контроле _______________  ____ TextBox, Label, Button, DropDownList, ListBox, Data Grid <br> <br> 2. Контроле за податке _______________  ____ FileSystemWatcher, MessageQueue, EventLog, <br> <br> 3. Серверске контроле _______________  ____ SqlConnection, SqlCommand, OleDbConnection <br> <br> 4. Системске компоненте _______________  ____ Text Area, Table, Image, Submit, Button, Reset Button ",
+    "pitanje": "Веб обрасци могу да садрже неколико различитих типова компоненти <br> <br> Категоришите наведене компоненте веб образаца, и повежите категорија, уносећи тачан број на линију: <br> <br> 1. HTML контроле _______________  ____ TextBox, Label, Button, DropDownList, ListBox, Data Grid <br> <br> 2. Контроле за податке _______________  ____ FileSystemWatcher, MessageQueue, EventLog, <br> <br> 3. Серверске контроле _______________  ____ SqlConnection, SqlCommand, OleDbConnection <br> <br> 4. Системске компоненте _______________  ____ Text Area, Table, Image, Submit, Button, Reset Button ",
     "moguci_odgovori": {
-        "0": "4 <br> 2 <br> 3 <br> 1",
-        "1": "2 <br> 4 <br> 3 <br> 1"
+        "0": "<pre>4  2  3 1</pre>",
+        "1": "<pre>2 4 3 1</pre>"
     },
     "tacni_odgovori": [1]
 },
@@ -3274,7 +3274,7 @@
 },
 
 "298": {
-    "pitanje": "Садашње верзије IIS сервера изграђене су на модуларнојархитектури. <br> Са леве стране дати су модули, а са десне стране њиховефункције. <br> <br> Повежите називе модула са функцијама које обављају:  <br> <br> 1. HTTP модул  _______________  ____ Модул за обављање послова везаних за евиденцију и дијагностику у захтеву <br> <br> 2. Безбедностни модулс  _______________  ____ Модул за обављање послова у вези са садржајем у захтеву, као што је обрада захтева за статичке фајлове, враћање подразумеване странице када клијент не наведе ресурс у захтеву и наводи садржај директоријума <br> <br> 3. Модули за евиденцију и дијагностику  _______________  ____ Модул за обављање послова који су специфични за обраду и процесирање захтева, као што је одговарање на информације, враћање HTTP грешака и преусмеравање захтева <br> <br> 4. Модули садржаја  _______________  ____ Модул за обављање послова везаних за безбедност захтева и процесирања, као што су обављање ауторизације УРЛ-а и филтрирање захтева",
+    "pitanje": "Садашње верзије IIS сервера изграђене су на модуларнојархитектури. <br> Са леве стране дати су модули, а са десне стране њиховефункције. <br> <br> Повежите називе модула са функцијама које обављају:  <br>  1. HTTP модул  _______________  ____ Модул за обављање послова везаних за евиденцију и дијагностику у захтеву <br>  2. Безбедностни модулс  _______________  ____ Модул за обављање послова у вези са садржајем у захтеву, као што је обрада захтева за статичке фајлове, враћање подразумеване странице када клијент не наведе ресурс у захтеву и наводи садржај директоријума <br>  3. Модули за евиденцију и дијагностику  _______________  ____ Модул за обављање послова који су специфични за обраду и процесирање захтева, као што је одговарање на информације, враћање HTTP грешака и преусмеравање захтева <br>  4. Модули садржаја  _______________  ____ Модул за обављање послова везаних за безбедност захтева и процесирања, као што су обављање ауторизације УРЛ-а и филтрирање захтева",
     "moguci_odgovori": {
         "0": "3 <br> 4 <br> 1 <br> 2",
         "1": "3 <br> 4 <br> 2 <br> 1"
@@ -3475,7 +3475,7 @@
 
 
 "316": {
-    "pitanje": "Дата је табела KUPCI: <br> <br> Id | Prezime | Adresa | Mesto | PostBroj | Status <br> 1 | Antić | Mokroluška 35 | Bečej | 21220 | Aktivan  <br> 2 | Kostić | Jug Бogdanova 12 | Niš | 18000 | Pasivan <br> 3 | Marić | Masarikova 1 | Pirot | 18300 | Pasivan <br> 4 | Perić | Taкovska 67 | Niš | 18000 | Pasivan <br> 5 | Rakić | Konstantinova 22 | Sombor | 25000 | Aktivan <br> 6 | Tomić | Kneza Miloša 13 | Bečej | 21220 Аktivan <br> <br> Извршава се упит: <br> <br> DELETE FROM KUPCI WHERE Mesto = ‘Niš’; <br> <br> Колико записа у табели ће остати? ",
+    "pitanje": "Дата је табела KUPCI: <br> <br> <table> <tr> <td> Id </td> <td> Prezime </td> <td> Adresa </td> <td> Mesto </td> <td> PostBroj </td> <td> Status </td> </tr> <tr> <td> 1 </td> <td> Antić </td> <td> Mokroluška 35 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> <tr> <td> 2 </td> <td> Kostić </td> <td> Jug Бogdanova 12 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 3 </td> <td> Marić </td> <td> Masarikova 1 </td> <td> Pirot </td> <td> 18300 </td> <td> Pasivan </td> </tr> <tr> <td> 4 </td> <td> Perić </td> <td> Taкovska 67 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 5 </td> <td> Rakić </td> <td> Konstantinova 22 </td> <td> Sombor </td> <td> 25000 </td> <td> Aktivan </td> </tr> <tr> <td> 6 </td> <td> Tomić </td> <td> Kneza Miloša 13 </td> <td> Bečej </td> <td> 21220 </td> <td> Аktivan </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> DELETE FROM KUPCI WHERE Mesto = ‘Niš’; <br> <br> Колико записа у табели ће остати? ",
     "moguci_odgovori": {
         "0": "0",
         "1": "2",
@@ -3487,7 +3487,7 @@
 
 
 "317": {
-    "pitanje": "Дата је табела KUPCI: <br> <br> Id | Prezime | Adresa | Mesto | PostBroj | Status <br> 1 | Antić | Mokroluška 35 | Bečej | 21220 | Aktivan <br> 2 | Kostić | Jug Bogdanova 12 | Niš | 18000 | Pasivan <br> 3 | Marić | Masarikova 1 | Pirot | 18300 | Pasivan <br> 4 | Perić | Takovska 67 | Niš | 18000 | Pasivan <br> 5 | Rakić | Konstantinova 22 | Sombor | 25000 | Aktivan <br> 6 | Tomić | Kneza Miloša 13 | Bečej | 21220 | Aktivan <br> <br> Извршава се упит: <br> <br> ALTER TABLE KUPCI ADD (DatUgovora (Date)); <br> <br> Одредити шта ће се десити након извршења упита:",
+    "pitanje": "Дата је табела KUPCI: <br> <br> <table> <tr> <td> Id </td> <td> Prezime </td> <td> Adresa </td> <td> Mesto </td> <td> PostBroj </td> <td> Status </td> </tr> <tr> <td> 1 </td> <td> Antić </td> <td> Mokroluška 35 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> <tr> <td> 2 </td> <td> Kostić </td> <td> Jug Бogdanova 12 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 3 </td> <td> Marić </td> <td> Masarikova 1 </td> <td> Pirot </td> <td> 18300 </td> <td> Pasivan </td> </tr> <tr> <td> 4 </td> <td> Perić </td> <td> Taкovska 67 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 5 </td> <td> Rakić </td> <td> Konstantinova 22 </td> <td> Sombor </td> <td> 25000 </td> <td> Aktivan </td> </tr> <tr> <td> 6 </td> <td> Tomić </td> <td> Kneza Miloša 13 </td> <td> Bečej </td> <td> 21220 </td> <td> Аktivan </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> ALTER TABLE KUPCI ADD (DatUgovora (Date)); <br> <br> Одредити шта ће се десити након извршења упита:",
     "moguci_odgovori": {
         "0": "Промениће се тип података у колони DatUgovora у табели KUPCI",
         "1": "Биће додат нови запис – врста у табелу KUPCI",
@@ -3499,7 +3499,7 @@
 },
 
 "318": {
-    "pitanje": "Дата је табела KUPCI: <br> <br> Id | Prezime | Adresa | Mesto | PostBroj | Status <br> 1 | Antić | Mokroluška 35 | Bečej | 21220 | Aktavan <br> 2 | Kostić | Jug Bogdanova 12 | Niš | 18000 | Pasivan <br> 3 | Marić | Masarikoвa 1 | Pirot | 18300 | Pasivan <br> 4 | Perić | Takovska 67 | Niš | 18000 | Pasivan <br> 5 | Rakić | Konstantinova 22 | Sombor | 25000 | Aktivan <br> 6 | Tomić | Kneza Miloša 13 | Bečej | 21220 | Aktivan <br> <br> Извршава се упит: <br> <br> SELECT Mesto, Adresa FROM KUPCI WHERE Prezime like ‘%tić’; <br> <br> Одредити колико редова ће имати резултантна табела не рачунајући заглавље: ",
+    "pitanje": "Дата је табела KUPCI: <br> <br> <table> <tr> <td> Id </td> <td> Prezime </td> <td> Adresa </td> <td> Mesto </td> <td> PostBroj </td> <td> Status </td> </tr> <tr> <td> 1 </td> <td> Antić </td> <td> Mokroluška 35 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> <tr> <td> 2 </td> <td> Kostić </td> <td> Jug Bogdanova 12 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 3 </td> <td> Marić </td> <td> Masarikova 1 </td> <td> Pirot </td> <td> 18300 </td> <td> Pasivan </td> </tr> <tr> <td> 4 </td> <td> Perić </td> <td> Takovska 67 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 5 </td> <td> Rakić </td> <td> Konstantinova 22 </td> <td> Sombor </td> <td> 25000 </td> <td> Aktivan </td> </tr> <tr> <td> 6 </td> <td> Tomić </td> <td> Kneza Miloša 13 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> SELECT Mesto, Adresa FROM KUPCI WHERE Prezime like ‘%tić’; <br> <br> Одредити колико редова ће имати резултантна табела не рачунајући заглавље: ",
     "moguci_odgovori": {
         "0": "0 редова",
         "1": "1 ред",
@@ -3522,7 +3522,7 @@
 },
 
 "320": {
-    "pitanje": "Дата је табела KUPCI: <br> <br> Id | Prezime | Adresa | Mesto | PostBroj | Status <br> 1 | Antić | Mokroluška 35 | Bečej | 21220 | Aktivan <br> 2 | Kostić | Jug Bogdanova 12 | Niš | 18000 | Pasivan <br> 3 | Marić | Masarikova 1 | Pirot | 18300 | Pasivan <br> 4 | Perić | Takovska 67 | Niš | 18000 | Pasivan <br> 5 | Rakić | Konstantinova 22 | Sombor | 25000 | Aktivan <br> 6 | Tomić | Kneza Miloša 13 | Bečej | 21220 | Aktivan <br> <br> Извршава се упит: <br> <br> SELECT Mesto, Adresa FROM KUPCI WHERE Prezime like ‘%mić’; <br> <br> Одредити колико редова ће имати резултантна табела не рачунајући заглавље:",
+    "pitanje": "Дата је табела KUPCI: <br> <br> <table> <tr> <td> Id </td> <td> Prezime </td> <td> Adresa </td> <td> Mesto </td> <td> PostBroj </td> <td> Status </td> </tr> <tr> <td> 1 </td> <td> Antić </td> <td> Mokroluška 35 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> <tr> <td> 2 </td> <td> Kostić </td> <td> Jug Бogdanova 12 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 3 </td> <td> Marić </td> <td> Masarikova 1 </td> <td> Pirot </td> <td> 18300 </td> <td> Pasivan </td> </tr> <tr> <td> 4 </td> <td> Perić </td> <td> Taкovska 67 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 5 </td> <td> Rakić </td> <td> Konstantinova 22 </td> <td> Sombor </td> <td> 25000 </td> <td> Aktivan </td> </tr> <tr> <td> 6 </td> <td> Tomić </td> <td> Kneza Miloša 13 </td> <td> Bečej </td> <td> 21220 </td> <td> Аktivan </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> SELECT Mesto, Adresa FROM KUPCI WHERE Prezime like ‘%mić’; <br> <br> Одредити колико редова ће имати резултантна табела не рачунајући заглавље:",
     "moguci_odgovori": {
         "0": "0 редова",
         "1": "1 ред",
@@ -3534,7 +3534,7 @@
 },
 
 "321": {
-    "pitanje": "Дата је табела KUPCI: <br> <br> Id | Prezime | Adresa | Mesto | PostBroj | Status <br> 1 | Antić | Mokroluška 35 | Bečej | 21220 | Aktivan <br> 2 | Kostić | Jug Bogdanova 12 | Niš | 18000 | Pasivan <br> 3 | Marić | Masariкova 1 | Pirot | 18300 | Pasivan <br> 4 | Perić | Takovska 67 | Niš | 18000 | Pasivan <br> 5 | Rakić | Konstantinova 22 | Sombor | 25000 | Aktivan <br> 6 | Tomić | Kneza Miloša 13 | Bečej | 21220 | Aktivan <br> <br> Извршава се упит: <br> <br> SELECT DISTINCT Mesto FROM KUPCI; <br> <br> Одредити колико редова ће имати резултантна табела не рачунајући заглавље:",
+    "pitanje": "Дата је табела KUPCI: <br> <br> <table> <tr> <td> Id </td> <td> Prezime </td> <td> Adresa </td> <td> Mesto </td> <td> PostBroj </td> <td> Status </td> </tr> <tr> <td> 1 </td> <td> Antić </td> <td> Mokroluška 35 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> <tr> <td> 2 </td> <td> Kostić </td> <td> Jug Bogdanova 12 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 3 </td> <td> Marić </td> <td> Masarikova 1 </td> <td> Pirot </td> <td> 18300 </td> <td> Pasivan </td> </tr> <tr> <td> 4 </td> <td> Perić </td> <td> Takovska 67 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 5 </td> <td> Rakić </td> <td> Konstantinova 22 </td> <td> Sombor </td> <td> 25000 </td> <td> Aktivan </td> </tr> <tr> <td> 6 </td> <td> Tomić </td> <td> Kneza Miloša 13 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> SELECT DISTINCT Mesto FROM KUPCI; <br> <br> Одредити колико редова ће имати резултантна табела не рачунајући заглавље:",
     "moguci_odgovori": {
         "0": "5 редова",
         "1": "4 редa",
@@ -3557,7 +3557,7 @@
 },
 
 "323": {
-    "pitanje": "Дата је табела KUPCI: <br> <br> Id | Prezime | Adresa | Mesto | PostBroj | Status <br> 1 | Antić | Mokroluška 35 | Bečej | 21220 | Aktivan <br> 2 | Kostić | Jug Bogdanova 12 | Niš | 18000 | Pasivan <br> 3 | Marić | Masarikova 1 | Pirot | 18300 | Pasivan <br> 4 | Perić | Takovska 67 | Niš | 18000 | Pasivan <br> 5 | Rakić | Konstantinova 22 | Sombor | 25000 | Aktivan <br> 6 | Tomić | Kneza Miloša 13 | Bečej | 21220 | Aktivan <br> <br> Извршава се упит: <br> <br> SELECT Prezime, Mesto, Adresa FROM KUPCI WHERE LENGTH(Adresa) > 14; <br> <br> Одредити колико редова ће имати резултантна табела не рачунајући заглавље:",
+    "pitanje": "Дата је табела KUPCI: <br> <br> <table> <tr> <td> Id </td> <td> Prezime </td> <td> Adresa </td> <td> Mesto </td> <td> PostBroj </td> <td> Status </td> </tr> <tr> <td> 1 </td> <td> Antić </td> <td> Mokroluška 35 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> <tr> <td> 2 </td> <td> Kostić </td> <td> Jug Бogdanova 12 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 3 </td> <td> Marić </td> <td> Masarikova 1 </td> <td> Pirot </td> <td> 18300 </td> <td> Pasivan </td> </tr> <tr> <td> 4 </td> <td> Perić </td> <td> Taкovska 67 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 5 </td> <td> Rakić </td> <td> Konstantinova 22 </td> <td> Sombor </td> <td> 25000 </td> <td> Aktivan </td> </tr> <tr> <td> 6 </td> <td> Tomić </td> <td> Kneza Miloša 13 </td> <td> Bečej </td> <td> 21220 </td> <td> Аktivan </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> SELECT Prezime, Mesto, Adresa FROM KUPCI WHERE LENGTH(Adresa) > 14; <br> <br> Одредити колико редова ће имати резултантна табела не рачунајући заглавље:",
     "moguci_odgovori": {
         "0": "5 редова",
         "1": "4 редa",
@@ -3569,7 +3569,7 @@
 },
 
 "324": {
-    "pitanje": "Дата је табела KUPCI: <br> <br> Id | Prezime | Adresa | Mesto | PostBroj | Status <br> 1 | Antić | Mokroluška 35 | Bečej | 21220 | Aktivan <br> 2 | Kostić | Jug Bogdanova 12 | Niš | 18000 | Pasivan <br> 3 | Marić | Masarikova 1 | Pirot | 18300 | Pasivan <br> 4 | Perić | Takovska 67 | Niš | 18000 | Pasivan <br> 5 | Rakić | Konstantinova 22 | Sombor | 2500 | Aktivan <br> 6 | Tomić | Kneza Miloša 13 | Bečej | 21220 | Aktivan <br> <br> Извршава се упит: <br> <br> SELECT Prezime, Mesto, Adresa FROM KUPCI WHERE LENGTH(Adresa) < 10; <br> <br> Одредити колико редова ће имати резултантна табела не рачунајући заглавље:",
+    "pitanje": "Дата је табела KUPCI: <br> <br> <table> <tr> <td> Id </td> <td> Prezime </td> <td> Adresa </td> <td> Mesto </td> <td> PostBroj </td> <td> Status </td> </tr> <tr> <td> 1 </td> <td> Antić </td> <td> Mokroluška 35 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> <tr> <td> 2 </td> <td> Kostić </td> <td> Jug Bogdanova 12 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 3 </td> <td> Marić </td> <td> Masarikova 1 </td> <td> Pirot </td> <td> 18300 </td> <td> Pasivan </td> </tr> <tr> <td> 4 </td> <td> Perić </td> <td> Takovska 67 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 5 </td> <td> Rakić </td> <td> Konstantinova 22 </td> <td> Sombor </td> <td> 25000 </td> <td> Aktivan </td> </tr> <tr> <td> 6 </td> <td> Tomić </td> <td> Kneza Miloša 13 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> SELECT Prezime, Mesto, Adresa FROM KUPCI WHERE LENGTH(Adresa) < 10; <br> <br> Одредити колико редова ће имати резултантна табела не рачунајући заглавље:",
     "moguci_odgovori": {
         "0": "5 редова",
         "1": "4 редa",
@@ -3582,7 +3582,7 @@
 
 
 "325": {
-    "pitanje": "Дата је табела ARTIKLI: <br> <br> Id | Naziv | DatProiz | JM | Kol | Cena | Akcija <br> 21 | Hleb | Sava | 15.04.2015 | kom | 100 | 35 | ___ <br> 32 | Hleb | Dunav | 15.04.2015 | kom | 50 | 45 | 0.05  <br> 23 | Baget | beli | 12.04.2015 | kom | 20 | 32 | 0.12  <br> 47 | Baget | crni | 12.04.2015 | kom | 12 | 35 | 0.08  <br> 25 | Tost | tamni | 10.04.2015 | kom | 6 | 75 | 0.15  <br> 36 | Tost | beli | 10.04.2015 | kom | 8 | 70 | ___ <br> 28 | Kifla | integralna | 15.04.2015 | kom | 15 | 18 | 0 <br> 10 | Brašno | Graham | 10.03.2015 | kg | 24 | 54 | 0 <br> <br> Одредити упит који приказује називе за све артикле и за сваки одредити укупну цену за <br> <br> дату количину:",
+    "pitanje": "Дата је табела ARTIKLI: <br> <br> <table> <tr> <td> Id </td> <td> Naziv </td> <td> DatProiz </td> <td> JM </td> <td> Kol </td> <td> Cena </td> <td> Akcija </td> </tr> <tr> <td> 21 </td> <td> Hleb Sava </td> <td> 15.04.15 </td> <td> kom </td> <td> 100 </td> <td> 35 </td> <td> </td> </tr> <tr> <td> 32 </td> <td> Hleb Dunav </td> <td> 15.04.15 </td> <td> kom </td> <td> 50 </td> <td> 45 </td> <td> 0.05 </td> </tr> <tr> <td> 23 </td> <td> Baget beli </td> <td> 12.04.15 </td> <td> kom </td> <td> 20 </td> <td> 32 </td> <td> 0.12 </td> </tr> <tr> <td> 47 </td> <td> Baget crni </td> <td> 12.04.15 </td> <td> kom </td> <td> 12 </td> <td> 35 </td> <td> 0.08 </td> </tr> <tr> <td> 25 </td> <td> Tost tamni </td> <td> 10.04.15 </td> <td> kom </td> <td> 6 </td> <td> 75 </td> <td> 0.15 </td> </tr> <tr> <td> 36 </td> <td> Tost beli </td> <td> 10.04.15 </td> <td> kom </td> <td> 8 </td> <td> 70 </td> <td> </td> </tr> <tr> <td> 28 </td> <td> Kifla integralna </td> <td> 15.04.15 </td> <td> kom </td> <td> 15 </td> <td> 18 </td> <td> 0 </td> </tr> <tr> <td> 10 </td> <td> Brašno Graham </td> <td> 10.03.15 </td> <td> kg </td> <td> 24 </td> <td> 54 </td> <td> 0 </td> </tr> </table> <br> <br> Одредити упит који приказује називе за све артикле и за сваки одредити укупну цену за <br> <br> дату количину:",
     "moguci_odgovori": {
         "0": "SELECT Naziv, Kol * Cena as Ukupno FROM ARTIKLI;",
         "1": "SELECT Naziv, count(Kol * Cena) FROM ARTIKLI;",
@@ -3593,7 +3593,7 @@
 },
 
 "326": {
-    "pitanje": "Дата је табела ARTIKLI: <br> <br> Id | Naziv | DatProiz | JM | Kol | Cena | Akcija <br> 21 | Hleb Sava | 15.04.15 | kom | 100 | 35 | ____ <br> 32 | Hleb Dunav | 15.04.15 | kom | 50 | 45 | 0.05 <br> 23 | Baget beli | 12.04.15 | kom | 20 | 32 | 0.12 <br> 47 | Baget crni | 12.04.15 | kom | 12 | 35 | 0.08 <br> 25 | Tost tamni | 10.04.15 | kom | 6 | 75 | 0.15 <br> 36 | Tost beli | 10.04.15 | kom | 8 | 70 | ____ <br> 28 | Kifla integralna | 15.04.15 | kom | 15 | 18 | 0 <br> 10 | Brašno Graham | 10.03.15 | kg | 24 | 54 | 0 <br> <br> Одредити упит који приказује називе за све артикле на акцији и нове цене, умањене за акцијски попуст: ",
+    "pitanje": "Дата је табела ARTIKLI: <br> <br> <table> <tr> <td> Id </td> <td> Naziv </td> <td> DatProiz </td> <td> JM </td> <td> Kol </td> <td> Cena </td> <td> Akcija </td> </tr> <tr> <td> 21 </td> <td> Hleb Sava </td> <td> 15.04.15 </td> <td> kom </td> <td> 100 </td> <td> 35 </td> <td> </td> </tr> <tr> <td> 32 </td> <td> Hleb Dunav </td> <td> 15.04.15 </td> <td> kom </td> <td> 50 </td> <td> 45 </td> <td> 0.05 </td> </tr> <tr> <td> 23 </td> <td> Baget beli </td> <td> 12.04.15 </td> <td> kom </td> <td> 20 </td> <td> 32 </td> <td> 0.12 </td> </tr> <tr> <td> 47 </td> <td> Baget crni </td> <td> 12.04.15 </td> <td> kom </td> <td> 12 </td> <td> 35 </td> <td> 0.08 </td> </tr> <tr> <td> 25 </td> <td> Tost tamni </td> <td> 10.04.15 </td> <td> kom </td> <td> 6 </td> <td> 75 </td> <td> 0.15 </td> </tr> <tr> <td> 36 </td> <td> Tost beli </td> <td> 10.04.15 </td> <td> kom </td> <td> 8 </td> <td> 70 </td> <td> </td> </tr> <tr> <td> 28 </td> <td> Kifla integralna </td> <td> 15.04.15 </td> <td> kom </td> <td> 15 </td> <td> 18 </td> <td> 0 </td> </tr> <tr> <td> 10 </td> <td> Brašno Graham </td> <td> 10.03.15 </td> <td> kg </td> <td> 24 </td> <td> 54 </td> <td> 0 </td> </tr> </table> <br> <br> Одредити упит који приказује називе за све артикле на акцији и нове цене, умањене за акцијски попуст: ",
     "moguci_odgovori": {
         "0": "SELECT Naziv, Akcija * Cena FROM ARTIKLI where Akcija is not NULL;",
         "1": "SELECT Naziv, (1-Akcija) * Cena FROM ARTIKLI where Akcija is NULL;",
@@ -3604,7 +3604,7 @@
 },
 
 "327": {
-    "pitanje": "Дата је табела ARTIKLI: <br> <br> Id | Naziv | DatProiz | JM | Kol | Cena | Akcija <br> 21 | Hleb Sava | 15.04.15 | kom | 100 | 35 | ____ <br> 32 | Hleb Dunav | 15.04.15 | kom | 50 | 45 | 0.05 <br> 23 | Baget beli | 12.04.15 | kom | 20 | 32 | 0.12 <br> 47 | Baget crni | 12.04.15 | kom | 12 | 35 | 0.08 <br> 25 | Tost tamni | 10.04.15 | kom | 6 | 75 | 0.15 <br> 36 | Tost beli | 10.04.15 | kom | 8 | 70 | ____ <br> 28 | Kifla integralna | 15.04.15 | kom | 15 | 18 | 0 <br> 10 | Brašno Graham | 10.03.15 | kg | 24 | 54 | 0 <br> <br> Извршава се упит: <br> <br> SELECT Naziv, DatProiz, Kol from Artikli where Id < 30 and Cena <= 45; <br> <br> Одредити колико редова има табела која је резултат рада упита не рачунајући заглавље: ",
+    "pitanje": "Дата је табела ARTIKLI: <br> <br> <table> <tr> <td> Id </td> <td> Naziv </td> <td> DatProiz </td> <td> JM </td> <td> Kol </td> <td> Cena </td> <td> Akcija </td> </tr> <tr> <td> 21 </td> <td> Hleb Sava </td> <td> 15.04.15 </td> <td> kom </td> <td> 100 </td> <td> 35 </td> <td> </td> </tr> <tr> <td> 32 </td> <td> Hleb Dunav </td> <td> 15.04.15 </td> <td> kom </td> <td> 50 </td> <td> 45 </td> <td> 0.05 </td> </tr> <tr> <td> 23 </td> <td> Baget beli </td> <td> 12.04.15 </td> <td> kom </td> <td> 20 </td> <td> 32 </td> <td> 0.12 </td> </tr> <tr> <td> 47 </td> <td> Baget crni </td> <td> 12.04.15 </td> <td> kom </td> <td> 12 </td> <td> 35 </td> <td> 0.08 </td> </tr> <tr> <td> 25 </td> <td> Tost tamni </td> <td> 10.04.15 </td> <td> kom </td> <td> 6 </td> <td> 75 </td> <td> 0.15 </td> </tr> <tr> <td> 36 </td> <td> Tost beli </td> <td> 10.04.15 </td> <td> kom </td> <td> 8 </td> <td> 70 </td> <td> </td> </tr> <tr> <td> 28 </td> <td> Kifla integralna </td> <td> 15.04.15 </td> <td> kom </td> <td> 15 </td> <td> 18 </td> <td> 0 </td> </tr> <tr> <td> 10 </td> <td> Brašno Graham </td> <td> 10.03.15 </td> <td> kg </td> <td> 24 </td> <td> 54 </td> <td> 0 </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> SELECT Naziv, DatProiz, Kol from Artikli where Id < 30 and Cena <= 45; <br> <br> Одредити колико редова има табела која је резултат рада упита не рачунајући заглавље: ",
     "moguci_odgovori": {
         "0": "0 редова",
         "1": "1 ред",
@@ -3615,7 +3615,7 @@
 },
 
 "328": {
-    "pitanje": "Дата је табела ARTIKLI: <br> <br> Id | Naziv | DatProiz | JM | Kol | Cena | Akcija <br> 23 | Baget beli | 12.04.15 | kom | 20 | 32 | 0.12 <br> 47 | Baget crni | 12.04.15 | kom | 12 | 35 | 0.08 <br> 25 | Tost tamni | 10.04.15 | kom | 6 | 75 | 0.15 <br> 36 | Tost beli | 10.04.15 | kom | 8 | 70 | ____ <br> 28 | Kifla integralna | 15.04.15 | kom | 15 | 18 | 0 <br> 10 | Brašno Graham | 10.03.15 | kg | 24 | 54 | 0 <br> <br> Извршава се упит: <br> <br> SELECT max(Cena), min(Cena) from Artikli; <br> <br> Заокружити број испред траженог одговора. <br> Одредити резултат рада упита: ",
+    "pitanje": "Дата је табела ARTIKLI: <br> <br> <table> <tr> <td> Id </td> <td> Naziv </td> <td> DatProiz </td> <td> JM </td> <td> Kol </td> <td> Cena </td> <td> Akcija </td> </tr> <tr> <td> 21 </td> <td> Hleb Sava </td> <td> 15.04.15 </td> <td> kom </td> <td> 100 </td> <td> 35 </td> <td> </td> </tr> <tr> <td> 32 </td> <td> Hleb Dunav </td> <td> 15.04.15 </td> <td> kom </td> <td> 50 </td> <td> 45 </td> <td> 0.05 </td> </tr> <tr> <td> 23 </td> <td> Baget beli </td> <td> 12.04.15 </td> <td> kom </td> <td> 20 </td> <td> 32 </td> <td> 0.12 </td> </tr> <tr> <td> 47 </td> <td> Baget crni </td> <td> 12.04.15 </td> <td> kom </td> <td> 12 </td> <td> 35 </td> <td> 0.08 </td> </tr> <tr> <td> 25 </td> <td> Tost tamni </td> <td> 10.04.15 </td> <td> kom </td> <td> 6 </td> <td> 75 </td> <td> 0.15 </td> </tr> <tr> <td> 36 </td> <td> Tost beli </td> <td> 10.04.15 </td> <td> kom </td> <td> 8 </td> <td> 70 </td> <td> </td> </tr> <tr> <td> 28 </td> <td> Kifla integralna </td> <td> 15.04.15 </td> <td> kom </td> <td> 15 </td> <td> 18 </td> <td> 0 </td> </tr> <tr> <td> 10 </td> <td> Brašno Graham </td> <td> 10.03.15 </td> <td> kg </td> <td> 24 </td> <td> 54 </td> <td> 0 </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> SELECT max(Cena), min(Cena) from Artikli; <br> <br> Заокружити број испред траженог одговора. <br> Одредити резултат рада упита: ",
     "moguci_odgovori": {
         "0": "max(Cena) | min(Cena) <br> 75 | 32 ",
         "1": "max(Cena) | min(Cena) <br> 75 | 18 ",
@@ -3626,7 +3626,7 @@
 },
 
 "329": {
-    "pitanje": "Дата је табела ARTIKLI: <br> <br> Id | Naziv | DatProiz | JM | Kol | Cena | Akcija <br> 21 | Hleb Sava | 15.04.15 | kom | 100 | 35 | ____ <br> 32 | Hleb Dunav | 15.04.15 | kom | 50 | 45 | 0.05 <br> 23 | Baget beli | 12.04.15 | kom | 20 | 32 | 0.12 <br> 47 | Baget crni | 12.04.15 | kom | 12 | 35 | 0.08 <br> 25 | Tost tamni | 10.04.15 | kom | 6 | 75 | 0.15 <br> 36 | Tost beli | 10.04.15 | kom | 8 | 70 | ____ <br> 28 | Kifla integralna | 15.04.15 | kom | 15 | 18 | 0 <br> 10 | Brašno Graham | 10.03.15 | kg | 24 | 54 | 0 <br> <br> Извршава се упит: <br> <br> SELECT Naziv, DatProiz, Kol from Artikli where Id > 30 and Cena >= 45; <br> <br> Резултат извршења упита је табела са заглављем и",
+    "pitanje": "Дата је табела ARTIKLI: <br> <br> <table> <tr> <td> Id </td> <td> Naziv </td> <td> DatProiz </td> <td> JM </td> <td> Kol </td> <td> Cena </td> <td> Akcija </td> </tr> <tr> <td> 21 </td> <td> Hleb Sava </td> <td> 15.04.15 </td> <td> kom </td> <td> 100 </td> <td> 35 </td> <td> </td> </tr> <tr> <td> 32 </td> <td> Hleb Dunav </td> <td> 15.04.15 </td> <td> kom </td> <td> 50 </td> <td> 45 </td> <td> 0.05 </td> </tr> <tr> <td> 23 </td> <td> Baget beli </td> <td> 12.04.15 </td> <td> kom </td> <td> 20 </td> <td> 32 </td> <td> 0.12 </td> </tr> <tr> <td> 47 </td> <td> Baget crni </td> <td> 12.04.15 </td> <td> kom </td> <td> 12 </td> <td> 35 </td> <td> 0.08 </td> </tr> <tr> <td> 25 </td> <td> Tost tamni </td> <td> 10.04.15 </td> <td> kom </td> <td> 6 </td> <td> 75 </td> <td> 0.15 </td> </tr> <tr> <td> 36 </td> <td> Tost beli </td> <td> 10.04.15 </td> <td> kom </td> <td> 8 </td> <td> 70 </td> <td> </td> </tr> <tr> <td> 28 </td> <td> Kifla integralna </td> <td> 15.04.15 </td> <td> kom </td> <td> 15 </td> <td> 18 </td> <td> 0 </td> </tr> <tr> <td> 10 </td> <td> Brašno Graham </td> <td> 10.03.15 </td> <td> kg </td> <td> 24 </td> <td> 54 </td> <td> 0 </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> SELECT Naziv, DatProiz, Kol from Artikli where Id > 30 and Cena >= 45; <br> <br> Резултат извршења упита је табела са заглављем и",
     "moguci_odgovori": {
         "0": "0 редова и 2 колоне",
         "1": "1 редом и 3 колоне",
@@ -3637,7 +3637,7 @@
 },
 
 "330": {
-    "pitanje": "Дата је табела KUPCI: <br> <br> Id | Prezime | Adresa | Mesto | PostBroj | Status <br> 1 | Antić | Mokroluška 35 | Bečej | 21220 | Aktivan <br> 2 | Kostić | Jug Bogdanova 12 | Niš | 18000 | Pasivan <br> 3 | Marić | Masarikova 1 | Pirot | 18300 | Pasivan <br> 4 | Perić | Takovska 6 | Niš | 18000 | Pasivan <br> 5 | Rakić | Konstantinova 22 | Sombor | 25000 | Aktivan <br> 6 | Tomić | Kneza Miloša 13 | Bečej | 21220 | Aktivan <br> <br> Извршава се упит: <br> <br> SELECT Prezime, Mesto, Adresa FROM KUPCI WHERE LENGTH(Adresa) > 10; <br> <br> Резултат извршења упита је табела са заглављем и",
+    "pitanje": "Дата је табела KUPCI: <br> <br> <table> <tr> <td> Id </td> <td> Prezime </td> <td> Adresa </td> <td> Mesto </td> <td> PostBroj </td> <td> Status </td> </tr> <tr> <td> 1 </td> <td> Antić </td> <td> Mokroluška 35 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> <tr> <td> 2 </td> <td> Kostić </td> <td> Jug Bogdanova 12 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 3 </td> <td> Marić </td> <td> Masarikova 1 </td> <td> Pirot </td> <td> 18300 </td> <td> Pasivan </td> </tr> <tr> <td> 4 </td> <td> Perić </td> <td> Takovska 67 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 5 </td> <td> Rakić </td> <td> Konstantinova 22 </td> <td> Sombor </td> <td> 25000 </td> <td> Aktivan </td> </tr> <tr> <td> 6 </td> <td> Tomić </td> <td> Kneza Miloša 13 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> SELECT Prezime, Mesto, Adresa FROM KUPCI WHERE LENGTH(Adresa) > 10; <br> <br> Резултат извршења упита је табела са заглављем и",
     "moguci_odgovori": {
         "0": "5 редова и 3 колоне",
         "1": "4 редa и 4 колоне",
@@ -3649,7 +3649,7 @@
 },
 
 "331": {
-    "pitanje": "Дата је табела KUPCI: <br> <br> Id | Prezime | Adresa | Mesto | PostBroj | Status <br> 1 | Antić | Mokroluška 35 | Bečej | 21220 | Aktivan <br> 2 | Kostić | Jug Bogdanova 12 | Niš | 18000 | Pasivan <br> 3 | Marić | Masarikova 1 | Pirot | 18300 | Pasivan <br> 4 | Perić | Takovska 6 | Niš | 18000 | Pasivan <br> 5 | Rakić | Konstantinova 22 | Sombor | 25000 | Aktivan <br> 6 | Tomić | Kneza Miloša 13 | Bečej | 21220 | Aktivan <br> <br> Извршава се упит: <br> <br> SELECT count(*) FROM KUPCI WHERE Status= ‘Aktivan’; <br> <br> Одредити резултат упита: ",
+    "pitanje": "Дата је табела KUPCI: <br> <br> <table> <tr> <td> Id </td> <td> Prezime </td> <td> Adresa </td> <td> Mesto </td> <td> PostBroj </td> <td> Status </td> </tr> <tr> <td> 1 </td> <td> Antić </td> <td> Mokroluška 35 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> <tr> <td> 2 </td> <td> Kostić </td> <td> Jug Bogdanova 12 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 3 </td> <td> Marić </td> <td> Masarikova 1 </td> <td> Pirot </td> <td> 18300 </td> <td> Pasivan </td> </tr> <tr> <td> 4 </td> <td> Perić </td> <td> Takovska 67 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 5 </td> <td> Rakić </td> <td> Konstantinova 22 </td> <td> Sombor </td> <td> 25000 </td> <td> Aktivan </td> </tr> <tr> <td> 6 </td> <td> Tomić </td> <td> Kneza Miloša 13 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> SELECT count(*) FROM KUPCI WHERE Status= ‘Aktivan’; <br> <br> Одредити резултат упита: ",
     "moguci_odgovori": {
         "0": "3",
         "1": "4",
@@ -3662,7 +3662,7 @@
 
 
 "332": {
-    "pitanje": "Дата је табела KUPCI: <br> <br> Id | Prezime | Adresa | Mesto | PostBroj | Status <br> 1 | Antić | Mokroluška | 35 | Bečej | 21220 | Aktivan <br> 2 | Kostić | Jug Bogdanova 12 | Niš | 18000 | Pasivan <br> 3 | Marić | Masarikova 1 | Pirot | 18300 | Pasivan <br> 4 | Perić | Takovska 6 | Niš | 18000 | Pasivan <br> 5 | Rakić | Konstantinova 22 | Sombor | 25000 | Aktivan <br> 6 | Tomić | Kneza Miloša 13 | Bečej | 21220 | Aktivan <br> <br> Извршава се упит: <br> <br> SELECT Prezime, Adresa, Mesto FROM KUPCI order by Prezime; <br> <br> Записи у резултантној табели ће имати: ",
+    "pitanje": "Дата је табела KUPCI: <br> <br> <table> <tr> <td> Id </td> <td> Prezime </td> <td> Adresa </td> <td> Mesto </td> <td> PostBroj </td> <td> Status </td> </tr> <tr> <td> 1 </td> <td> Antić </td> <td> Mokroluška 35 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> <tr> <td> 2 </td> <td> Kostić </td> <td> Jug Bogdanova 12 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 3 </td> <td> Marić </td> <td> Masarikova 1 </td> <td> Pirot </td> <td> 18300 </td> <td> Pasivan </td> </tr> <tr> <td> 4 </td> <td> Perić </td> <td> Takovska 67 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 5 </td> <td> Rakić </td> <td> Konstantinova 22 </td> <td> Sombor </td> <td> 25000 </td> <td> Aktivan </td> </tr> <tr> <td> 6 </td> <td> Tomić </td> <td> Kneza Miloša 13 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> SELECT Prezime, Adresa, Mesto FROM KUPCI order by Prezime; <br> <br> Записи у резултантној табели ће имати: ",
     "moguci_odgovori": {
         "0": "поредак исти као у приказаној табели",
         "1": "поредак супротан од поретка у приказаној табели",
@@ -3673,7 +3673,7 @@
 
 
 "333": {
-    "pitanje": "Дата је табела KUPCI: <br> <br> Id | Prezime | Adresa | Mesto | PostBroj | Status <br> 1 | Antić | Mokroluška 35 | Bečej | 21220 | Aktivan <br> 2 | Kostić | Jug Bogdanova 12 | Niš | 18000 | Pasivan <br> 3 | Marić | Masarikova 1 | Pirot | 18300 | Pasivan <br> 4 | Perić | Takovska 6 | Niš | 18000 | Pasivan <br> 5 | Rakić | Konstantinova 22 | Sombor | 25000 | Aktivan <br> 6 | Tomić | Kneza Miloša 13 | Bečej | 21220 | Aktivan <br> <br>Извршава се упит:  <br> <br> SELECT Prezime, Adresa, Mesto FROM KUPCI order by Mesto; <br> <br> Заокружити број испред траженог одговора. <br> Записи у резултантној табели ће имати:",
+    "pitanje": "Дата је табела KUPCI: <br> <br> <table> <tr> <td> Id </td> <td> Prezime </td> <td> Adresa </td> <td> Mesto </td> <td> PostBroj </td> <td> Status </td> </tr> <tr> <td> 1 </td> <td> Antić </td> <td> Mokroluška 35 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> <tr> <td> 2 </td> <td> Kostić </td> <td> Jug Bogdanova 12 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 3 </td> <td> Marić </td> <td> Masarikova 1 </td> <td> Pirot </td> <td> 18300 </td> <td> Pasivan </td> </tr> <tr> <td> 4 </td> <td> Perić </td> <td> Takovska 67 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 5 </td> <td> Rakić </td> <td> Konstantinova 22 </td> <td> Sombor </td> <td> 25000 </td> <td> Aktivan </td> </tr> <tr> <td> 6 </td> <td> Tomić </td> <td> Kneza Miloša 13 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> </table> <br> <br>Извршава се упит:  <br> <br> SELECT Prezime, Adresa, Mesto FROM KUPCI order by Mesto; <br> <br> Заокружити број испред траженог одговора. <br> Записи у резултантној табели ће имати:",
     "moguci_odgovori": {
         "0": "поредак исти као у приказаној табели",
         "1": "поредак супротан од приказане табеле",
@@ -3727,7 +3727,7 @@
 },
 
 "338": {
-    "pitanje": "Дата је табела ARTIKLI: <br> <br> Id | Naziv | DatProiz | JM | Kol | Cena | Akcija <br> 21 | Hleb Sava | 15.04.15 | kom | 100 | 35 | ____ <br> 32 | Hleb Dunav | 15.04.15 | kom | 50 | 45 | 0.05 <br> 23 | Baget beli | 12.04.15 | kom | 20 | 32 | 0.12 <br> 47 | Baget crni | 12.04.15 | kom | 12 | 35 | 0.08 <br> 25 | Tost tamni | 10.04.15 | kom | 6 | 75 | 0.15 <br> 36 | Tost beli | 10.04.15 | kom | 8 | 70 | ____ <br> 28 | Kifla integralna | 15.04.15 | kom | 15 | 18 | 0 <br> 10 | Brašno Graham | 10.03.15 | kg | 24 | 54 | 0 <br> <br> Заокружити број испред траженог одговора <br> Одредити упит који коригује – повећава цене за све артикле линеарно за 8 процената у односу на тренутну цену",
+    "pitanje": "Дата је табела ARTIKLI: <br> <br> <table> <tr> <td> Id </td> <td> Naziv </td> <td> DatProiz </td> <td> JM </td> <td> Kol </td> <td> Cena </td> <td> Akcija </td> </tr> <tr> <td> 21 </td> <td> Hleb Sava </td> <td> 15.04.15 </td> <td> kom </td> <td> 100 </td> <td> 35 </td> <td> </td> </tr> <tr> <td> 32 </td> <td> Hleb Dunav </td> <td> 15.04.15 </td> <td> kom </td> <td> 50 </td> <td> 45 </td> <td> 0.05 </td> </tr> <tr> <td> 23 </td> <td> Baget beli </td> <td> 12.04.15 </td> <td> kom </td> <td> 20 </td> <td> 32 </td> <td> 0.12 </td> </tr> <tr> <td> 47 </td> <td> Baget crni </td> <td> 12.04.15 </td> <td> kom </td> <td> 12 </td> <td> 35 </td> <td> 0.08 </td> </tr> <tr> <td> 25 </td> <td> Tost tamni </td> <td> 10.04.15 </td> <td> kom </td> <td> 6 </td> <td> 75 </td> <td> 0.15 </td> </tr> <tr> <td> 36 </td> <td> Tost beli </td> <td> 10.04.15 </td> <td> kom </td> <td> 8 </td> <td> 70 </td> <td> </td> </tr> <tr> <td> 28 </td> <td> Kifla integralna </td> <td> 15.04.15 </td> <td> kom </td> <td> 15 </td> <td> 18 </td> <td> 0 </td> </tr> <tr> <td> 10 </td> <td> Brašno Graham </td> <td> 10.03.15 </td> <td> kg </td> <td> 24 </td> <td> 54 </td> <td> 0 </td> </tr> </table> <br> <br> Заокружити број испред траженог одговора <br> Одредити упит који коригује – повећава цене за све артикле линеарно за 8 процената у односу на тренутну цену",
     "moguci_odgovori": {
         "0": "UPDATE ARTIKLI SET Cena = Cena*0.8;",
         "1": "UPDATE ARTIKLI SET Cena АS Cena*0.8;",
@@ -3739,7 +3739,7 @@
 
 
 "339": {
-    "pitanje": "Дата је табела RADNIK: <br> <br> IDBR | IME | PREZIME | PLATA | PREMIJA | DATZAP | <br> 5874 | Todor | Marjanović | 1000 | 1100 | 19.4.1971 <br> 5898 | Andrija | Aleksić | 1100 | ____ | 20.1.1980 <br> 5900 | Slobodan | Golubović | 900 | 1300 | 3.10.1978 <br> 5932 | Mitar | Gavrilović | 2600 | ____ | 25.3.1985 <br> 5953 | Persida | Kosanović | 1100 | 0 | 12.1.1979 <br> 6234 | Marko | Pavlović | 1300 | 3000 | 17.12.1990 <br> 6789 | Janko | Nikolić | 3900 | 10 | 23.12.1999 <br> <br> Заокружити број испред упитa којим ће се приказати само презиме, име и датум запослења за раднике запослене пре 1. јануара 1980.",
+    "pitanje": "Дата је табела RADNIK: <br> <br> <table> <tr> <td> IDBR </td> <td> IME </td> <td> PREZIME </td> <td> PLATA </td> <td> PREMIJA </td> <td> DATZAP </td> </tr> <tr> <td> 5874 </td> <td> Todor </td> <td> Marjanović </td> <td> 1000 </td> <td> 1100 </td> <td> 19.4.1971 </td> </tr> <tr> <td> 5898 </td> <td> Andrija </td> <td> Aleksić </td> <td> 1100 </td> <td></td> <td> 20.1.1980 </td> </tr> <tr> <td> 5900 </td> <td> Slobodan </td> <td> Golubović </td> <td> 900 </td> <td> 1300 </td> <td> 3.10.1978 </td> </tr> <tr> <td> 5932 </td> <td> Mitar </td> <td> Gavrilović </td> <td> 2600 </td> <td></td> <td> 25.3.1985 </td> </tr> <tr> <td> 5953 </td> <td> Persida </td> <td> Kosanović </td> <td> 1100 </td> <td> 0 </td> <td> 12.1.1979 </td> </tr> <tr> <td> 6234 </td> <td> Marko </td> <td> Pavlović </td> <td> 1300 </td> <td> 3000 </td> <td> 17.12.1990 </td> </tr> <tr> <td> 6789 </td> <td> Janko </td> <td> Nikolić </td> <td> 3900 </td> <td> 10 </td> <td> 23.12.1999 </td> </tr> </table> <br> <br> Заокружити број испред упитa којим ће се приказати само презиме, име и датум запослења за раднике запослене пре 1. јануара 1980.",
     "moguci_odgovori": {
         "0": "Select Prezime, Ime, DatZap from Radnik;",
         "1": "Select Ime, Prezime, DatZap from Radnik where DatZap < #1.1.1980#;",
@@ -3750,30 +3750,30 @@
 },
 
 "340": {
-    "pitanje": "Дата је табела RADNIK: <br> <br> IDBR | IME | PREZIME | PLATA | PREMIJA | DATZAP <br> 5900 | Slobodan | Golubović | 3900 | 1300 | 3.10.1978 <br> 5932 | Mitar | Gavrilović | 2600 | ____ | 25.3.1985 <br> 5953 | Persida | Kosanović | 1100 | 0 | 12.1.1979 <br> 6234 | Marko | Pavlović | 1300 | 3000 | 17.12.1990 <br> 6789 | Janko | Nikolić | 3900 | 10 | 31.12.1995 <br> <br> Извршава се упит: <br> <br> SELECT ime, prezime, plata FROM radnik <br> WHERE plata = (SELECT MAX(plata) FROM radnik); <br> <br> Одредити резултат извршења упита:",
+    "pitanje": "Дата је табела RADNIK: <br> <br> <table> <tr> <td> IDBR </td> <td> IME </td> <td> PREZIME </td> <td> PLATA </td> <td> PREMIJA </td> <td> DATZAP </td> </tr> <tr> <td> 5874 </td> <td> Todor </td> <td> Marjanović </td> <td> 1000 </td> <td> 1100 </td> <td> 19.4.1971 </td> </tr> <tr> <td> 5898 </td> <td> Andrija </td> <td> Aleksić </td> <td> 1100 </td> <td></td> <td> 20.1.1980 </td> </tr> <tr> <td> 5900 </td> <td> Slobodan </td> <td> Golubović </td> <td> 900 </td> <td> 1300 </td> <td> 3.10.1978 </td> </tr> <tr> <td> 5932 </td> <td> Mitar </td> <td> Gavrilović </td> <td> 2600 </td> <td></td> <td> 25.3.1985 </td> </tr> <tr> <td> 5953 </td> <td> Persida </td> <td> Kosanović </td> <td> 1100 </td> <td> 0 </td> <td> 12.1.1979 </td> </tr> <tr> <td> 6234 </td> <td> Marko </td> <td> Pavlović </td> <td> 1300 </td> <td> 3000 </td> <td> 17.12.1990 </td> </tr> <tr> <td> 6789 </td> <td> Janko </td> <td> Nikolić </td> <td> 3900 </td> <td> 10 </td> <td> 23.12.1999 </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> SELECT ime, prezime, plata FROM radnik <br> WHERE plata = (SELECT MAX(plata) FROM radnik); <br> <br> Одредити резултат извршења упита:",
     "moguci_odgovori": {
-        "0": "IME | PREZIME | PLATA <br> Slobodan | Golubović | 3900 <br> Mitar | Gavrilović | 2600",
-        "1": "IME | PREZIME | PLATA <br> Slobodan | Golubović | 3900 <br> Janko | Nikolić | 3900",
-        "2": "IME | PREZIME | PLATA <br> Slobodan | Golubović | 3900",
-        "3": "IME | PREZIME | PLATA <br> Janko | Nikolić | 3900"
+        "0": "<table> <tr> <td> IME </td> <td> PREZIME </td> <td> PLATA </td> </tr> <tr> <td> Slobodan </td> <td> Golubović </td> <td> 3900 </td> </tr> <tr> <td> Mitar </td> <td> Gavrilović </td> <td> 2600 </td> </tr> </table>",
+        "1": "<table> <tr> <td> IME </td> <td> PREZIME </td> <td> PLATA </td> </tr> <tr> <td> Slobodan </td> <td> Golubović </td> <td> 3900 </td> </tr> <tr> <td> Janko </td> <td> Nikolić </td> <td> 3900 </td> </tr> </table>",
+        "2": "<table> <tr> <td> IME </td> <td> PREZIME </td> <td> PLATA </td> </tr> <tr> <td> Slobodan </td> <td> Golubović </td> <td> 3900 </td> </tr> </table>",
+        "3": "<table> <tr> <td> IME </td> <td> PREZIME </td> <td> PLATA </td> </tr> <tr> <td> Janko </td> <td> Nikolić </td> <td> 3900 </td> </tr> </table>"
     },
     "tacni_odgovori": [1]
 },
 
 "341": {
-    "pitanje": "Дата је табела RADNIK: <br> <br> IDBR | IME | PREZIME | PLATA | PREMIJA | DATZAP <br> 5900 | Slobodan | Golubović | 3900 | 1300 | 3.10.1978 <br> 5932 | Mitar | Gavrilović | 2600 | ____ | 25.3.1985 <br> 5953 | Persida | Kosanović | 1100 | 0 | 12.1.1979 <br> 6234 | Marko | Pavlović | 1300 | 3000 | 17.12.1990 <br> 6789 | Janko | Nikolić | 3900 | 10 | 31.12.1995 <br> <br> Извршава се упит: <br> <br> SELECT ime, prezime, plata+premija AS zarada FROM radnik <br> WHERE premija is not NULL and premija> 10; <br> <br> Одредити шта је резултат извршења упита:",
+    "pitanje": "Дата је табела RADNIK: <br> <br> <table> <tr> <td> IDBR </td> <td> IME </td> <td> PREZIME </td> <td> PLATA </td> <td> PREMIJA </td> <td> DATZAP </td> </tr> <tr> <td> 5874 </td> <td> Todor </td> <td> Marjanović </td> <td> 1000 </td> <td> 1100 </td> <td> 19.4.1971 </td> </tr> <tr> <td> 5898 </td> <td> Andrija </td> <td> Aleksić </td> <td> 1100 </td> <td></td> <td> 20.1.1980 </td> </tr> <tr> <td> 5900 </td> <td> Slobodan </td> <td> Golubović </td> <td> 900 </td> <td> 1300 </td> <td> 3.10.1978 </td> </tr> <tr> <td> 5932 </td> <td> Mitar </td> <td> Gavrilović </td> <td> 2600 </td> <td></td> <td> 25.3.1985 </td> </tr> <tr> <td> 5953 </td> <td> Persida </td> <td> Kosanović </td> <td> 1100 </td> <td> 0 </td> <td> 12.1.1979 </td> </tr> <tr> <td> 6234 </td> <td> Marko </td> <td> Pavlović </td> <td> 1300 </td> <td> 3000 </td> <td> 17.12.1990 </td> </tr> <tr> <td> 6789 </td> <td> Janko </td> <td> Nikolić </td> <td> 3900 </td> <td> 10 </td> <td> 23.12.1999 </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> SELECT ime, prezime, plata+premija AS zarada FROM radnik <br> WHERE premija is not NULL and premija> 10; <br> <br> Одредити шта је резултат извршења упита:",
     "moguci_odgovori": {
-        "0": "IME | PREZIME | ZARADA <br> Slobodan | Golubović | 5200 <br> Marko | Pavlović | 4300 ",
-        "1": "IME | PREZIME | ZARADA <br> Slobodan | Golubović | 3900 <br> Marko | Pavlović | 3000 ",
-        "2": "IME | PREZIME | ZARADA <br> Mitar | Gavrilović | 2600 ",
-        "3": "IME | PREZIME | ZARADA <br> Persida | Kosanović | 1100 <br> Janko | Nikolić | 3900 "
+        "0": "<table> <tr> <td> IME </td> <td> PREZIME </td> <td> ZARADA </td> </tr> <tr> <td> Slobodan </td> <td> Golubović </td> <td> 5200 </td> </tr> <tr> <td> Marko </td> <td> Pavlović </td> <td> 4300 </td> </tr> </table> ",
+        "1": "<table> <tr> <td> IME </td> <td> PREZIME </td> <td> ZARADA </td> </tr> <tr> <td> Slobodan </td> <td> Golubović </td> <td> 3900 </td> </tr> <tr> <td> Marko </td> <td> Pavlović </td> <td> 3000 </td> </tr> </table> ",
+        "2": "<table> <tr> <td> IME </td> <td> PREZIME </td> <td> ZARADA </td> </tr> <tr> <td> Mitar </td> <td> Gavrilović </td> <td> 2600 </td> </tr> </table> ",
+        "3": "<table> <tr> <td> IME </td> <td> PREZIME </td> <td> ZARADA </td> </tr> <tr> <td> Persida </td> <td> Kosanović </td> <td> 1100 </td> </tr> <tr> <td> Janko </td> <td> Nikolić </td> <td> 3900 </td> </tr> </table> "
     },
     "tacni_odgovori": [0]
 },
 
 
 "342": {
-    "pitanje": "Дата је табела RADNIK: <br> <br> IDBR | IME | PREZIME | PLATA | PREMIJA | DATZAP <br> 5900 | Slobodan | Golubović | 3900 | 1300 | 3.10.1978 <br> 5932 | Mitar | Gavrilović | 2600 | ____ | 25.3.1985 <br> 5953 | Persida | Kosanović | 1100 | 0 | 12.1.1979 <br> 6234 | Marko | Pavlović | 1300 | 3000 | 17.12.1990 <br> 6789 | Janko | Nikolić | 3900 | 10 | 31.12.1995 <br> <br> Извршава се упит: <br> <br> SELECT ime, prezime, plata+premija AS zarada FROM radnik <br> WHEREpremijais not NULL; <br> <br> Одредити колико редова има табела која је резултат извршења упита не рачунајући заглавље:",
+    "pitanje": "Дата је табела RADNIK: <br> <br> <table> <tr> <td> IDBR </td> <td> IME </td> <td> PREZIME </td> <td> PLATA </td> <td> PREMIJA </td> <td> DATZAP </td> </tr> <tr> <td> 5874 </td> <td> Todor </td> <td> Marjanović </td> <td> 1000 </td> <td> 1100 </td> <td> 19.4.1971 </td> </tr> <tr> <td> 5898 </td> <td> Andrija </td> <td> Aleksić </td> <td> 1100 </td> <td></td> <td> 20.1.1980 </td> </tr> <tr> <td> 5900 </td> <td> Slobodan </td> <td> Golubović </td> <td> 900 </td> <td> 1300 </td> <td> 3.10.1978 </td> </tr> <tr> <td> 5932 </td> <td> Mitar </td> <td> Gavrilović </td> <td> 2600 </td> <td></td> <td> 25.3.1985 </td> </tr> <tr> <td> 5953 </td> <td> Persida </td> <td> Kosanović </td> <td> 1100 </td> <td> 0 </td> <td> 12.1.1979 </td> </tr> <tr> <td> 6234 </td> <td> Marko </td> <td> Pavlović </td> <td> 1300 </td> <td> 3000 </td> <td> 17.12.1990 </td> </tr> <tr> <td> 6789 </td> <td> Janko </td> <td> Nikolić </td> <td> 3900 </td> <td> 10 </td> <td> 23.12.1999 </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> SELECT ime, prezime, plata+premija AS zarada FROM radnik <br> WHEREpremijais not NULL; <br> <br> Одредити колико редова има табела која је резултат извршења упита не рачунајући заглавље:",
     "moguci_odgovori": {
         "0": "0",
         "1": "2",
@@ -3797,7 +3797,7 @@
 
 
 "344": {
-    "pitanje": "Дата је табела KUPCI: <br> <br> Id | Prezime | Adresa | Mesto | PostBroj | Status <br> 1 | Antić | Mokroluška 35 | Bečej | 21220 | Aktivan <br> 2 | Kostić | Jug Bogdanova 12 | Niš | 18000 | Pasivan <br> 3 | Marić | Masarikova 1 | Pirot | 18300 | Pasivan <br> 4 | Perić | Takovska 67 | Niš | 18000 | Pasivan <br> 5 | Rakić | Konstantinova 22 | Sombor | 25000 | Aktivan <br> 6 | Tomić | Kneza Miloša 13 | Bečej | 21220 | Aktivan <br> <br> у којој поља AdresaPostBrojStatus могу бити неодређена. <br> Извршaва се упит: <br> <br> INSERT INTO KUPCI (Id, Prezime, Mesto) <br> VALUES (9,'Andrejić','Ada'); <br> <br> Одредити резултат рада овог упита: ",
+    "pitanje": "Дата је табела KUPCI: <br> <br> <table> <tr> <td> Id </td> <td> Prezime </td> <td> Adresa </td> <td> Mesto </td> <td> PostBroj </td> <td> Status </td> </tr> <tr> <td> 1 </td> <td> Antić </td> <td> Mokroluška 35 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> <tr> <td> 2 </td> <td> Kostić </td> <td> Jug Бogdanova 12 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 3 </td> <td> Marić </td> <td> Masarikova 1 </td> <td> Pirot </td> <td> 18300 </td> <td> Pasivan </td> </tr> <tr> <td> 4 </td> <td> Perić </td> <td> Taкovska 67 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 5 </td> <td> Rakić </td> <td> Konstantinova 22 </td> <td> Sombor </td> <td> 25000 </td> <td> Aktivan </td> </tr> <tr> <td> 6 </td> <td> Tomić </td> <td> Kneza Miloša 13 </td> <td> Bečej </td> <td> 21220 </td> <td> Аktivan </td> </tr> </table> <br> <br> у којој поља AdresaPostBrojStatus могу бити неодређена. <br> Извршaва се упит: <br> <br> INSERT INTO KUPCI (Id, Prezime, Mesto) <br> VALUES (9,'Andrejić','Ada'); <br> <br> Одредити резултат рада овог упита: ",
     "moguci_odgovori": {
         "0": "Добићемо поруку о грешци",
         "1": "У табелу ће бити додат један запис",
@@ -3809,7 +3809,7 @@
 
 
 "345": {
-    "pitanje": "Дата је табела KUPCI: <br> <br> Id | Prezime | Adresa | Mesto | PostBroj | Status <br> 1 | Antić | Mokroluška 35 | Bečej | 21220 | Aktivan <br> 2 | Kostić | Jug Bogdanova 12 | Niš | 18000 | Pasivan <br> 3 | Marić | Masarikova 1 | Pirot | 18300 | Pasivan <br> 4 | Perić | Takovska 67 | Niš | 18000 | Pasivan <br> 5 | Rakić | Konstantinova 22 | Sombor | 25000 | Aktivan <br> 6 | Tomić | Kneza Miloša 13 | Bečej | 21220 | Aktivan <br> <br> Извршава се упит: <br> <br> DELETE FROM KUPCI WHERE Mesto Like ‘*?o?*’; <br> <br> Одредити вредности Id оних записа који ће бити уклоњени из табеле након извршења датог упита: ",
+    "pitanje": "Дата је табела KUPCI: <br> <br> <table> <tr> <td> Id </td> <td> Prezime </td> <td> Adresa </td> <td> Mesto </td> <td> PostBroj </td> <td> Status </td> </tr> <tr> <td> 1 </td> <td> Antić </td> <td> Mokroluška 35 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> <tr> <td> 2 </td> <td> Kostić </td> <td> Jug Бogdanova 12 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 3 </td> <td> Marić </td> <td> Masarikova 1 </td> <td> Pirot </td> <td> 18300 </td> <td> Pasivan </td> </tr> <tr> <td> 4 </td> <td> Perić </td> <td> Taкovska 67 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 5 </td> <td> Rakić </td> <td> Konstantinova 22 </td> <td> Sombor </td> <td> 25000 </td> <td> Aktivan </td> </tr> <tr> <td> 6 </td> <td> Tomić </td> <td> Kneza Miloša 13 </td> <td> Bečej </td> <td> 21220 </td> <td> Аktivan </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> DELETE FROM KUPCI WHERE Mesto Like ‘*?o?*’; <br> <br> Одредити вредности Id оних записа који ће бити уклоњени из табеле након извршења датог упита: ",
     "moguci_odgovori": {
         "0": "1,2",
         "1": "2,3",
@@ -3821,7 +3821,7 @@
 
 
 "346": {
-    "pitanje": "Дата је табела KUPCI: <br> <br> Id | Prezime | Adresa | Mesto | PostBroj | Status <br> 1 | Antić | Mokroluška 35 | Bečej | 21220 | Aktivan <br> 2 | Kostić | Jug Bogdanova 12 | Niš | 18000 | Pasivan <br> 3 | Marić | Masarikova 1 | Pirot | 18300 | Pasivan <br> 4 | Perić | Takovska 67 | Niš | 18000 | Pasivan <br> 5 | Rakić | Konstantinova 22 | Sombor | 25000 | Aktivan <br> 6 | Tomić | Kneza Miloša 13 | Bečej | 21220 | Aktivan <br> <br> Извршава се упит: <br> <br> CREATE TABLE NoviKupci <br> (Id number PrimaryKey, Prezime text(50), Adresa Text(50), Mesto Text(20), <br> PostBroj Number, Status Text(8) is Null); <br> <br> Одредити резултат извршења упита: ",
+    "pitanje": "Дата је табела KUPCI: <br> <br> <table> <tr> <td> Id </td> <td> Prezime </td> <td> Adresa </td> <td> Mesto </td> <td> PostBroj </td> <td> Status </td> </tr> <tr> <td> 1 </td> <td> Antić </td> <td> Mokroluška 35 </td> <td> Bečej </td> <td> 21220 </td> <td> Aktivan </td> </tr> <tr> <td> 2 </td> <td> Kostić </td> <td> Jug Бogdanova 12 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 3 </td> <td> Marić </td> <td> Masarikova 1 </td> <td> Pirot </td> <td> 18300 </td> <td> Pasivan </td> </tr> <tr> <td> 4 </td> <td> Perić </td> <td> Taкovska 67 </td> <td> Niš </td> <td> 18000 </td> <td> Pasivan </td> </tr> <tr> <td> 5 </td> <td> Rakić </td> <td> Konstantinova 22 </td> <td> Sombor </td> <td> 25000 </td> <td> Aktivan </td> </tr> <tr> <td> 6 </td> <td> Tomić </td> <td> Kneza Miloša 13 </td> <td> Bečej </td> <td> 21220 </td> <td> Аktivan </td> </tr> </table> <br> <br> Извршава се упит: <br> <br> CREATE TABLE NoviKupci <br> (Id number PrimaryKey, Prezime text(50), Adresa Text(50), Mesto Text(20), <br> PostBroj Number, Status Text(8) is Null); <br> <br> Одредити резултат извршења упита: ",
     "moguci_odgovori": {
         "0": "Креира нову табелу NoviKupci",
         "1": "У нову табелу NoviKupci преписује све записе из табеле KUPCI",
@@ -4038,7 +4038,7 @@
 
 
 "365": {
-    "pitanje": "Дата је табела ARTIKLI: <br> <br> Id | Naziv | DatProiz | JM | Kol | Cena | Akcija <br> 21 | Hleb Sava | 15.04.2015 | kom | 100 | 35 | ____ <br> 32 | Hleb Dunav | 15.04.2015 | kom | 50 | 45 | 0.05 <br> 23 | Baget beli | 12.04.2015 | kom | 20 | 32 | 0.12 <br>  47 | Baget crni | 12.04.2015 | kom | 12 | 35 | 0.08 <br> 25 | Tost tamni | 10.04.2015 | kom | 6 | 75 | 0.15 <br> 36 | Tost beli | 10.04.2015 | kom | 8 | 70 | ____ <br> 28 | Kifla integralna | 15.04.2015 | kom | 15 | 18 | 0 <br> 10 | Brašno Graham | 10.03.2015 | kg | 24 | 54 | 0 <br> <br> Потребно је приказати називе, цене и количине за све артикле чији назив не почиње са Hleb, Baget или Tost. <br> Заокружити број испред упита који одговара постављеном захтеву.",
+    "pitanje": "Дата је табела ARTIKLI: <br> <br> <table> <tr> <td> Id </td> <td> Naziv </td> <td> DatProiz </td> <td> JM </td> <td> Kol </td> <td> Cena </td> <td> Akcija </td> </tr> <tr> <td> 21 </td> <td> Hleb Sava </td> <td> 15.04.15 </td> <td> kom </td> <td> 100 </td> <td> 35 </td> <td> </td> </tr> <tr> <td> 32 </td> <td> Hleb Dunav </td> <td> 15.04.15 </td> <td> kom </td> <td> 50 </td> <td> 45 </td> <td> 0.05 </td> </tr> <tr> <td> 23 </td> <td> Baget beli </td> <td> 12.04.15 </td> <td> kom </td> <td> 20 </td> <td> 32 </td> <td> 0.12 </td> </tr> <tr> <td> 47 </td> <td> Baget crni </td> <td> 12.04.15 </td> <td> kom </td> <td> 12 </td> <td> 35 </td> <td> 0.08 </td> </tr> <tr> <td> 25 </td> <td> Tost tamni </td> <td> 10.04.15 </td> <td> kom </td> <td> 6 </td> <td> 75 </td> <td> 0.15 </td> </tr> <tr> <td> 36 </td> <td> Tost beli </td> <td> 10.04.15 </td> <td> kom </td> <td> 8 </td> <td> 70 </td> <td> </td> </tr> <tr> <td> 28 </td> <td> Kifla integralna </td> <td> 15.04.15 </td> <td> kom </td> <td> 15 </td> <td> 18 </td> <td> 0 </td> </tr> <tr> <td> 10 </td> <td> Brašno Graham </td> <td> 10.03.15 </td> <td> kg </td> <td> 24 </td> <td> 54 </td> <td> 0 </td> </tr> </table> <br> <br> Потребно је приказати називе, цене и количине за све артикле чији назив не почиње са Hleb, Baget или Tost. <br> Заокружити број испред упита који одговара постављеном захтеву.",
     "moguci_odgovori": {
         "0": "SELECT Naziv, Kol, Cena FROM ARTIKLI;",
         "1": "SELECT Naziv, Kol, Cena FROM ARTIKLI where Naziv not in ('Hleb* ', 'Baget* ', 'Tost*');",
@@ -4050,7 +4050,7 @@
 
 
 "366": {
-    "pitanje": "Дата је табела ARTIKLI и упит: <br> <br> Id | Naziv | DatProiz | JM | Kol | Cena | Akcija <br> 21 | Hleb Sava | 15.04.2015 | kom | 100 | 35 | ____ <br> 32 | Hleb Dunav | 15.04.2015 | kom | 50 | 45 | 0.05 <br> 23 | Baget beli | 12.04.2015 | kom | 20 | 32 | 0.12 <br> 47 | Baget crni | 12.04.2015 | kom | 12 | 35 | 0.08 <br> 36 | Tost beli | 10.04.2015 | kom | 8 | 70 | ____ <br> 28 | Kifla integralna | 15.04.2015 | kom | 15 | 18 | 0 <br> 10 | Brašno Graham | 10.03.2015 | kg | 24 | 54 | 0 <br> <br> SELECT Naziv, Kol, Cena, DateDiff(\"d\", DatProiz,“2015-04-18“) FROM ARTIKLI; <br> <br> Одредити шта ће бити приказано након извршења упита:",
+    "pitanje": "Дата је табела ARTIKLI и упит: <br> <br> <table> <tr> <td> Id </td> <td> Naziv </td> <td> DatProiz </td> <td> JM </td> <td> Kol </td> <td> Cena </td> <td> Akcija </td> </tr> <tr> <td> 21 </td> <td> Hleb Sava </td> <td> 15.04.15 </td> <td> kom </td> <td> 100 </td> <td> 35 </td> <td> </td> </tr> <tr> <td> 32 </td> <td> Hleb Dunav </td> <td> 15.04.15 </td> <td> kom </td> <td> 50 </td> <td> 45 </td> <td> 0.05 </td> </tr> <tr> <td> 23 </td> <td> Baget beli </td> <td> 12.04.15 </td> <td> kom </td> <td> 20 </td> <td> 32 </td> <td> 0.12 </td> </tr> <tr> <td> 47 </td> <td> Baget crni </td> <td> 12.04.15 </td> <td> kom </td> <td> 12 </td> <td> 35 </td> <td> 0.08 </td> </tr> <tr> <td> 25 </td> <td> Tost tamni </td> <td> 10.04.15 </td> <td> kom </td> <td> 6 </td> <td> 75 </td> <td> 0.15 </td> </tr> <tr> <td> 36 </td> <td> Tost beli </td> <td> 10.04.15 </td> <td> kom </td> <td> 8 </td> <td> 70 </td> <td> </td> </tr> <tr> <td> 28 </td> <td> Kifla integralna </td> <td> 15.04.15 </td> <td> kom </td> <td> 15 </td> <td> 18 </td> <td> 0 </td> </tr> <tr> <td> 10 </td> <td> Brašno Graham </td> <td> 10.03.15 </td> <td> kg </td> <td> 24 </td> <td> 54 </td> <td> 0 </td> </tr> </table> <br> <br> SELECT Naziv, Kol, Cena, DateDiff(\"d\", DatProiz,“2015-04-18“) FROM ARTIKLI; <br> <br> Одредити шта ће бити приказано након извршења упита:",
     "moguci_odgovori": {
         "0": "Називи, цене и количине за све артикле",
         "1": "Називи, цене и количине за све артикле који су произведени пре 18.04.2015",
@@ -4062,7 +4062,7 @@
 
 
 "367": {
-    "pitanje": "Дата је табела RADNIK и упит: <br> <br> IDBR | IME | PREZIME | PLATA | PREMIJA | DATZAP <br> 6234 | Marko | Pavlović | 1300 | 3000 | 17.12.1990 <br> 6789 | Janko | Nikolić | 3900 | 10 | 23.12.1999 <br> <br> SELECT ime, prezime, DateDiff(\"yyyy\", datzap, now()) as god from radnik; <br> <br> Одредити шта је резултат упита: ",
+    "pitanje": "Дата је табела RADNIK и упит: <br> <br> <table> <tr> <td> IDBR </td> <td> IME </td> <td> PREZIME </td> <td> PLATA </td> <td> PREMIJA </td> <td> DATZAP </td> </tr> <tr> <td> 6234 </td> <td> Marko </td> <td> Pavlović </td> <td> 1300 </td> <td> 3000 </td> <td> 17.12.1990 </td> </tr> <tr> <td> 6789 </td> <td> Janko </td> <td> Nikolić </td> <td> 3900 </td> <td> 10 </td> <td> 23.12.1999 </td> </tr> </table> <br> <br> SELECT ime, prezime, DateDiff(\"yyyy\", datzap, now()) as god from radnik; <br> <br> Одредити шта је резултат упита: ",
     "moguci_odgovori": {
         "0": "Табела са подацима о именима и презименима радника",
         "1": "Табела са подацима о именима, презименима и броју година које су протекле од датума запослења радника до краја века",
@@ -4574,7 +4574,7 @@
 },
 
 "413": {
-    "pitanje": "Дата је табела RADNIK: <br> <br> IDBR | IME | PREZIME | PLATA | PREMIJA | DATZAP <br> 5900 | Slobodan | Golubović | 900 | 1300 | 3.10.1978 <br> 5932 | Mitar | Gavrilović | 2600 | ____ | 25.3.1985 <br> 5953 | Persida | Kosanović | 1100 | 0 | 12.1.1979 <br> 6234 | Marko | Pavlović | 1300 | 3000 | 17.12.1990 <br> 6789 | Janko | Nikolić | 3900 | 10 | 31.12.1995 <br> <br> Заокружити бројеве испред упита којим ће се приказати само презиме и име за раднике запослене у периоду од 1. јануара 1980. до 31. децембра 1995.  ",
+    "pitanje": "Дата је табела RADNIK: <br> <br> <table> <tr> <td> IDBR </td> <td> IME </td> <td> PREZIME </td> <td> PLATA </td> <td> PREMIJA </td> <td> DATZAP </td> </tr> <tr> <td> 5900 </td> <td> Slobodan </td> <td> Golubović </td> <td> 900 </td> <td> 1300 </td> <td> 3.10.1978 </td> </tr> <tr> <td> 5932 </td> <td> Mitar </td> <td> Gavrilović </td> <td> 2600 </td> <td></td> <td> 25.3.1985 </td> </tr> <tr> <td> 5953 </td> <td> Persida </td> <td> Kosanović </td> <td> 1100 </td> <td> 0 </td> <td> 12.1.1979 </td> </tr> <tr> <td> 6234 </td> <td> Marko </td> <td> Pavlović </td> <td> 1300 </td> <td> 3000 </td> <td> 17.12.1990 </td> </tr> <tr> <td> 6789 </td> <td> Janko </td> <td> Nikolić </td> <td> 3900 </td> <td> 10 </td> <td> 31.12.1995 </td> </tr> </table> <br> <br> Заокружити бројеве испред упита којим ће се приказати само презиме и име за раднике запослене у периоду од 1. јануара 1980. до 31. децембра 1995.  ",
     "moguci_odgovori": {
         "0": "Select Prezime, Ime from Radnik where DatZap > #1.1.1980#; and < #1.1.1995#;",
         "1": "Select Prezime, Ime from Radnik where DatZap <= #1.1.1980# and DatZap <= #31.12.1995#;",
@@ -4732,8 +4732,8 @@
 "428": {
     "pitanje": "Тригери (окидачи) се могу стартовати непосредно ____________ или ____________ SQL наредбе",
     "moguci_odgovori": {
-        "0": "pre | posle",
-        "1": "nakon izvrsenja | gasenja "
+        "0": "pre |i posle",
+        "1": "nakon izvrsenja |i gasenja "
     },
     "tacni_odgovori": [0]
 },

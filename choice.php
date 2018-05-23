@@ -2,7 +2,7 @@
     ?>
 <html>
     <head>
-    <link rel="stylesheet" type="text/css" href="css/choice.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     </head>
     <body class="container">
         <section class="row section_choose_action">

@@ -10,7 +10,7 @@
                 });
             });
     </script>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     </head>
     <body class="container">
         <section class="section_choice">

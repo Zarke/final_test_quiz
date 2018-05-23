@@ -89,10 +89,8 @@
             background-color:rgba($color: map-get($grey,'lighten-1'), $alpha: 0.75);
             box-shadow: .4rem .4rem .5rem map-get($grey,'darken-4');
             cursor:pointer;
-            // height: 6rem;
             color: color('shades','black');
             vertical-align: middle!important;
-            // line-height: 6rem;
             margin-bottom: 3rem;
             font-size: 1.3rem!important;
 
@@ -137,14 +135,19 @@
     @include spacer;
     float: left;
 }
+table,th,td{
+    color: color("shades","white");
+    border: 1px solid color("shades","white");
+}
+
 //index.php styling
 
 .section_choice{
     background: url(../images/index_bckg.jpg);
     background-size: cover;
-    height: 60vh;
+    height: 80vh;
     position: relative;
-    margin-top:20vh; 
+    margin-top:10vh; 
     &__form{
         padding: 2rem;
         &-heading{
@@ -175,7 +178,7 @@
             @include answer;
             background-color:rgba($color: color("grey","darken-4"), $alpha: 0.75);
             position: absolute;
-            bottom: 5rem;
+            bottom: 1.5rem;
             left:40%;
             color: color("shades","white");
             border: 1px solid color("shades","white");

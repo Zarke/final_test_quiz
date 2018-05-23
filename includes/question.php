@@ -121,7 +121,6 @@
                     if(in_array($answer , $this->answers)){
                         echo "<div class='question__answers-correct '>Odgovor:<b> ". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ." </b>je tačan </div>";
                         $unchecked_correct = question::deleteElement($answer, $unchecked_correct);
-                        print_r($unchecked_correct);echo "Kad pogodis jedan tacan";
                     } else {
                         echo "<div class='question__answers-incorrect '>Odgovor: <b>". $this->documents->{$question_id_val}->moguci_odgovori->{$answer} ."</b> je netačan </div>";
                     }

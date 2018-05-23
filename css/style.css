@@ -6613,16 +6613,12 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
   height: 3rem;
   float: left; }
 
-table, th, td {
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF; }
-
 .section_choice {
   background: url(../images/index_bckg.jpg);
   background-size: cover;
-  height: 80vh;
+  height: 60vh;
   position: relative;
-  margin-top: 10vh; }
+  margin-top: 20vh; }
   .section_choice__form {
     padding: 2rem; }
     .section_choice__form-heading {
@@ -6660,7 +6656,7 @@ table, th, td {
       vertical-align: middle;
       background-color: rgba(33, 33, 33, 0.75);
       position: absolute;
-      bottom: 1.5rem;
+      bottom: 5rem;
       left: 40%;
       color: #FFFFFF;
       border: 1px solid #FFFFFF;
