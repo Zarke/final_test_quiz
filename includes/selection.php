@@ -25,14 +25,14 @@ include("question.php");
         //method that activates on page load that lists all question groups
         public function show_selections(){
             $this->question_amount();
-                echo "<h1 class='section__choose-form-heading center-align col m6 offset-m3'>Izaberite željenu sliku</h1>";
+                echo "<h1 class='section__choose-form-heading center-align col m6 offset-m3'>Izaberite željenu banju</h1>";
                 for ($i=0; $i <= $this->selection_num; $i++) { 
                     switch ($i) {
                         case 0:
-                            echo "<input id='".$i."' type='checkbox' name= 'checkbox[]' value='".$i."'>"."<label class='section__choose-form-option col m4 offset-m1' for='".$i."'>Istorija banata</label>";
+                            echo "<input id='".$i."' type='checkbox' name= 'checkbox[]' value='".$i."'>"."<label class='section__choose-form-option col m4 offset-m1' for='".$i."'>".$this->documents->{"lista_gradova"}[0]."</label>";
                             break;
                         case 1:
-                            echo "<input id='".$i."' type='checkbox' name= 'checkbox[]' value='".$i."'>"."<label class='section__choose-form-option col m4 offset-m2' for='".$i."'>istorija beogradskog pasaluka</label>";
+                            echo "<input id='".$i."' type='checkbox' name= 'checkbox[]' value='".$i."'>"."<label class='section__choose-form-option col m4 offset-m2' for='".$i."'>".$this->documents->{"lista_gradova"}[1]."</label>";
                             break;
                     }
                 }  

@@ -46,7 +46,7 @@
 .section__choose{
     background: url(../images/index_bckg.jpg);
     background-size: cover;
-    height: 60vh;
+    height: 70vh;
     position: relative;
     margin-top:20vh; 
     &-form{
@@ -79,7 +79,7 @@
             @include answer;
             background-color:rgba($color: color("grey","darken-4"), $alpha: 0.75);
             position: absolute;
-            bottom: 5rem;
+            bottom: 2rem;
             left:40%;
             color: color("shades","white");
             border: 1px solid color("shades","white");

@@ -7,7 +7,7 @@ $(document).ready(function(){
         if($.cookie("img_id")){
         var img_id_cookie = $.cookie("img_id");
         var img_id = $.parseJSON(img_id_cookie);
-            var img_url = "url(images/fortress-"+ img_id + ".jpg)";
+            var img_url = "url(images/ljubodrag-"+ img_id + ".jpg)";
             $("table").css("background-image",img_url);
         }
         if($.cookie("correct_sections")){

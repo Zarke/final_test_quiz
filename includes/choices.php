@@ -29,7 +29,7 @@
         //method that lists all possible image names
         public function checkbox_listing(){
             $this->get_json();
-            $this->fortress_arr = $this->documents->{'lista tvrdajva'};
+            $this->fortress_arr = $this->documents->{'Lista licnosti'};
             foreach( $this->fortress_arr as $key => $value){
                 echo "<input class='checkbox' id='".$key."' type='radio' name= 'radio_btn[]' value=" .$key.">"."<label class='img_check__form-possible_answer col m3 offset-m2' for='".$key."'>".$value."</label>"."<br>";
             }

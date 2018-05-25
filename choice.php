@@ -42,7 +42,7 @@
                 ?>
             </div>
             <form method="post" class="img_check__form">
-                <h3 class="img_check__form-heading col m8 offset-m2 center-align">Čestitamo, odgovorili ste tačno na sva pitanja! Sada proverite svoje znanje tako što ćete pokušati da pogodite o kojoj tvrđavi je reč.</h3>
+                <h3 class="img_check__form-heading col m8 offset-m2 center-align">Čestitamo, odgovorili ste tačno na sva pitanja! Sada proverite svoje znanje tako što ćete pokušati da pogodite o kojoj ličnosti je reč je reč.</h3>
                 <?php $choice->checkbox_listing(); $choice->choose_action();?>
                 <input type="submit" class="img_check__form-btn btn-rerun" name="rerun" value="Ponoviti selekciju"/>
                 <input type="submit" class="img_check__form-btn btn-check" name="check" value="Potvrdi odabir"/>

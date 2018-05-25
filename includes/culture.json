@@ -3,22 +3,22 @@
         "0":{
             "section questions":{
                 "0":{
-                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 0 qst 0",
+                    "pitanje": "Vrnjačka banja, od davnina poznata je po:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Lekovitim izvorima",
+                        "1": "Hrani",
+                        "2": "Zimovanjima",
+                        "3": "Jezeru"
                     },
                     "tacni_odgovori": [0]
                 },
                 "1":{
-                    "pitanje": "Koliko je stara Niska tvrdjava img section 0 qst 1",
+                    "pitanje": "Vrnjačka banja nalazi se u sledećoj oblasti:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Zapadna Srbija",
+                        "1": "Centralna Srbija",
+                        "2": "Istočna Srbija",
+                        "3": "Vojvodina"
                     },
                     "tacni_odgovori": [1]
                 }
@@ -27,22 +27,22 @@
         "1":{
             "section questions":{
                 "0":{
-                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 1 qst 0",
+                    "pitanje": "Najbliži grad je:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Kragujevac",
+                        "1": "Beograd",
+                        "2": "Kraljevo",
+                        "3": "Valjevo"
                     },
                     "tacni_odgovori": [2]
                 },
                 "1":{
-                    "pitanje": "Koliko je stara Niska tvrdjava img section 1 qst 1",
+                    "pitanje": "Od Beograda udaljena je:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "240km",
+                        "1": "148km",
+                        "2": "70km",
+                        "3": "200km"
                     },
                     "tacni_odgovori": [3]
                 }
@@ -51,22 +51,22 @@
         "2":{
             "section questions":{
                 "0":{
-                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 2 qst 0",
+                    "pitanje": "Koja slavna ličnost dolazi iz Vrnjacke banje?",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Ljubodrag Simonović",
+                        "1": "Bogdan Bogdanović",
+                        "2": "Ipče Ahmedovski",
+                        "3": "Toma Zdravković"
                     },
                     "tacni_odgovori": [0]
                 },
                 "1":{
-                    "pitanje": "Koliko je stara Niska tvrdjava img section 2 qst 1",
+                    "pitanje": "Najbliza planina je:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Kopaonik",
+                        "1": "Goč",
+                        "2": "Zlatibor",
+                        "3": "Tara"
                     },
                     "tacni_odgovori": [1]
                 }
@@ -75,22 +75,22 @@
         "3":{
             "section questions":{
                 "0":{
-                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 3 qst 0",
+                    "pitanje": "Najbliži manastir je:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Hram Svetog Save",
+                        "1": "Manastir Manasija",
+                        "2": "Manastir Kalenić",
+                        "3": "Hilandar"
                     },
                     "tacni_odgovori": [2]
                 },
                 "1":{
-                    "pitanje": "Koliko je stara Niska tvrdjava img section 3 qst 1",
+                    "pitanje": "Grana turizma koju Vrnjačka banja nema:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Adrenalinski turizam",
+                        "1": "Duhovni turizam",
+                        "2": "Zdravstveni turizam",
+                        "3": "Rečni turizam"
                     },
                     "tacni_odgovori": [3]
                 }
@@ -99,22 +99,22 @@
         "4":{
             "section questions":{
                 "0":{
-                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 4 qst 0",
+                    "pitanje": "Za koji sport Vrnjačka banja nema klub:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Teniski klub",
+                        "1": "Fudbalski klub",
+                        "2": "Odbojkaški klub",
+                        "3": "Rukometni klub"
                     },
                     "tacni_odgovori": [0]
                 },
                 "1":{
-                    "pitanje": "Koliko je stara Niska tvrdjava img section 4 qst 1",
+                    "pitanje": "Sama Vrnjačka banja ima:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "5.000 stanovnika",
+                        "1": "10.000 stanovnika",
+                        "2": "20.000 stanovnika",
+                        "3": "50.000 stanovnika"
                     },
                     "tacni_odgovori": [1]
                 }
@@ -123,22 +123,22 @@
         "5":{
             "section questions":{
                 "0":{
-                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 5 qst 0",
+                    "pitanje": "Vrnjačka banja se nalazi u:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Bačkom okrugu",
+                        "1": "Pirotskom okrugu",
+                        "2": "Raškom okrugu",
+                        "3": "Južno-Banatskom okrugu"
                     },
                     "tacni_odgovori": [2]
                 },
                 "1":{
-                    "pitanje": "Koliko je stara Niska tvrdjava img section 5 qst 1",
+                    "pitanje": "Serija snimana u Vrnjačkoj banji je:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Porodično Blago",
+                        "1": "Bela Lađa",
+                        "2": "Bolji Život",
+                        "3": "Stižu dolari"
                     },
                     "tacni_odgovori": [3]
                 }
@@ -147,22 +147,22 @@
         "6":{
             "section questions":{
                 "0":{
-                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 6 qst 0",
+                    "pitanje": "Najbliža reka je:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Zapadna Morava",
+                        "1": "Dunav",
+                        "2": "Sava",
+                        "3": "Tisa"
                     },
                     "tacni_odgovori": [0]
                 },
                 "1":{
-                    "pitanje": "Koliko je stara Niska tvrdjava img section 6 qst 1",
+                    "pitanje": "Koji festival se održava u Vrnjačkoj banji:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Exit",
+                        "1": "Love Fest",
+                        "2": "Guča",
+                        "3": "Beer Fest"
                     },
                     "tacni_odgovori": [1]
                 }
@@ -171,22 +171,22 @@
         "7":{
             "section questions":{
                 "0":{
-                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 7 qst 0",
+                    "pitanje": "Koja tvrđava se nalazi kod Vrnjačke banje:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Bačka tvrđava",
+                        "1": "Petrovaradinska tvrđava",
+                        "2": "Tvrđava Zvornik",
+                        "3": "Niška tvrđava"
                     },
                     "tacni_odgovori": [2]
                 },
                 "1":{
-                    "pitanje": "Koliko je stara Niska tvrdjava img section 7 qst 1",
+                    "pitanje": "Zaštitni znak Vrnjačke banje je:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Labud Slavko",
+                        "1": "Orao Mile",
+                        "2": "Golub Gocko",
+                        "3": "Vrabac Gocko"
                     },
                     "tacni_odgovori": [3]
                 }
@@ -195,22 +195,22 @@
         "8":{
             "section questions":{
                 "0":{
-                    "pitanje": "Koliko je stara tvrdjava Smederevo img section 8 qst 0",
+                    "pitanje": "Koja znamenitost postoji samo u Vrnjačkoj banji:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "Most Ljubavi",
+                        "1": "Tvršava",
+                        "2": "Muzej",
+                        "3": "Manastir"
                     },
                     "tacni_odgovori": [0]
                 },
                 "1":{
-                    "pitanje": "Koliko je stara Niska tvrdjava img section 8 qst 1",
+                    "pitanje": "Vrnjačku banju godišnje poseti:",
                     "moguci_odgovori": {
-                        "0": "150 godina",
-                        "1": "250 godina",
-                        "2": "175 godina",
-                        "3": "350 godina"
+                        "0": "50.000 ljudi",
+                        "1": "170.000 ljudi",
+                        "2": "200.000 ljudi",
+                        "3": "200.000 ljudi"
                     },
                     "tacni_odgovori": [1]
                 }
@@ -315,5 +315,6 @@
             } 
         }
     },
-    "lista tvrdajva":["Smederevska tvrdjava","Niska tvrdjava"]
+    "lista_gradova":["Vrnjačka banja","Niška banja"],
+    "Lista licnosti":["Ljubodrag Simonović","Marko Stanojević"]
 }

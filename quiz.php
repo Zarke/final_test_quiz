@@ -9,7 +9,7 @@
     </head>
    
     <body class="container">
-    <table class="responsive-table table__img">
+    <table class=" table__img">
         <tr>
             <td class="img__section table__img--section id-0"></td>
             <td class="img__section table__img--section id-1"></td>

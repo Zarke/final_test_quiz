@@ -46,8 +46,8 @@
 
 .table__img{
     background: url(../img/hero.jpg);
-    background-size: cover;
-    height: 35vh;
+    background-size: 100% 100%;
+    height: 40vh;
     border: 1rem solid color('shades','black');
     &--section{
         border: .333rem solid color("shades","black");
@@ -61,7 +61,7 @@
 .img_check{
     background: url(../images/choice_bckg.jpg);
     background-size: cover;
-    height: 60vh;
+    height: 79vh;
     position: relative;
     &__answers{
         background-color: rgba($color: color("grey","darken-4"), $alpha: 0.6);
@@ -88,7 +88,6 @@
             box-shadow: 0 1rem 2.667rem color("grey","darken-4");
             color:color("grey","lighten-5");
             border-radius: 7px;
-            margin-bottom: 6rem;
             border: 1px solid color("grey","lighten-1");
         }
         &-possible_answer{
@@ -110,7 +109,7 @@
             @include answer;
             background-color:rgba($color: color("grey","darken-4"), $alpha: 0.75);
             position: absolute;
-            bottom: 5rem;
+            bottom: 1rem;
             color: color("shades","white");
             border: 1px solid color("shades","white");
             text-transform: uppercase;
@@ -138,7 +137,7 @@
     width: 15rem!important;
 }
 .btn-check{ 
-    left: 43%;
+    left: 38.5%;
 }
 .btn-new_selection{ 
     right: 5rem;

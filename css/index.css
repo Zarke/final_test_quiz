@@ -6514,7 +6514,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
 .section__choose {
   background: url(../images/index_bckg.jpg);
   background-size: cover;
-  height: 60vh;
+  height: 70vh;
   position: relative;
   margin-top: 20vh; }
   .section__choose-form {
@@ -6528,7 +6528,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
       border: 1px solid #bdbdbd; }
     .section__choose-form-option {
       border-radius: 5px;
-      font-size: 20px;
+      font-size: 15px;
       text-align: center;
       display: inline-block;
       padding: 10px 10px;
@@ -6546,7 +6546,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
         background-color: rgba(41, 182, 246, 0.75); }
     .section__choose-form-submit {
       border-radius: 5px;
-      font-size: 20px;
+      font-size: 15px;
       text-align: center;
       display: inline-block;
       padding: 10px 10px;
@@ -6554,7 +6554,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
       vertical-align: middle;
       background-color: rgba(33, 33, 33, 0.75);
       position: absolute;
-      bottom: 5rem;
+      bottom: 2rem;
       left: 40%;
       color: #FFFFFF;
       border: 1px solid #FFFFFF;

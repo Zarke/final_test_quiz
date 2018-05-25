@@ -6513,8 +6513,8 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
 
 .table__img {
   background: url(../img/hero.jpg);
-  background-size: cover;
-  height: 35vh;
+  background-size: 100% 100%;
+  height: 45vh;
   border: 1rem solid #000000; }
   .table__img--section {
     border: 0.333rem solid #000000;
@@ -6526,7 +6526,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
 .question {
   background: url(../images/question-background.jpg);
   background-size: cover;
-  height: 60vh;
+  height: 75vh;
   position: relative; }
   .question__answers {
     background-color: rgba(33, 33, 33, 0.6);
@@ -6537,7 +6537,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
     color: #FFFFFF; }
     .question__answers--correct {
       border-radius: 5px;
-      font-size: 20px;
+      font-size: 15px;
       text-align: center;
       display: inline-block;
       padding: 10px 10px;
@@ -6547,7 +6547,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
       width: 100%; }
     .question__answers--incorrect {
       border-radius: 5px;
-      font-size: 20px;
+      font-size: 15px;
       text-align: center;
       display: inline-block;
       padding: 10px 10px;
@@ -6557,7 +6557,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
       width: 50%; }
     .question__answers--unchecked {
       border-radius: 5px;
-      font-size: 20px;
+      font-size: 15px;
       text-align: center;
       display: inline-block;
       padding: 10px 10px;
@@ -6570,11 +6570,10 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
     box-shadow: 0 1rem 2.667rem #212121;
     color: #fafafa;
     border-radius: 7px;
-    margin-bottom: 6rem;
     border: 1px solid #bdbdbd; }
   .question__form-possible_answer {
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     display: inline-block;
     padding: 10px 10px;
@@ -6591,7 +6590,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
       background-color: rgba(41, 182, 246, 0.75); }
   .question__form-btn {
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     display: inline-block;
     padding: 10px 10px;
@@ -6599,7 +6598,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
     vertical-align: middle;
     background-color: rgba(33, 33, 33, 0.75);
     position: absolute;
-    bottom: 5rem;
+    bottom: .5rem;
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
     text-transform: uppercase;
