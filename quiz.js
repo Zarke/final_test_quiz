@@ -1,25 +1,23 @@
 
-var results = [
-    {
-        date: '31.05.2015',
-        points: 30,
-        time: '23 minutes and 54 seconds'
-    }
-];
+var results;
 var result = {
-    date: '',
+    name: '',
     points: 0,
+    date: '',
     time: ''
 }
 var questions;
 $.getJSON('questions.json', function(json) {
     questions = json;
   });
- 
+  $.getJSON('results.json', function(json) {
+    results = json;
+  });
+var resultCount = 0;
 var current = 0;
 var points = 0;
  $(function(){
-    $("#resultTable").view(results[0]);
+     $("#results").view(results);
     $("div#quiz").hide();
     $("#quiz").on("click", "li.bind-possible_answers", function(e){
 
@@ -50,10 +48,14 @@ var points = 0;
 
     
  $("#show_results").click(function(event){
+    var start = new Date;
     $("div#quiz").show();
     $("div#resultTable").hide();        
     $("#quiz").view(questions[current]);
     $("#show_results").hide();
+    setInterval(function() {
+        $('.timer').text(Math.round((new Date - start) / 1000, 0) + " Seconds");
+    }, 1000);
         
  })    
  });

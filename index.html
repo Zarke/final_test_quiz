@@ -14,6 +14,7 @@
     </head>
 <body>
 <div class="jumbotron jumbotron-fluid">
+    <span class="timer"></span>
   <div id="quiz" class="container">
     <h1 id="question"></h1>
     <ul class="list-group">
@@ -21,17 +22,20 @@
     </ul>
   </div>
   <div id="resultTable" class="container">
-    <table id="results">
+    <table >
         <thead>
             <tr>
-                <th>Month</th>
-                <th>Savings</th>
+                <th>Name</th>
+                <th>Points</th>
+                <th>Date</th>
+                <th>Time</th>
             </tr>
         </thead>
-        <tr>
-            <td id="date"></td>
-            <td id="points"></td>
-            <td id="time"></td>
+        <tr id="results">
+            <td class="bind-name"></td>
+            <td class="bind-points"></td>
+            <td class="bind-date"></td>
+            <td class="bind-time"></td>
         </tr>   
     </table>
 </div>
