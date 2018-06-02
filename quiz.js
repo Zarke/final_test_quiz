@@ -98,15 +98,15 @@ function quiz_stop(){
     }) ; 
  
     $("#restart").click(function(){
-    $(".elapsed_time").hide();
-    $(".gained_poins").hide();
-    $("#restart").hide();
-    current = 0;
-    $("table").DataTable();
-    $("div.resultList").show();
-    $("#start_quiz").show();
-    $("#username").hide();
-    $("label").show();
+        $(".elapsed_time").hide();
+        $(".gained_poins").hide();
+        $("#restart").hide();
+        current = 0;
+        $("table").DataTable();
+        $("div.resultList").show();
+        $("#start_quiz").show();
+        $("#username").show();
+        $("label").show();
     });
  
  });
