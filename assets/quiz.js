@@ -1,8 +1,12 @@
+$.getScript('assets/functions.js', function(){
+    console.log('script successfully imported');
+});
+
 
 var results;
 var result = {
     name: '',
-    points: 0,
+    userPoints: 0,
     date: '',
     time: ''
 }
@@ -19,28 +23,19 @@ var current;//position of the current question in the results array
 var points;//points the user has acumulated during the duration of the test
 var timer; //variable that defines the timer
 //function that ends the quiz
-function quiz_stop(){
-    if(current == questions.length){
-        $("#quiz").hide();
-        clearInterval(timer);
-        $("div.elapsed_time").html("Congratulations!! You finished the quiz in "+timer+" seconds").show();
-        $("div.gained_poins").html("In this session you got  "+points+" points").show();
-        $("#restart").show();
-        $("span.timer").hide();
-        $("div#end").show();
-        $("b#points").hide();
-        
-    } else{
-        $("#quiz").view(questions[current]);
-    }
-}
+var startDate = new Date;
+startDate.toUTCString();
+
+
  $(function(){
     $(".results").view(results);
     $("div#quiz").hide();
     $(".elapsed_time").hide();
     $(".gained_poins").hide();
     $("#restart").hide();
-    $("table").DataTable();
+    $("table").DataTable({
+        "order":[[1, "desc"], [2, "asc"]]
+    });
     $("#quiz").on("click", "li.bind-possibleAnswers", 
     
     function(e){
@@ -53,22 +48,14 @@ function quiz_stop(){
         //point counting function
         if( e.target.innerText == correct_text){
             points +=2;
-            if (points == -1 || points == 1){
-                $("b#points").html(points + ' point');
-            } else {
-                $("b#points").html(points + ' points');
-            }
+            displayPoints()
             current++;
-            quiz_stop();
+            quizStop();
         } else {
             points -=1;
-            if (points == -1 || points == 1){
-                $("b#points").html(points + ' point');
-            } else {
-                $("b#points").html(points + ' points');
-            }
+            displayPoints()
             current++;
-            quiz_stop();
+            quizStop();
         }
 
         
@@ -81,20 +68,26 @@ function quiz_stop(){
         points = 0;
         timer = 0;
         var start = new Date;//the time when the user has started the quiz 
+        start.toUTCString();
         $("div#quiz").show();
         $("div.resultList").hide();        
         $("#quiz").view(questions[current]);
         $("#username").hide();
         $("#start_quiz").hide();
         $("label").hide();
-        $("#points").show();
-        result[name]=$("#username").val();
+        $("b#points").html(points + ' points').show();
+        if ( !$("#username").val()){
+            result["name"] = "anonymous";
+        }else {
+            result["name"] = $("#username").val();
+        }
+        
     
         //timer that is displayed during the duration of the quiz
         timer = setInterval(function() {
             $('.timer').text(Math.round((new Date - start) / 1000, 0) + " Seconds");
         }, 1000);
-        
+       
     }) ; 
  
     $("#restart").click(function(){
@@ -107,6 +100,7 @@ function quiz_stop(){
         $("#start_quiz").show();
         $("#username").show();
         $("label").show();
+        addResult();
     });
  
  });

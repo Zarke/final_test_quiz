@@ -1,4 +1,5 @@
 <html>
+    <?php require_once('assets/save_json.php')?>
     <head>
         <title>quiz</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -14,8 +15,12 @@
         crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
-        <script src="jquery.view-engine.js"></script>
-        <script src="quiz.js"></script>
+        <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+        <script src="assets/jquery.view-engine.js"></script>
+        <script src="assets/quiz.js"></script>
     </head>
 <body>
 <div class="jumbotron jumbotron-fluid">
@@ -39,7 +44,7 @@
         <tbody>
             <tr class="results">
                 <td class="bind-name"></td>
-                <td class="bind-points"></td>
+                <td class="bind-userPoints"></td>
                 <td class="bind-date"></td>
                 <td class="bind-time"></td>
             </tr>
