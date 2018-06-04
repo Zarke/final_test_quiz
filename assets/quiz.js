@@ -34,7 +34,7 @@ startDate.toUTCString();
     $(".gained_poins").hide();
     $("#restart").hide();
     $("table").DataTable({
-        "order":[[1, "desc"], [2, "desc"]]
+        "order":[[1, "desc"], [3, "asc"]]
     });
     $("#quiz").on("click", "li.bind-possibleAnswers", 
     
@@ -100,12 +100,14 @@ startDate.toUTCString();
         $(".gained_poins").hide();
         $("#restart").hide();
         current = 0;
+        location.reload(true);
         $("table").DataTable();
         $("div.resultList").show();
         $("#start_quiz").show();
         $("#username").show();
         $("label").show();
         addResult();
+        
     });
  
  });
