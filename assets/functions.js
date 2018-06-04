@@ -5,8 +5,8 @@ function quizStop(){
         $("#quiz").hide();
         clearInterval(timer);
         time = $("span.timer").text().replace(" Seconds","");
-        $("div.elapsed_time").html("Congratulations!! You finished the quiz in "+ time).show();
-        $("div.gained_poins").html("In this session you got  "+points+" points").show();
+        $("div.elapsed_time").html("Congratulations!!"+"<br>"+" Your time is "+ time).show();
+        $("div.gained_poins").html("In this session you got" + "<br>"+points+" points").show();
         $("#restart").show();
         $("span.timer").hide();
         $("div#end").show();

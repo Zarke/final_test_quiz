@@ -23,48 +23,56 @@
     </head>
 <body>
 <div class="jumbotron jumbotron-fluid">
-    <span class="timer"></span>
-  <div id="quiz" class="container">
+    <div class="row justify-content-md-center">
+        <span class="timer font-weight-bold"></span>
+    </div>
+    <div id="quiz" class="container">
     <h1 id="question"></h1>
     <ul class="list-group">
         <li class="bind-possibleAnswers list-group-item"></li>    
     </ul>
   </div>
   <div class="container resultList">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Points</th>
-                <th>Date</th>
-                <th>Time</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="results">
-                <td class="bind-name"></td>
-                <td class="bind-userPoints"></td>
-                <td class="bind-date"></td>
-                <td class="bind-time"></td>
-            </tr>
-        </tbody>   
-    </table>
+    <div class="table-responsive">
+        <table class="table table-dark table-striped table-hover">
+        <caption>Scoreboard</caption>
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Points</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="results">
+                    <td class="bind-name"></td>
+                    <td class="bind-userPoints"></td>
+                    <td class="bind-date"></td>
+                    <td class="bind-time"></td>
+                </tr>
+            </tbody>   
+        </table>
+    </div>
+   
 </div>
 <div class="row justify-content-md-center">
-    <div class=" col-md-2 offset-md-2 elapsed_time text-center"></div>
-    <div class="col-md-2 offset-md-3 gained_poins text-center "></div>
+    <div class=" font-weight-bold col-md-2  elapsed_time text-center"></div>
+    <div class=" font-weight-bold col-md-2  gained_poins text-center "></div>
 </div>
 </div>
 <div class="d-flex justify-content-center end">
     
     <button id="restart" type="button" class="btn btn-dark ">Restart quiz</button>
-</div> 
-<div class="d-flex justify-content-center control_group">
-    <label for="username">Name:</label>
-    <input id="username" type="text" >
-    <button id="start_quiz" type="button" class="btn btn-dark ">Start Quiz</button>
     <b id="points"></b>
 </div>
-
+<div class="row justify-content-md-center">
+    <div class="input-group col-md-3 ">
+        <label for="username" class="badge badge-dark input-group-addon mb-0 mr-3 p-3 align-middle">Name:</label>
+        <input id="username" class="form-control-md" type="text" palceholder="username">
+        <button id="start_quiz" type="button" class="btn btn-dark input-group-append font-weight-bold ml-3">Start Quiz</button>
+        
+    </div>
+</div>
 </body>
 </html>
