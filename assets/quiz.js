@@ -68,6 +68,7 @@ startDate.toUTCString();
         points = 0;
         timer = 0;
         var start = new Date;//the time when the user has started the quiz 
+        var startTime = start.getTime();
         start.toUTCString();
         $("div#quiz").show();
         $("div.resultList").hide();        
@@ -85,7 +86,11 @@ startDate.toUTCString();
     
         //timer that is displayed during the duration of the quiz
         timer = setInterval(function() {
-            $('.timer').text(Math.round((new Date - start) / 1000, 0) + " Seconds");
+            var currDate = new Date;
+            var currTime = currDate.getTime();
+            var minutes = Math.floor((currTime - startTime) / 60000);
+            var seconds = (((currTime - startTime) % 60000) / 1000).toFixed(0);
+            timeFormatting(minutes,seconds);
         }, 1000);
        
     }) ; 

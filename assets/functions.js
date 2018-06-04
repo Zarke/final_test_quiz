@@ -5,7 +5,6 @@ function quizStop(){
         $("#quiz").hide();
         clearInterval(timer);
         time = $("span.timer").text().replace(" Seconds","");
-        console.log(time);
         $("div.elapsed_time").html("Congratulations!! You finished the quiz in "+ time).show();
         $("div.gained_poins").html("In this session you got  "+points+" points").show();
         $("#restart").show();
@@ -45,5 +44,18 @@ function addResult(){
         failure: function() {alert("Error!");}
     });
 }
+
+function timeFormatting(minutes,seconds){
+    if (minutes < 10 && seconds < 10){
+        $('.timer').text("0" + minutes + ":"+ "0" + seconds);
+    } else if(minutes < 10 && seconds > 10){
+        $('.timer').text("0" + minutes + ":"+ seconds);
+    } else if(minutes > 10 && seconds >10){
+        $('.timer').text(minutes + ":" + seconds);
+    } else if(minutes > 10 && seconds < 10){
+        $('.timer').text(minutes + ":"+ "0" + seconds);
+    }
+}
+
 
 
