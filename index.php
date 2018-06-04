@@ -15,10 +15,9 @@
         crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
-        <script
-  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-  crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+          integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
         <script src="assets/jquery.view-engine.js"></script>
         <script src="assets/quiz.js"></script>
     </head>

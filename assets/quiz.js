@@ -34,7 +34,7 @@ startDate.toUTCString();
     $(".gained_poins").hide();
     $("#restart").hide();
     $("table").DataTable({
-        "order":[[1, "desc"], [2, "asc"]]
+        "order":[[1, "desc"], [2, "desc"]]
     });
     $("#quiz").on("click", "li.bind-possibleAnswers", 
     

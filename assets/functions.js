@@ -40,7 +40,7 @@ function addResult(){
         dataType : 'json',
         async: false,
         url: 'http://localhost/SPA%20-%20quiz/assets/save_json.php',
-        data: { data: JSON.stringify(results) },
+        data: { data: JSON.stringify(result) },
         success: function () {alert("Thanks!"); },
         failure: function() {alert("Error!");}
     });
