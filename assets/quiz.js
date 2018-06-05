@@ -1,8 +1,3 @@
-$.getScript('assets/functions.js', function(){
-    console.log('script successfully imported');
-});
-
-
 var results;
 var result = {
     name: '',
@@ -12,12 +7,9 @@ var result = {
 }
 var questions;
 //retrieving questions and results of previous test runs
-$.getJSON('questions.json', function(json) {
-    questions = json;
-  });
-  $.getJSON('results.json', function(json) {
-    results = json;
-  });
+
+
+
 
 var current;//position of the current question in the results array
 var points;//points the user has acumulated during the duration of the test
@@ -28,13 +20,19 @@ startDate.toUTCString();
 
 
  $(function(){
-    $(".results").view(results);
+    $("div#page-cover").hide();
+    loadPageResourses();
+    $.when(loadPageResourses() ).done(function(){
+        $(".loading").hide();
+        $("div#page-cover").show();
+    })
+    $(".results").view(JSON.parse(localStorage.getItem("results")));
     $("div#quiz").hide();
     $(".elapsed_time").hide();
     $(".gained_poins").hide();
     $("#restart").hide();
     $("table").DataTable({
-        "order":[[1, "desc"], [3, "asc"]]
+        "order":[[1, "desc"], [3, "asc"], [2,"asc"]]
     });
     $("#quiz").on("click", "li.bind-possibleAnswers", 
     
@@ -78,9 +76,9 @@ startDate.toUTCString();
         $("label").hide();
         $("b#points").html(points + ' points').show();
         if ( !$("#username").val()){
-            result["name"] = "anonymous";
+            result.name = "anonymous";
         }else {
-            result["name"] = $("#username").val();
+            result.name = $("#username").val();
         }
         
     

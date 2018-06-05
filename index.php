@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css
         ">
+        <link rel="stylesheet" href="assets/styles.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
@@ -19,9 +20,12 @@
           integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"></script>
         <script src="assets/jquery.view-engine.js"></script>
+        <script src="assets/functions.js"></script>
         <script src="assets/quiz.js"></script>
     </head>
 <body>
+<div class="loading"><img src="assets/loading.gif" alt=""></div> 
+<div id="page-cover">
 <div class="jumbotron jumbotron-fluid">
     <div class="row justify-content-md-center">
         <span class="timer font-weight-bold"></span>
@@ -56,23 +60,24 @@
     </div>
    
 </div>
+<div class="container"></div>
 <div class="row justify-content-md-center">
     <div class=" font-weight-bold col-md-2  elapsed_time text-center"></div>
     <div class=" font-weight-bold col-md-2  gained_poins text-center "></div>
 </div>
 </div>
 <div class="d-flex justify-content-center end">
-    
     <button id="restart" type="button" class="btn btn-dark ">Restart quiz</button>
     <b id="points"></b>
 </div>
-<div class="row justify-content-md-center">
+<div class="row justify-content-md-center control-group">
     <div class="input-group col-md-3 ">
         <label for="username" class="badge badge-dark input-group-addon mb-0 mr-3 p-3 align-middle">Name:</label>
         <input id="username" class="form-control-md" type="text" palceholder="username">
         <button id="start_quiz" type="button" class="btn btn-dark input-group-append font-weight-bold ml-3">Start Quiz</button>
         
     </div>
+</div>
 </div>
 </body>
 </html>
