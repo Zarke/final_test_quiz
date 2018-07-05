@@ -1,0 +1,52 @@
+[  
+    {  
+       "question":"Vrnjacka banja, od davnina poznata je po:",
+       "possibleAnswers":[  
+          "Lekovitim izvorima",
+          "Hrani",
+          "Zimovanjima",
+          "Jezeru"
+       ],
+       "correctAnswer": 0
+    },
+    {  
+       "question":"Vrnjacka banja nalazi se u sledecoj oblasti:",
+       "possibleAnswers":[  
+          "Zapadna Srbija",
+          "Centralna Srbija",
+          "Istočna Srbija",
+          "Vojvodina"
+       ],
+       "correctAnswer": 1
+    },
+    {  
+       "question":"Najbliži grad je:",
+       "possibleAnswers":[  
+          "Kragujevac",
+          "Beograd",
+          "Kraljevo",
+          "Valjevo"
+       ],
+       "correctAnswer": 2
+    },
+    {  
+       "question":"Od Beograda udaljena je:",
+       "possibleAnswers":[  
+          "240km",
+          "148km",
+          "70km",
+          "200km"
+       ],
+       "correctAnswer":3
+    },
+    {  
+       "question":"Koja slavna ličnost dolazi iz Vrnjacke banje?",
+       "possibleAnswers":[  
+          "Ljubodrag Simonović",
+          "Bogdan Bogdanović",
+          "Ipče Ahmedovski",
+          "Toma Zdravković"
+       ],
+       "correctAnswer":0
+    }
+ ]
