@@ -1,6 +1,6 @@
 <template>
-    <div class="container">
-    
+    <div class="row">
+        Evo ga timer
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
-    <div class="container">
-    
+    <div class="row">
+        Evo su poeni
     </div>
 </template>
 
