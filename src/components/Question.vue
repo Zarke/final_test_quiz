@@ -1,7 +1,7 @@
 <template>
     <div class="col-md-8 offset-md-2">
         <h2 class="text-center">{{questions[currQuestion].question}}</h2>
-        <app-possible-ans v-for="answer in questions[0].possibleAnswers"
+        <app-possible-ans v-for="answer in questions[currQuestion].possibleAnswers"
                             :answer="answer">
 
         </app-possible-ans>
@@ -16,7 +16,7 @@
         data: function(){
             return{
                 questions: Array,
-                currQuestion: 0,
+                currQuestion: 0
             }
         },
         computed: {
@@ -37,6 +37,11 @@
                     eventBus.$emit('points', 2);
                 } else {
                     eventBus.$emit('points', -1);
+                }
+                if(this.currQuestion != this.questions.length-1){
+                    this.currQuestion++;
+                }else {
+                    eventBus.$emit('quizEnd',true);
                 }
             })
         },
