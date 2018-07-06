@@ -22,7 +22,7 @@
             return {
                 quizStart: false
             }
-        },
+        },//TODO pass added/substracted points to points component
        components: {
            appStartForm: StartForm,
            appTimer: Timer,

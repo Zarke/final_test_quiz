@@ -1,12 +1,12 @@
 <template>
     <div class="row">
-        Evo ga timer
+        Timer {{time}}
     </div>
 </template>
 
 <script>
     export default {
-        
+        //TODO on create start the timer and format the time
     }
 </script>
 
