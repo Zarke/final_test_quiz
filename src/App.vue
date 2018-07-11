@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <template v-if="quizStart">
-            <app-timer></app-timer>
+            <app-timer :quizFinished="quizEnd"></app-timer>
             <span v-if="quizEnd">Congratulations, you finshed the quiz!!!</span>
             <app-questions @endingMessage="quizEnd = !quizEnd"
                            v-else>

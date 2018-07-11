@@ -8,6 +8,9 @@
 import { eventBus } from '../main';
 
 export default {
+    props: {
+        quizFinished: Boolean
+    },
     data: function(){
         return{
             counter: '00:00',
@@ -28,11 +31,16 @@ export default {
         },
         elapsedTime(){
             var timer = setInterval(function(){
-            var currDate = new Date;
-            var currTime = currDate.getTime();
-            var minutes = Math.floor((currTime - this.startingTime) / 60000);
-            var seconds = (((currTime - this.startingTime) % 60000) / 1000).toFixed(0);
-            this.timeFormatting(minutes, seconds);
+                if(this.quizFinished){
+                    clearInterval(timer);
+                } else{
+                    var currDate = new Date;
+                    var currTime = currDate.getTime();
+                    var minutes = Math.floor((currTime - this.startingTime) / 60000);
+                    var seconds = (((currTime - this.startingTime) % 60000) / 1000).toFixed(0);
+                    this.timeFormatting(minutes, seconds);
+                }
+                
         }.bind(this),1000);
         }
     },
