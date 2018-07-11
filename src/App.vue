@@ -2,7 +2,10 @@
     <div class="container">
         <template v-if="quizStart">
             <app-timer></app-timer>
-            <app-questions></app-questions>
+            <span v-if="quizEnd">Congratulations, you finshed the quiz!!!</span>
+            <app-questions @endingMessage="quizEnd = !quizEnd"
+                           v-else>
+            </app-questions>
             <app-points></app-points>
         </template>
         <app-start-form :start="quizStart"
@@ -22,6 +25,7 @@
         data: function(){
             return {
                 quizStart: false,
+                quizEnd: false
             }
         },
        components: {
@@ -29,6 +33,9 @@
            appTimer: Timer,
            appPoints: Points,
            appQuestions: Questions
+       },
+       created(){
+
        }
     }
 </script>

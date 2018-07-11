@@ -3,8 +3,8 @@
         <h2 class="text-center">{{questions[currQuestion].question}}</h2>
         <app-possible-ans v-for="answer in questions[currQuestion].possibleAnswers"
                             :answer="answer">
-
         </app-possible-ans>
+        <slot></slot>
     </div>
 </template>
 
@@ -42,6 +42,7 @@
                     this.currQuestion++;
                 }else {
                     eventBus.$emit('quizEnd',true);
+                    this.$emit('endingMessage', 'congratulations');
                 }
             })
         },
