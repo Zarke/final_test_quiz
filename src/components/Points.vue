@@ -1,6 +1,6 @@
 <template>
-    <div class="row">
-        Points: {{points}}
+    <div class="row justify-content-center mt-3">
+        <b>Points: {{points}}</b>
     </div>
 </template>
 

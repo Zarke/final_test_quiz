@@ -16,13 +16,14 @@
     import Timer from './components/Timer.vue';
     import Points from './components/Points.vue';
     import Questions from './components/Question.vue';
+    
 
     export default {
         data: function(){
             return {
-                quizStart: false
+                quizStart: false,
             }
-        },//TODO pass added/substracted points to points component
+        },
        components: {
            appStartForm: StartForm,
            appTimer: Timer,

@@ -18,7 +18,10 @@
 
     export default {
         props: {
-            start: Boolean,
+            start: {
+                type: Boolean,
+                default: false
+            },
             end: {
                 type: Boolean,
                 default: false
