@@ -28,14 +28,6 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader?cacheDirectory',
-        include: [
-          path.join(__dirname, '/src'),
-          /vue2-datatable-component/ // <-- add this!
-        ]
       }
     ]
   },

@@ -1,7 +1,7 @@
 <template>
     <div class="row justify-content-center mt-3">
         <b>{{dataCaption}}  {{dataPoints}}</b>
-        <slot></slot>
+        <slot name="points"></slot>
     </div>
 </template>
 
@@ -19,6 +19,9 @@
             eventBus.$on('points', (points)=>{
                 this.dataPoints = this.dataPoints + points;
             })
+        },
+        beforeDestroy(){
+            this.$emit('totalPoints', ['totalPoints',this.dataPoints]);
         }
     }
 </script>

@@ -49,7 +49,9 @@ export default {
         this.startingTime = new Date;//the time when the user has started the quiz 
         this.startingTime = this.startingTime.getTime();
         this.elapsedTime();
-
+    },
+    beforeDestroy(){
+        this.$emit('totalTime', ['totalTime',this.counter]);
     }
 }
 </script>

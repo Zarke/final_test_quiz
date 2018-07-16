@@ -2,18 +2,21 @@
     <div class="container">
         <template v-if="quizStart">
             <template v-if="quizEnd" >
-                <span >Congratulations, you finshed the quiz!!! </span>
+                <span >Congratulations {{results['username']}}, you finshed the quiz in {{results['totalTime']}} seconds with {{results['totalPoints']}} points</span>
                 <app-restart @quizFinished="quizEnd = false; quizStart=false"></app-restart>
             </template>
             <template v-else>
-                <app-timer :quizFinished="quizEnd"></app-timer>
+                <app-timer :quizFinished="quizEnd"
+                            @totalTime="updateResults($event)">
+                </app-timer>
                 <app-questions :questions="questionsArr">
                 </app-questions>
-                <app-points></app-points>
+                <app-points  @totalPoints="updateResults($event)"></app-points>
             </template>
         </template>
         <template v-else>
-            <app-start-form @quizStarted="quizStart = true;"
+            <app-start-form @quizStarted="quizStart = true"
+                            @username="updateResults($event)"
             >
             </app-start-form>
         </template>      
@@ -35,7 +38,12 @@
                 quizStart: false,
                 quizEnd: false,
                 questionsArr: Array,
-                total: 0    
+                results: {'username':'', 'totalTime':'', 'totalPoints':''}//results of the current quiz run  
+            }
+        },
+        methods:{
+            updateResults(resultsParams){
+                this.results[resultsParams[0]] = resultsParams[1];
             }
         },
         created(){
@@ -45,16 +53,10 @@
                 this.questionsArr = res
                 }
             )
-            fetch('./src/assets/results.json').then(
-                res => res.json()
-            ).then( res => {
-                this.resultsArr = res
-                }
-            )
             eventBus.$on('quizEnd', (responce)=>{
-                // appQuestions.$destroy();
                 this.quizEnd = true;
             })
+            
         },
        components: {
            appStartForm: StartForm,
