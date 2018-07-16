@@ -1,6 +1,7 @@
 <template>
     <div class="row justify-content-center mt-3">
-        <b>Points: {{points}}</b>
+        <b>{{dataCaption}}  {{dataPoints}}</b>
+        <slot></slot>
     </div>
 </template>
 
@@ -8,15 +9,15 @@
     import { eventBus } from '../main';
 
     export default {
-        props:{
-            points: {
-                type: Number,
-                default: 0
+        data: function(){
+            return{
+                dataPoints: 0,
+                dataCaption: 'Points'
             }
         },
         created(){
             eventBus.$on('points', (points)=>{
-                this.points = this.points + points;
+                this.dataPoints = this.dataPoints + points;
             })
         }
     }

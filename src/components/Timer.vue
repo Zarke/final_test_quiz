@@ -1,6 +1,7 @@
 <template>
     <div class="row justify-content-center mb-3">
-        <span><b>Your time: {{ counter }}</b></span>
+        <span><b>{{ counter }}</b></span>
+        <slot></slot>
     </div>
 </template>
 

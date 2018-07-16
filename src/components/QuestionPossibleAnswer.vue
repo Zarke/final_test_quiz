@@ -1,6 +1,6 @@
 <template>
     <div id="answer" @click="answerSelected">
-        {{answer}}
+        {{dataAnswer}}
     </div>
 </template>
 
@@ -11,9 +11,19 @@
         props:{
             answer: String
         },
+        data:function(){
+            return{
+                dataAnswer: this.answer
+            }
+        },
+        watch:{
+            answer: function(){
+                this.dataAnswer = this.answer;
+            }
+        },
         methods: {
             answerSelected(){
-                eventBus.$emit('answerSelected',this.answer);
+                eventBus.$emit('answerSelected',this.dataAnswer);
             }
         }
     }
