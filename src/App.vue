@@ -43,6 +43,9 @@
         },
         methods:{
             updateResults(resultsParams){
+                if( resultsParams[1] === '' && resultsParams[0] == 'username' ){
+                    this.result[resultsParams[0]] = 'anonymous';
+                }
                 this.results[resultsParams[0]] = resultsParams[1];
             }
         },

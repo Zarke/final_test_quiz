@@ -1,6 +1,6 @@
 <template>
     <div class="row justify-content-center mb-3">
-        <span><b>{{ counter }}</b></span>
+        <span class="font-weight-bold">{{counter}} </span>
         <slot></slot>
     </div>
 </template>
@@ -14,41 +14,22 @@ export default {
     },
     data: function(){
         return{
-            counter: '00:00',
-            startingTime: ''
+            counter: '',
+            startingTime: '',
+            currTime: ''
         };
     },
     methods:  {
-        timeFormatting(minutes,seconds){
-            if (minutes < 10 && seconds < 10){
-                this.counter = '0'+minutes+':'+'0'+seconds;
-            } else if(minutes < 10 && seconds >= 10){
-                this.counter = '0'+minutes+':'+seconds;
-            } else if(minutes > 10 && seconds >10){
-                this.counter = minutes+':'+seconds;
-            } else if(minutes > 10 && seconds < 10){
-                this.counter = minutes+':'+'0'+seconds;
-            }  
-        },
         elapsedTime(){
             var timer = setInterval(function(){
-                if(this.quizFinished){
-                    clearInterval(timer);
-                } else{
-                    var currDate = new Date;
-                    var currTime = currDate.getTime();
-                    var minutes = Math.floor((currTime - this.startingTime) / 60000);
-                    var seconds = (((currTime - this.startingTime) % 60000) / 1000).toFixed(0);
-                    this.timeFormatting(minutes, seconds);
-                }
-                
+            this.currTime = this.$moment();
+            this.counter = this.currTime.diff(this.startingTime, 'seconds');
         }.bind(this),1000);
         }
     },
     created(){
-        this.startingTime = new Date;//the time when the user has started the quiz 
-        this.startingTime = this.startingTime.getTime();
         this.elapsedTime();
+        this.startingTime = this.$moment();
     },
     beforeDestroy(){
         this.$emit('totalTime', ['totalTime',this.counter]);
