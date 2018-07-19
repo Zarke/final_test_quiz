@@ -19,6 +19,9 @@
                             @username="updateResults($event)"
             >
             </app-start-form>
+            <div id="table" class="col-xs-12 table-responsive">
+                <v-client-table :data="tableData" :columns="columns" :options="options"></v-client-table>
+            </div>
         </template>      
     </div>
 </template>
@@ -27,9 +30,9 @@
     import { eventBus } from './main';
     import StartForm from './components/quizInitialization/StartForm.vue';
     import Restart from './components/quizInitialization/Restart.vue';
-    import Timer from './components/Timer.vue';
-    import Points from './components/Points.vue';
-    import Questions from './components/Question.vue';
+    import Timer from './components/quizFunctionality/Timer.vue';
+    import Points from './components/quizFunctionality/Points.vue';
+    import Questions from './components/quizFunctionality/Question.vue';
     
 
     export default {
@@ -38,7 +41,24 @@
                 quizStart: false,
                 quizEnd: false,
                 questionsArr: Array,
-                results: {'username':'', 'totalTime':'', 'totalPoints':''}//results of the current quiz run  
+                results: {'username':'', 'totalTime':'', 'totalPoints':''},//results of the current quiz run  
+                columns: ['name', 'userPoints', 'date', 'time'],
+                tableData: [],
+                options: {
+                    filterByColumn: true,
+                    headings: {
+                        name: 'Name',
+                        userPoints: 'Points',
+                        date: 'Date',
+                        time: 'Time',
+                      },
+                },
+                sortOrder: [
+                {
+                  field: 'userPoints',
+                  direction: 'asc'
+                }
+    ]
             }
         },
         methods:{
@@ -56,6 +76,12 @@
                 this.questionsArr = res
                 }
             )
+            fetch('./src/assets/results.json').then(
+                res => res.json()
+            ).then( res => {
+                this.tableData = res
+                }
+            )
             eventBus.$on('quizEnd', (responce)=>{
                 this.quizEnd = true;
             })
@@ -66,8 +92,9 @@
            appTimer: Timer,
            appPoints: Points,
            appQuestions: Questions,
-           appRestart: Restart
-       }
+           appRestart: Restart,
+           Event
+        }
     }
 </script>
 
