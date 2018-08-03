@@ -3,7 +3,7 @@
         <template v-if="quizStart">
             <template v-if="quizEnd" >
                 <span >Congratulations {{result['username']}}, you finshed the quiz in {{result['totalTime']}} seconds with {{result['totalPoints']}} points</span>
-                <app-restart @quizFinished="quizEnd = false; quizStart=false; "></app-restart>
+                <app-restart @quizFinished="quizEnd = false; quizStart=false;" :result="result"></app-restart>
             </template>
             <template v-else>
                 <app-timer :quizFinished="quizEnd"
@@ -52,9 +52,16 @@
                         date: 'Date',
                         time: 'Time',
                     },
-                    orderBy:{ascending:false,'column': 'userPoints'},
-                    clientMultiSorting:true 
-                }
+                    orderBy:{ascending:false, 'column':'userPoints'},
+                    multiSorting: {
+                        userPoints: [
+                            {   column: 'time', matchDir: false}
+                           
+                        ]
+                    }
+                },
+                resource: {},
+                nodes: ['results','questions']
             }
         },
         methods:{
@@ -63,24 +70,36 @@
                     this.result[resultParams[0]] = 'anonymous';
                 }
                 this.result[resultParams[0]] = resultParams[1];
-            },
-            updateResultsJSON(entry){
-                
             }
+            
         },
         created(){
-            fetch('./src/assets/questions.json').then(
-                res => res.json()
-            ).then( res => {
-                this.questionsArr = res
-                }
-            )
-            fetch('./src/assets/results.json').then(
-                res => res.json()
-            ).then( res => {
-                this.tableData = res
-                }
-            )
+            const customActions = {
+                getData: {method: 'GET'},
+                saveAlt: {method: 'POST'}
+            }
+
+            this.resource = this.$resource('{node}.json', {}, customActions);
+            
+            //loading results
+            this.resource.getData({node: this.nodes[0]})
+                .then(responce => {
+                    return responce.json();
+                })
+                .then(data => {
+                    this.tableData = data;
+                })
+
+            //loading questions
+            this.resource.getData({node: this.nodes[1]})
+                .then(responce => {
+                    return responce.json();
+                })
+                .then(data => {
+                    this.questionsArr = data;
+                })
+
+
             eventBus.$on('quizEnd', (responce)=>{
                 this.quizEnd = true;
             })
