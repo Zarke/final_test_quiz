@@ -1,8 +1,8 @@
 <template>
     <div class="row">
        <div class="col-sm-12">
-            <button @click="updateResults"></button>
-            <button @click="restartQuiz()">Restart Quiz</button>
+            <button @click="uploadResult">Submit your results</button>
+            <button @click="restartQuiz">Restart Quiz</button>
         </div>
     </div>
 </template>
@@ -11,15 +11,13 @@
      import { eventBus } from '../../main';
 
     export default {
-        props: {
-            result: Object
-        },
         methods: {
             restartQuiz(){
                 this.$emit('quizFinished', true);
             },
-
-
+            uploadResult() {
+                eventBus.$emit('uploadResult', true);
+            }
         }
     }
 </script>

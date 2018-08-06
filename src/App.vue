@@ -2,12 +2,13 @@
     <div class="container">
         <template v-if="quizStart">
             <template v-if="quizEnd" >
-                <span >Congratulations {{result['username']}}, you finshed the quiz in {{result['totalTime']}} seconds with {{result['totalPoints']}} points</span>
-                <app-restart @quizFinished="quizEnd = false; quizStart=false;" :result="result"></app-restart>
+                <span >Congratulations {{result['name']}}, you finshed the quiz in {{result['time']}} seconds with {{result['userPoints']}} points</span>
+                <app-restart @quizFinished="quizEnd = false; quizStart=false;" ></app-restart>
             </template>
             <template v-else>
-                <app-timer :quizFinished="quizEnd"
-                            @totalTime="updateResult($event)">
+                <app-timer :quizFinished="quizEnd "
+                            @totalTime="updateResult($event)"
+                            @date="updateResult($event)">
                 </app-timer>
                 <app-questions :questions="questionsArr">
                 </app-questions>
@@ -20,6 +21,7 @@
             </div>
             <app-start-form @quizStarted="quizStart = true"
                             @username="updateResult($event)"
+                            @startDate="updateResult($event)"
             >
             </app-start-form>
             
@@ -42,7 +44,7 @@
                 quizStart: false,
                 quizEnd: false,
                 questionsArr: Array,
-                result: {'username':'', 'totalTime':'', 'totalPoints':''},//results of the current quiz run  
+                result: {'name':'', 'userPoints':'','date':'', 'time':''},//results of the current quiz run  
                 columns: ['name', 'userPoints', 'date', 'time'],
                 tableData: [],
                 options: {
@@ -58,7 +60,8 @@
                             {   column: 'time', matchDir: false}
                            
                         ]
-                    }
+                    },
+                    filterable: false
                 },
                 resource: {},
                 nodes: ['results','questions']
@@ -66,19 +69,30 @@
         },
         methods:{
             updateResult(resultParams){
-                if( resultParams[1] === '' && resultParams[0] == 'username' ){
+                if( resultParams[1] === '' && resultParams[0] == 'name' ){
                     this.result[resultParams[0]] = 'anonymous';
+                } else {
+                    this.result[resultParams[0]] = resultParams[1];
                 }
-                this.result[resultParams[0]] = resultParams[1];
+                
             }
             
         },
         created(){
+            eventBus.$on('quizEnd', ()=>{
+                this.quizEnd = true;
+            })
+            eventBus.$on('uploadResult', () => {
+                this.resource.saveRes({node: this.nodes[0]}, this.result);
+            })
+
+            //custom actions for vue resource
             const customActions = {
                 getData: {method: 'GET'},
-                saveAlt: {method: 'POST'}
+                saveRes: {method: 'POST'}
             }
 
+            //definition of the resource
             this.resource = this.$resource('{node}.json', {}, customActions);
             
             //loading results
@@ -87,7 +101,9 @@
                     return responce.json();
                 })
                 .then(data => {
-                    this.tableData = data;
+                    for (let key in data) {
+                        this.tableData.push(data[key])
+                    }
                 })
 
             //loading questions
@@ -98,12 +114,6 @@
                 .then(data => {
                     this.questionsArr = data;
                 })
-
-
-            eventBus.$on('quizEnd', (responce)=>{
-                this.quizEnd = true;
-            })
-            
         },
        components: {
            appStartForm: StartForm,

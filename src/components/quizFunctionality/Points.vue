@@ -21,7 +21,7 @@
             })
         },
         beforeDestroy(){
-            this.$emit('totalPoints', ['totalPoints',this.dataPoints]);
+            this.$emit('totalPoints', ['userPoints',this.dataPoints]);
         }
     }
 </script>

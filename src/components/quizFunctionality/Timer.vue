@@ -1,6 +1,6 @@
 <template>
     <div class="row justify-content-center mb-3">
-        <span class="font-weight-bold">{{counter}} </span>
+        <span class="font-weight-bold">{{time}} </span>
         <slot></slot>
     </div>
 </template>
@@ -14,25 +14,28 @@ export default {
     },
     data: function(){
         return{
-            counter: '',
+            time: '',
             startingTime: '',
-            currTime: ''
+            currTime: '',
+            counter:0
         };
     },
     methods:  {
+        
         elapsedTime(){
             var timer = setInterval(function(){
-            this.currTime = this.$moment();
-            this.counter = this.currTime.diff(this.startingTime, 'seconds');
+                let minutes = Math.floor(this.counter/60);
+                if (minutes > 0){ minutes = minutes-1};
+            this.time = this.$moment().minute(minutes).second(this.counter++).format('mm:ss');
         }.bind(this),1000);
         }
     },
     created(){
         this.elapsedTime();
-        this.startingTime = this.$moment();
+        this.$emit('date', ['date',this.$moment.utc().format()]);       
     },
     beforeDestroy(){
-        this.$emit('totalTime', ['totalTime',this.counter]);
+        this.$emit('totalTime', ['time', this.time]);
     }
 }
 </script>

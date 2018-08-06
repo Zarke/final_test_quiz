@@ -30,7 +30,8 @@
 
         },
         beforeDestroy(){
-            this.$emit('username', ['username', this.username]);
+            this.$emit('username', ['name', this.username]);
+            
         }
     }
 </script>
