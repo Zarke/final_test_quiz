@@ -1,36 +1,30 @@
 <template>
     <div class="container">
         <template v-if="quizStart">
-            <template v-if="quizEnd" >
-                <span >Congratulations {{result['name']}}, you finshed the quiz in {{result['time']}} seconds with {{result['userPoints']}} points</span>
-                <app-restart @quizFinished="quizEnd = false; quizStart=false;" ></app-restart>
+            <template v-if="quizEnd">
+                <span >Congratulations {{ name }}, you finshed the quiz in {{time}} seconds with {{userPoints}} points</span>
+                <app-restart></app-restart>
             </template>
             <template v-else>
-                <app-timer :quizFinished="quizEnd "
-                            @totalTime="updateResult($event)"
-                            @date="updateResult($event)">
+                <app-timer>
                 </app-timer>
                 <app-questions :questions="questionsArr">
                 </app-questions>
-                <app-points  @totalPoints="updateResult($event)"></app-points>
+                <app-points  ></app-points>
             </template>
         </template>
         <template v-else>
             <div id="table" class="col-xs-12 table-responsive">
                 <v-client-table :data="tableData" :columns="columns" :options="options"></v-client-table>
             </div>
-            <app-start-form @quizStarted="quizStart = true"
-                            @username="updateResult($event)"
-                            @startDate="updateResult($event)"
-            >
-            </app-start-form>
-            
+            <app-start-form @quizStarted="quizStart = true"></app-start-form>
         </template>      
     </div>
 </template>
 
 <script>
     import { eventBus } from './main';
+    import { mapGetters } from 'vuex';
     import StartForm from './components/quizInitialization/StartForm.vue';
     import Restart from './components/quizInitialization/Restart.vue';
     import Timer from './components/quizFunctionality/Timer.vue';
@@ -78,10 +72,14 @@
             }
             
         },
+        computed: {
+            ...mapGetters([
+                'returnUser',
+                'returnEnd'
+            ])
+        },
         created(){
-            eventBus.$on('quizEnd', ()=>{
-                this.quizEnd = true;
-            })
+            this.quizEnd = this.returnEnd;
             eventBus.$on('uploadResult', () => {
                 this.resource.saveRes({node: this.nodes[0]}, this.result);
             })

@@ -9,9 +9,6 @@
 import { eventBus } from '../../main';
 
 export default {
-    props: {
-        quizFinished: Boolean
-    },
     data: function(){
         return{
             time: '',
@@ -32,10 +29,17 @@ export default {
     },
     created(){
         this.elapsedTime();
-        this.$emit('date', ['date',this.$moment.utc().format()]);       
+        this.$store.commit('updateUser', {
+                    key: 'date',
+                    value: this.$moment.utc().format()
+                })       
     },
     beforeDestroy(){
-        this.$emit('totalTime', ['time', this.time]);
+        this.$store.commit('updateUser', {
+                    key: 'time',
+                    value: this.time
+        })
+        // this.$emit('totalTime', ['time', this.time]);
     }
 }
 </script>

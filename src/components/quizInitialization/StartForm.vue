@@ -30,7 +30,17 @@
 
         },
         beforeDestroy(){
-            this.$emit('username', ['name', this.username]);
+            if (this.username == '') {
+                this.$store.commit('updateUser', {
+                    key: 'name',
+                    value: 'anonymous'
+                })
+            } else {
+                this.$store.commit('updateUser', {
+                    key: 'name',
+                    value: this.username
+                })
+            }
             
         }
     }

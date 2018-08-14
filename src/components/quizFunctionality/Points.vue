@@ -21,7 +21,11 @@
             })
         },
         beforeDestroy(){
-            this.$emit('totalPoints', ['userPoints',this.dataPoints]);
+            this.$store.commit('updateUser', {
+                    key: 'userPoints',
+                    value: this.dataPoints
+                })
+                console.log(this.dataPoints);
         }
     }
 </script>
