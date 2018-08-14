@@ -22,10 +22,11 @@
         },
         methods: {
             beginQuiz(){
-                this.start = !this.start;
-                this.end = false;
-                this.$emit('quizStarted', this.start);
-                this.$emit('quizEndChange', false)
+                this.$store.commit('quizStateChange', {
+                    key: 'start/end',
+                    start: true,
+                    end: false
+                })
             }
 
         },

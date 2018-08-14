@@ -39,7 +39,10 @@
                     this.currQuestion++;
                 }else {
                     this.currQuestion = 0;
-                    eventBus.$emit('quizEnd',true);
+                    this.$store.commit('quizStateChange', {
+                        start:true,
+                        end: true
+                    });
                 }
             })
             

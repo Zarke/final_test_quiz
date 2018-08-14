@@ -13,7 +13,10 @@
     export default {
         methods: {
             restartQuiz(){
-                this.$store.commit('quizEnd', true);
+                this.$store.commit('quizStateChange', {
+                    start: false,
+                    end: false
+                })
             },
             uploadResult() {
                 eventBus.$emit('uploadResult', true);

@@ -2,7 +2,7 @@
     <div class="container">
         <template v-if="quizStart">
             <template v-if="quizEnd">
-                <span >Congratulations {{ name }}, you finshed the quiz in {{time}} seconds with {{userPoints}} points</span>
+                <span >Congratulations {{  }}, you finshed the quiz in {{time}} seconds with {{userPoints}} points</span>
                 <app-restart></app-restart>
             </template>
             <template v-else>
@@ -75,11 +75,19 @@
         computed: {
             ...mapGetters([
                 'returnUser',
-                'returnEnd'
+                'returnEnd',
+                'returnStart'
             ])
         },
+        watch: {
+            returnEnd() {
+                this.quizEnd = this.returnEnd;
+            },
+            returnStart() {
+                this.quizStart = this.returnStart;
+            }
+        },
         created(){
-            this.quizEnd = this.returnEnd;
             eventBus.$on('uploadResult', () => {
                 this.resource.saveRes({node: this.nodes[0]}, this.result);
             })

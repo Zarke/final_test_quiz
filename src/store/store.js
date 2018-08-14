@@ -6,19 +6,24 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
     state: {
         user: { name: '', userPoints: 0, time: '', date: ''},
-        end: false
+        end: false,
+        start: false
     },
     getters: {
         returnUser: state => {
             return state.user;
+        },
+        returnStart: state => {
+            return state.start;
         },
         returnEnd: state => {
             return state.end;
         }
     },
     mutations: {
-        quizEnd(state, payload) {
-            state.end = payload;
+        quizStateChange(state, payload) {
+                state.start = payload.start;
+                state.end = payload.end;
         },
         updateUser(state, payload) {
             state.user[payload.key] = payload.value;
