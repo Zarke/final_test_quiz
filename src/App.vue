@@ -2,7 +2,7 @@
     <div class="container">
         <template v-if="quizStart">
             <template v-if="quizEnd">
-                <span >Congratulations {{  }}, you finshed the quiz in {{time}} seconds with {{userPoints}} points</span>
+                <span >Congratulations {{ returnUser.name }}, you finshed the quiz in {{ returnUser.time }} seconds with {{ returnUser.userPoints }} points</span>
                 <app-restart></app-restart>
             </template>
             <template v-else>

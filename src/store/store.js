@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        user: { name: '', userPoints: 0, time: '', date: ''},
+        user: { name: '', userPoints: 0, date: '', time: ''},
         end: false,
         start: false
     },
