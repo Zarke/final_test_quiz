@@ -31,9 +31,15 @@
         created(){
             eventBus.$on('answerSelected', (answer)=>{
                 if (this.dataQuestions[this.currQuestion].possibleAnswers[this.correctIndex] == answer){
-                    eventBus.$emit('points', 2);
+                    this.$store.commit('updatePoints', {
+                        value: 2,
+                        reset: false
+                    });
                 } else {
-                    eventBus.$emit('points', -1);
+                    this.$store.commit('updatePoints', {
+                        value: -1,
+                        reset: false
+                    });
                 }
                 if(this.currQuestion != this.dataQuestions.length-1){
                     this.currQuestion++;

@@ -38,7 +38,6 @@
                 quizStart: false,
                 quizEnd: false,
                 questionsArr: Array,
-                result: {'name':'', 'userPoints':'','date':'', 'time':''},//results of the current quiz run  
                 columns: ['name', 'userPoints', 'date', 'time'],
                 tableData: [],
                 options: {
@@ -89,7 +88,7 @@
         },
         created(){
             eventBus.$on('uploadResult', () => {
-                this.resource.saveRes({node: this.nodes[0]}, this.result);
+                this.resource.saveRes({node: this.nodes[0]}, this.returnUser);
             })
 
             //custom actions for vue resource

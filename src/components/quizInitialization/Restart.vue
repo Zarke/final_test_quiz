@@ -17,6 +17,7 @@
                     start: false,
                     end: false
                 })
+                this.$store.commit('userInfoReset', true);
             },
             uploadResult() {
                 eventBus.$emit('uploadResult', true);
