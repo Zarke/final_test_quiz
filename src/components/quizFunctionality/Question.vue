@@ -10,6 +10,7 @@
 
 <script>
     import { eventBus } from '../../main';
+    import { mapMutations } from 'vuex';
     import PossibleAns from './QuestionPossibleAnswer.vue';
 
     export default {
@@ -28,15 +29,21 @@
                 return this.dataQuestions[this.currQuestion].correctAnswer
             }
         },
+        methods: {
+            ...mapMutations([
+                'quizStateChange',
+                'updatePoints'
+            ])
+        },
         created(){
             eventBus.$on('answerSelected', (answer)=>{
                 if (this.dataQuestions[this.currQuestion].possibleAnswers[this.correctIndex] == answer){
-                    this.$store.commit('updatePoints', {
+                    this.updatePoints({
                         value: 2,
                         reset: false
                     });
                 } else {
-                    this.$store.commit('updatePoints', {
+                    this.updatePoints({
                         value: -1,
                         reset: false
                     });
@@ -45,7 +52,7 @@
                     this.currQuestion++;
                 }else {
                     this.currQuestion = 0;
-                    this.$store.commit('quizStateChange', {
+                    this.quizStateChange({
                         start:true,
                         end: true
                     });

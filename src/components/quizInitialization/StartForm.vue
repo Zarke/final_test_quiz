@@ -12,7 +12,8 @@
 </template>
 
 <script>
-     import { eventBus } from '../../main';
+    import { eventBus } from '../../main';
+    import { mapMutations } from 'vuex';
 
     export default {
         data: function(){
@@ -21,23 +22,26 @@
             }
         },
         methods: {
+            ...mapMutations([
+                'quizStateChange',
+                'updateUser'
+            ]),
             beginQuiz(){
-                this.$store.commit('quizStateChange', {
+                this.quizStateChange({
                     key: 'start/end',
                     start: true,
                     end: false
                 })
             }
-
         },
         beforeDestroy(){
             if (this.username == '') {
-                this.$store.commit('updateUser', {
+                this.updateUser({
                     key: 'name',
                     value: 'anonymous'
                 })
             } else {
-                this.$store.commit('updateUser', {
+                this.updateUser({
                     key: 'name',
                     value: this.username
                 })

@@ -19,11 +19,6 @@
             ...mapGetters([
                 'returnPoints'
             ])
-        },
-        created(){
-            eventBus.$on('points', (points)=>{
-                this.dataPoints = this.dataPoints + points;
-            })
         }
         
     }

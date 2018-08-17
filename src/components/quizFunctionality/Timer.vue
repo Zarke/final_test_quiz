@@ -7,6 +7,7 @@
 
 <script>
 import { eventBus } from '../../main';
+import { mapMutations } from 'vuex';
 
 export default {
     data: function(){
@@ -18,7 +19,9 @@ export default {
         };
     },
     methods:  {
-        
+        ...mapMutations([
+            'updateUser'
+        ]),
         elapsedTime(){
             var timer = setInterval(function(){
                 let minutes = Math.floor(this.counter/60);
@@ -29,17 +32,16 @@ export default {
     },
     created(){
         this.elapsedTime();
-        this.$store.commit('updateUser', {
+        thisupdateUser({
                     key: 'date',
                     value: this.$moment.utc().format()
                 })       
     },
     beforeDestroy(){
-        this.$store.commit('updateUser', {
+        this.updateUser({
                     key: 'time',
                     value: this.time
         })
-        // this.$emit('totalTime', ['time', this.time]);
     }
 }
 </script>

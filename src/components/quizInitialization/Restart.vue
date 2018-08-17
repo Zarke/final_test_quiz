@@ -8,16 +8,21 @@
 </template>
 
 <script>
-     import { eventBus } from '../../main';
+    import { eventBus } from '../../main';
+    import { mapMutations } from 'vuex';
 
     export default {
         methods: {
+            ...mapMutations([
+                'quizStateChange',
+                'updateUser'
+            ]),
             restartQuiz(){
-                this.$store.commit('quizStateChange', {
+                this.quizStateChange({
                     start: false,
                     end: false
                 })
-                this.$store.commit('userInfoReset', true);
+                this.userInfoChange(true);
             },
             uploadResult() {
                 eventBus.$emit('uploadResult', true);
