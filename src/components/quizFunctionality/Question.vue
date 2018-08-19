@@ -10,7 +10,8 @@
 
 <script>
     import { eventBus } from '../../main';
-    import { mapMutations } from 'vuex';
+    import { mapActions } from 'vuex';
+    import * as types from '../../store/types';
     import PossibleAns from './QuestionPossibleAnswer.vue';
 
     export default {
@@ -30,10 +31,10 @@
             }
         },
         methods: {
-            ...mapMutations([
-                'quizStateChange',
-                'updatePoints'
-            ])
+            ...mapActions({
+                quizStateChange: types.ACTION_QUIZ_STATE_CHANGE,
+                updatePoints: types.ACTION_UPDATE_POINTS
+            })
         },
         created(){
             eventBus.$on('answerSelected', (answer)=>{

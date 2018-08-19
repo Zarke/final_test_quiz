@@ -9,20 +9,21 @@
 
 <script>
     import { eventBus } from '../../main';
-    import { mapMutations } from 'vuex';
+    import { mapActions } from 'vuex';
+    import * as types from '../../store/types';
 
     export default {
         methods: {
-            ...mapMutations([
-                'quizStateChange',
-                'updateUser'
-            ]),
+            ...mapActions({
+                quizStateChange: types.ACTION_QUIZ_STATE_CHANGE,
+                userInfoReset: types.ACTION_USER_RESET
+            }),
             restartQuiz(){
                 this.quizStateChange({
                     start: false,
                     end: false
                 })
-                this.userInfoChange(true);
+                this.userInfoReset(true);
             },
             uploadResult() {
                 eventBus.$emit('uploadResult', true);

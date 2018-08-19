@@ -7,7 +7,8 @@
 
 <script>
 import { eventBus } from '../../main';
-import { mapMutations } from 'vuex';
+import { mapActions } from 'vuex';
+import * as types from '../../store/types';
 
 export default {
     data: function(){
@@ -19,9 +20,9 @@ export default {
         };
     },
     methods:  {
-        ...mapMutations([
-            'updateUser'
-        ]),
+        ...mapActions({
+            updateUser: types.ACTION_UPDATE_USER
+        }),
         elapsedTime(){
             var timer = setInterval(function(){
                 let minutes = Math.floor(this.counter/60);
@@ -32,7 +33,7 @@ export default {
     },
     created(){
         this.elapsedTime();
-        thisupdateUser({
+        this.updateUser({
                     key: 'date',
                     value: this.$moment.utc().format()
                 })       

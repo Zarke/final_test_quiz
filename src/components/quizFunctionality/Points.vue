@@ -8,6 +8,7 @@
 <script>
     import { eventBus } from '../../main';
     import { mapGetters } from 'vuex';
+    import * as types from '../../store/types'
 
     export default {
         data: function(){
@@ -16,9 +17,9 @@
             }
         },
         computed: {
-            ...mapGetters([
-                'returnPoints'
-            ])
+            ...mapGetters({
+                returnPoints: types.RETURN_POINTS
+            })
         }
         
     }

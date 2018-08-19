@@ -24,13 +24,13 @@
 
 <script>
     import { eventBus } from './main';
-    import { mapGetters } from 'vuex';
     import StartForm from './components/quizInitialization/StartForm.vue';
     import Restart from './components/quizInitialization/Restart.vue';
     import Timer from './components/quizFunctionality/Timer.vue';
     import Points from './components/quizFunctionality/Points.vue';
     import Questions from './components/quizFunctionality/Question.vue';
-    
+    import { mapGetters } from 'vuex';
+    import * as types from './store/types'
 
     export default {
         data: function(){
@@ -72,11 +72,11 @@
             
         },
         computed: {
-            ...mapGetters([
-                'returnUser',
-                'returnEnd',
-                'returnStart'
-            ])
+            ...mapGetters({
+                returnUser: types.RETURN_USER,
+                returnEnd: types.RETURN_END,
+                returnStart: types.RETURN_START
+            })
         },
         watch: {
             returnEnd() {

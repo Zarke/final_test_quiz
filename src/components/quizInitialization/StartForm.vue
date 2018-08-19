@@ -13,7 +13,8 @@
 
 <script>
     import { eventBus } from '../../main';
-    import { mapMutations } from 'vuex';
+    import { mapActions } from 'vuex';
+    import * as types from '../../store/types';
 
     export default {
         data: function(){
@@ -22,10 +23,10 @@
             }
         },
         methods: {
-            ...mapMutations([
-                'quizStateChange',
-                'updateUser'
-            ]),
+            ...mapActions({
+                quizStateChange: types.ACTION_QUIZ_STATE_CHANGE,
+                updateUser: types.ACTION_UPDATE_USER
+            }),
             beginQuiz(){
                 this.quizStateChange({
                     key: 'start/end',
